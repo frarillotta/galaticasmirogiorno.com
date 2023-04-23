@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    
+    color: var(--primary-text-color);
+}
+
+.namesWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+
+}
+
+.label {
+
+}
+
+.verticalLine {
+    position: absolute;
+    left: calc(50% - 2px);
+}

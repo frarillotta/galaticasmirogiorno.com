@@ -1,0 +1,87 @@
+.footer {
+    position: absolute;
+    bottom: var(--global-padding);
+    left: var(--global-padding);
+    right: var(--global-padding);
+    height: 32px;
+
+    color: var(--primary-text-color);
+}
+
+.footerContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.plusSign {
+    display: flex;
+    transition: transform 0.5s ease-out;
+    position: absolute;
+}
+
+.plusSign:hover {
+    transition: transform 0.3s ease-in;
+    transform: rotate(180deg) scale(1.3);
+}
+
+.routes {
+    display: block;
+    text-align: center;
+    width: 80px;
+}
+
+.routesLink {    
+}
+
+.linksWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.routesLink {
+    cursor: pointer;
+    /* font-size: 18px; */
+    position: relative;
+    white-space: nowrap;
+    color: var(--primary-text-color);
+}
+
+.firstRoutesLink {
+}
+
+/* link animation */
+.routesLink::before,
+.routesLink::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.routesLink::before {
+    content: '';
+    /* show by default */
+}
+
+.routesLink--metis {
+}
+
+.routesLink--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.routesLink--metis:hover::before,
+.routesLink--metis-active::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
