@@ -14,8 +14,10 @@ const getActiveRoute = (currentRoute: string): Routes => {
             return Routes.About
         case currentRoute === Routes.Contact:
             return Routes.Contact
-        case currentRoute.includes(Routes.Projects) === true:
-            return Routes.Home
+        case currentRoute === Routes.Projects:
+            return Routes.Projects
+        case currentRoute.includes(`${Routes.Projects}/`) === true:
+            return Routes.Projects
         default:
             return Routes.Home
     }
@@ -53,12 +55,12 @@ export const Footer = () => {
                                 transition={{ duration: 0.5, ease: 'easeOut' }}
                                 className={styles.routes}
                             >
-                                <Link href={Routes.Home} className={`
-                                ${styles.firstRoutesLink}
-                                ${styles.routesLink} 
-                                ${styles['routesLink--metis']} 
-                                ${activeRoute === Routes.Home ? styles['routesLink--metis-active'] : ''}
-                            `}>
+                                <Link href={Routes.Projects} className={`
+                                    ${styles.firstRoutesLink}
+                                    ${styles.routesLink} 
+                                    ${styles['routesLink--metis']} 
+                                    ${activeRoute === Routes.Projects ? styles['routesLink--metis-active'] : ''}
+                                `}>
                                     PROJECTS
                                 </Link>
                             </motion.div >
@@ -69,10 +71,10 @@ export const Footer = () => {
                                 className={styles.routes}
                             >
                                 <Link href={Routes.About} className={`
-                                ${styles.routesLink} 
-                                ${styles['routesLink--metis']} 
-                                ${activeRoute === Routes.About ? styles['routesLink--metis-active'] : ''}
-                            `}>
+                                    ${styles.routesLink} 
+                                    ${styles['routesLink--metis']} 
+                                    ${activeRoute === Routes.About ? styles['routesLink--metis-active'] : ''}
+                                `}>
                                     ABOUT
                                 </Link>
                             </motion.div >
@@ -83,10 +85,10 @@ export const Footer = () => {
                                 className={styles.routes}
                             >
                                 <Link href={Routes.Contact} className={`
-                                ${styles.routesLink} 
-                                ${styles['routesLink--metis']} 
-                                ${activeRoute === Routes.Contact ? styles['routesLink--metis-active'] : ''}
-                            `}>
+                                    ${styles.routesLink} 
+                                    ${styles['routesLink--metis']} 
+                                    ${activeRoute === Routes.Contact ? styles['routesLink--metis-active'] : ''}
+                                `}>
                                     CONTACT
                                 </Link>
                             </motion.div >
