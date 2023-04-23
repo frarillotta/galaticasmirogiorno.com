@@ -11,8 +11,8 @@ export default function Contact() {
             <AnimatePresence >
                 <motion.div 
                     className={styles.verticalLine} 
-                    initial={{ scaleY: 0 }} 
-                    animate={{ scaleY: 25 }} 
+                    initial={{ scaleY: 0, originY: 0 }} 
+                    animate={{ scaleY: 23 }} 
                     transition={{ duration: 2, ease: 'easeInOut', delay: 0.5 }}
                 >
                     <Image width={4} height={48} alt='vertical line' src="/icons/line.svg" />
