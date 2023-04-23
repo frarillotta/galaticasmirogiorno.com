@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
 
-      <div>diocancaro</div>
+      <div>about</div>
     </>
   )
 }
