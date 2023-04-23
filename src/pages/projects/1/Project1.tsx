@@ -67,7 +67,7 @@ const projectPictures = [
   },
 ]
 
-export function Project1() {
+export default function Project1() {
   return (
     <main className={styles.main}>
       <p className={styles.description}>
