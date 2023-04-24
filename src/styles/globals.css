@@ -14,7 +14,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-size: 1em;
 	font-weight: inherit;
 	font-style: inherit;
-	font-size: 100%;
+	font-size: 99%;
 	vertical-align: baseline;
 }
 
@@ -92,7 +92,7 @@ html, body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: 1.4;
   padding: var(--global-padding);
   -webkit-font-smoothing: antialiased;
 }

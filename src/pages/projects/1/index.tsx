@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import styles from './Project1.module.css';
+import { Suspense } from 'react';
 
 type ProjectImageProps = {
   pictureName: string;
@@ -71,9 +72,9 @@ export default function Project1() {
   return (
     <main className={styles.main}>
       <p className={styles.description}>
-        <span>MASSIMILIANO PARRUCCHIERI</span><br/>
-        <span>CATANIA, ITALY</span><br/>
-        <br/>
+        <span>MASSIMILIANO PARRUCCHIERI</span><br />
+        <span>CATANIA, ITALY</span><br />
+        <br />
         <span>2021</span>
       </p>
       {projectPictures.map(

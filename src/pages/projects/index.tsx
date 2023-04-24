@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from '~/styles/Home.module.css'
 import Link from 'next/link';
 import { Routes } from '~/constants';
+import * as Icons from '~/Components/SvgIcons';
 
 type ProjectLinkProps = {
   projNumber: number;
@@ -12,8 +13,10 @@ type ProjectLinkProps = {
 
 //TODO: add label to each of these
 const ProjectLink: React.FC<ProjectLinkProps> = ({ projNumber, width, height, className = '' }) => {
+  //@ts-ignore horrible ik
+  const Icon = Icons[`Icon${projNumber}`]
   return <Link href={`${Routes.Projects}/${projNumber}`} className={`${styles.iconWrapper} ${styles[`icon${projNumber}`]}`}>
-    <Image className={`${styles.projectIcon} ${className}`} alt={`project ${projNumber} icon`} src={`/projects/${projNumber}/icon.png`} width={width} height={height} />
+    <Icon className={`${styles.projectIcon} ${className}`}/>
   </Link>
 };
 

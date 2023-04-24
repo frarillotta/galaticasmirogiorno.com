@@ -3,7 +3,7 @@
 import { Header } from '~/Components/Header/Header'
 import { Footer } from '~/Components/Footer/Footer'
 import Head from 'next/head'
-import { useRef } from 'react'
+import { Suspense, useRef } from 'react'
 
 
 //TODO: transizione per pagina
@@ -20,7 +20,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <Header />
-                {children}
+                <Suspense fallback={'potato'}>
+                    {children}
+                </Suspense>
                 <Footer />
             </div>
         </>
