@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import styles from './Project1.module.css';
-import { Suspense } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 type ProjectImageProps = {
   pictureName: string;
@@ -71,12 +71,24 @@ const projectPictures = [
 export default function Project1() {
   return (
     <main className={styles.main}>
-      <p className={styles.description}>
-        <span>MASSIMILIANO PARRUCCHIERI</span><br />
-        <span>CATANIA, ITALY</span><br />
-        <br />
-        <span>2021</span>
-      </p>
+      <AnimatePresence>
+        <div className={styles.description}>
+          <motion.div
+            className={styles.verticalLine}
+            initial={{ scaleY: 0, originY: 0 }}
+            animate={{ scaleY: 4 }}
+            transition={{ duration: 2, ease: 'easeInOut', delay: 0.5 }}
+          >
+            <Image width={4} height={48} alt='vertical line' src="/icons/line.svg" />
+          </motion.div>
+          <p className={styles.descriptionParagraph}>
+            <span>MASSIMILIANO PARRUCCHIERI</span><br />
+            <span>CATANIA, ITALY</span><br />
+            <br />
+            <span>2021</span>
+          </p>
+        </div>
+      </AnimatePresence>
       {projectPictures.map(
         (pic) =>
           <ProjectImage

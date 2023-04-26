@@ -1,4 +1,4 @@
-import { AnimationProps } from "framer-motion"
+import { AnimationProps, MotionProps } from "framer-motion"
 
 export const variants: AnimationProps['variants'] = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -15,11 +15,11 @@ export const variants: AnimationProps['variants'] = {
     },
     hover: () => {
         return {
-            pathOffset: 10,
+            pathOffset: 25,
             pathLength: 0.9,
             transition: {
                 pathLength: { duration: 1 },
-                pathOffset: { duration: 20 }
+                pathOffset: { ease: "linear" ,duration: 40, repeat: Infinity }
             }
         };
     },
@@ -30,8 +30,8 @@ export const transition: AnimationProps['transition'] = {
     duration: 2
 };
 
-export const variantsDefinition = {
+export const variantsDefinition: MotionProps = {
     initial: 'hidden',
     animate: 'visible',
-    whileHover: 'hover'
+    whileHover: 'hover',
 };

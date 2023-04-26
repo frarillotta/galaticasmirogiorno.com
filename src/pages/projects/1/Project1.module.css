@@ -2,12 +2,28 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    padding: 12px;
-    grid-gap: 12px;
+    --gap: 12px;
+    padding: var(--gap);
+    grid-gap: var(--gap);
+}
+
+.verticalLine {
+    position: absolute;
 }
 
 .description {
     grid-area: 1/13/3/18;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    /* pixel align: negative gap / 2 minus line width */
+    --offset: calc(calc(calc(var(--gap) * -1) / 2) + -2px);
+    transform: translate(var(--offset), var(--offset));
+    margin-bottom: 12px;
+}
+
+.descriptionParagraph {
+    padding: 12px;
 }
 
 .projectPicture {
