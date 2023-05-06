@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import styles from './Project1.module.css';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, Variants, motion } from 'framer-motion';
 
 type ProjectImageProps = {
   pictureName: string;
@@ -13,18 +13,48 @@ type ProjectImageProps = {
   className?: string;
 }
 
-//TODO: add label to each of these
+const MotionImage = motion(Image);
+
+const imageVariants: Variants = {  
+  initial: {
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+    transition: { duration: .4 }
+  },
+  whileHover: {
+    scale: 1.1,
+    transition: {
+      duration: 0.3,
+      ease: 'easeInOut'
+    }
+  },
+  reveal: {
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', 
+    transition: {
+      ease: 'easeOut',
+      duration: 0.5,
+      delay: 0.2
+    }
+  }
+}
+
 const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, priority = false, className = '' }) => {
-  return <div className={`${styles.pictureWrapper} ${className}`}>
-    <Image 
-      loading={loading} 
-      placeholder='blur' 
+  return <div
+    className={`${styles.pictureWrapper} ${className}`}
+  >
+    <MotionImage
+      variants={imageVariants}
+      initial={'initial'}
+      whileHover={'whileHover'}
+      whileInView={'reveal'}
+      viewport={{ once: false }}
+      
+      loading={loading}
       priority={priority}
-      className={styles.projectPicture} 
-      alt={`project ${projNumber} ${pictureName} Picture`} 
-      src={`/projects/${projNumber}/pictures/${pictureName}`} 
-      width={width} 
-      height={height} 
+      className={styles.projectPicture}
+      alt={`project ${projNumber} ${pictureName} Picture`}
+      src={`/projects/${projNumber}/pictures/${pictureName}`}
+      width={width}
+      height={height}
     />
   </div>
 };
