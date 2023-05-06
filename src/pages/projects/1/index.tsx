@@ -47,7 +47,7 @@ const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, wi
       whileHover={'whileHover'}
       whileInView={'reveal'}
       viewport={{ once: false }}
-      
+
       loading={loading}
       priority={priority}
       className={styles.projectPicture}
@@ -83,22 +83,22 @@ export default function Project1() {
               <span>A HAIR SALON WITH FAKE BROKEN MIRRORS.</span><br />
             </p>
           </div>
-          <ProjectImage loading='eager' priority={true} className={styles.oldFront} pictureName={'front-old.jpg'} height={1178} width={790} projNumber={1}></ProjectImage>
+          <ProjectImage loading='eager' priority={true} className={styles.oldFront} pictureName={'front-old.jpg'} height={589} width={395} projNumber={1}></ProjectImage>
         </AnimatePresence>
       </article>
       <article className={styles.screen}>
-        <ProjectImage loading='eager' className={styles.front} pictureName={'front.jpg'} height={573} width={843} projNumber={1} />
+        <ProjectImage loading='eager' className={styles.front} pictureName={'front.jpg'} height={286} width={421} projNumber={1} />
       </article>
       <article className={styles.screen}>
-        <ProjectImage loading='eager' className={styles.layout} pictureName={'layout.png'} height={870} width={830} projNumber={1} />
+        <ProjectImage loading='eager' className={styles.layout} pictureName={'layout.png'} height={435} width={415} projNumber={1} />
       </article>
       <article className={styles.screen}>
-        <ProjectImage loading='eager' className={styles.interior} pictureName={'interior.jpg'} height={1180} width={783} projNumber={1} />
-        <ProjectImage loading='eager' className={styles.mirrors} pictureName={'mirrors.png'} height={223} width={835} projNumber={1} />
+        <ProjectImage loading='eager' className={styles.interior} pictureName={'interior.jpg'} height={590} width={392} projNumber={1} />
+        <ProjectImage loading='eager' className={styles.mirrors} pictureName={'mirrors.png'} height={112} width={417} projNumber={1} />
       </article>
       <article className={styles.screen}>
-        <ProjectImage loading='eager' className={styles.handle} pictureName={'handle.jpg'} height={607} width={903} projNumber={1} />
-        <ProjectImage loading='eager' className={styles.blueprint} pictureName={'blueprint.png'} height={870} width={835} projNumber={1} />
+        <ProjectImage loading='eager' className={styles.handle} pictureName={'handle.jpg'} height={304} width={451} projNumber={1} />
+        <ProjectImage loading='eager' className={styles.blueprint} pictureName={'blueprint.png'} height={435} width={418} projNumber={1} />
       </article>
     </main>
   )
