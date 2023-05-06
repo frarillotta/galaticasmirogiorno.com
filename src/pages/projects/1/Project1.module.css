@@ -1,10 +1,9 @@
 .main {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    overflow-y: scroll;
+    display: block;
     --gap: 12px;
     padding: var(--gap);
-    grid-gap: var(--gap);
+    scroll-snap-type: y mandatory;
 }
 
 .verticalLine {
@@ -12,7 +11,7 @@
 }
 
 .description {
-    grid-area: 1/13/3/18;
+    grid-area: 1/7/3/13;
     overflow: hidden;
     position: relative;
     isolation: isolate;
@@ -37,39 +36,43 @@
     height: 100%;
 }
 
-.blueprint {
-    grid-area: 8/1/14/6;
+.screen {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: var(--gap);
+
+    scroll-snap-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.oldFront {
+    grid-area: 3/6/8/2;
 }
 
 .front {
-    grid-area: 3/6/8/13;
+    grid-area: 3/4/6/10;
+}
 
+.layout {
+    grid-area: 6/7/9/11;
+}
+
+.interior {
+    grid-area: 2/2/7/6;
+}
+
+.mirrors {
+    grid-area: 6/7/9/13;
 }
 
 .handle {
-    grid-area: 9/6/14/13;
+    grid-area: 4/9/8/13;
+    
 }
 
-.inside {
-    grid-area: 10/19/16/24;
-}
+.blueprint {
+    grid-area: 4/1/8/5;
 
-.mirror1 {
-    grid-area: 3/13/7/15;
-}
-
-.mirror2 {
-    grid-area: 3/15/7/17;
-}
-
-.mirror3 {
-    grid-area: 3/17/7/19;
-}
-
-.mirror4 {
-    grid-area: 3/19/7/21;
-}
-
-.mirror5 {
-    grid-area: 3/21/7/23;
 }

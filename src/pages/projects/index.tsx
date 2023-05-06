@@ -17,28 +17,28 @@ type ProjectLinkProps = {
 
 //TODO: add label to each of these
 const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, projNumber, className = '' }) => {
-  const [scope, animate] = useAnimate()
-  const linkRef = useRef<HTMLAnchorElement>(null);
-  useEffect(() => {
-    linkRef?.current?.addEventListener('mouseover', () => {
-      animate(scope.current, {
-        bottom: 0
-      })
-    });
-    linkRef?.current?.addEventListener('mouseout', () => {
-      animate(scope.current, {
-        bottom: -80
-      })
-    });
-  })
+  // const [scope, animate] = useAnimate()
+  // const linkRef = useRef<HTMLAnchorElement>(null);
+  // useEffect(() => {
+  //   linkRef?.current?.addEventListener('mouseover', () => {
+  //     animate(scope.current, {
+  //       bottom: 0
+  //     })
+  //   });
+  //   linkRef?.current?.addEventListener('mouseout', () => {
+  //     animate(scope.current, {
+  //       bottom: -80
+  //     })
+  //   });
+  // })
   //@ts-ignore horrible ik
   const Icon = Icons[`Icon${projNumber}`]
-  return <Link ref={linkRef} href={`${Routes.Projects}/${projNumber}`} className={`${styles.iconWrapper} ${styles[`icon${projNumber}`]}`}>
+  return <Link href={`${Routes.Projects}/${projNumber}`} className={`${styles.iconWrapper} ${styles[`icon${projNumber}`]}`}>
     <Icon className={`${styles.projectIcon} ${className}`} />
-    <div ref={scope} className={styles.label}>
+    {/* <div ref={scope} className={styles.label}>
       <span>{projectName}</span>
       {projectDate && (<><br /><span>{projectDate}</span></>)}
-    </div>
+    </div> */}
   </Link>
 };
 
