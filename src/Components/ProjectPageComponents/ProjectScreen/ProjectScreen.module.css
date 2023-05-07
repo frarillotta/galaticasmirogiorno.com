@@ -1,0 +1,10 @@
+.screen {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: var(--gap);
+
+    scroll-snap-align: center;
+    height: 100%;
+    width: 100%;
+}

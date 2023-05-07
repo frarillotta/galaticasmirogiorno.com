@@ -1,0 +1,7 @@
+.main {
+    overflow-y: scroll;
+    display: block;
+    --gap: 12px;
+    padding: var(--gap);
+    scroll-snap-type: y mandatory;
+}

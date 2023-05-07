@@ -1,0 +1,30 @@
+
+.verticalLine {
+    position: absolute;
+}
+
+.description {
+    grid-area: 1/7/5/13;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    /* pixel align: negative gap / 2 minus line width */
+    --offset: calc(calc(calc(var(--gap) * -1) / 2) + -2px);
+    transform: translate(var(--offset), var(--offset));
+    margin-bottom: 12px;
+}
+
+.descriptionParagraph {
+    padding: 12px;
+}
+
+.screen {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: var(--gap);
+
+    scroll-snap-align: center;
+    height: 100%;
+    width: 100%;
+}
