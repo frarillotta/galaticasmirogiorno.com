@@ -32,7 +32,7 @@ const imageVariants: Variants = {
     transition: {
       ease: 'easeOut',
       duration: 0.5,
-      delay: 0.2
+      delay: 0.1
     }
   }
 }
@@ -42,7 +42,7 @@ const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, wi
     className={`${styles.pictureWrapper} ${className}`}
   >
     <MotionImage
-      variants={imageVariants}
+      // variants={imageVariants}
       initial={'initial'}
       whileHover={'whileHover'}
       whileInView={'reveal'}
@@ -83,7 +83,7 @@ export default function Project1() {
               <span>A HAIR SALON WITH FAKE BROKEN MIRRORS.</span><br />
             </p>
           </div>
-          <ProjectImage loading='eager' priority={true} className={styles.oldFront} pictureName={'front-old.jpg'} height={589} width={395} projNumber={1}></ProjectImage>
+          <ProjectImage loading='eager' priority={true} className={styles.oldFront} pictureName={'front-old.jpg'} height={489} width={295} projNumber={1} />
         </AnimatePresence>
       </article>
       <article className={styles.screen}>
