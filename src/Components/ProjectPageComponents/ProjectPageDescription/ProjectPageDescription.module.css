@@ -1,6 +1,16 @@
 
-.verticalLine {
+.verticalLineWrapper {
     position: absolute;
+    height: 100%;
+}
+
+.verticalLine {
+    height: 100%;
+    width: 4px;
+}
+
+.paragraphWrapper {
+    position: relative;
 }
 
 .description {

@@ -12,12 +12,12 @@
 
 .verticalLineWrapper {
     position: absolute;
-    left: calc(50% - 1.5px);
-    top: 0;
+    left: calc(50% - 2px);
+    top: -48px;
     z-index: 1;
 }
 
 .verticalLine {
     height: 48px;
-    width: 3px;
+    width: 4px;
 }
