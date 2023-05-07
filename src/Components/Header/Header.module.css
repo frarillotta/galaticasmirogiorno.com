@@ -21,6 +21,8 @@
 }
 
 .verticalLine {
+    height: 100%;
+    width: 4px;
     position: absolute;
     left: calc(50% - 2px);
 }

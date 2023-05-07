@@ -5,6 +5,7 @@ import { Routes } from '../../constants';
 import { useRouter } from 'next/router';
 import { useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
+import { Line } from '../SvgIcons';
 
 //TODO: spacer nel centro - sarebbe carino fare qualche animazione di transizione?
 export const Header = () => {
@@ -34,7 +35,7 @@ export const Header = () => {
                 CLAUDIA GIORNO
             </h1>
         </Link>
-        <Image ref={scope} className={styles.verticalLine} width={4} height={48} alt='vertical line' src="/icons/line.svg" />
+        <Line className={styles.verticalLine} ref={scope} />
 
         <div >
             <h1 className={styles.label}>

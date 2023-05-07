@@ -10,9 +10,14 @@
 }
 
 
-.verticalLine {
+.verticalLineWrapper {
     position: absolute;
-    left: calc(50% - 2px);
+    left: calc(50% - 1.5px);
     top: 0;
     z-index: 1;
+}
+
+.verticalLine {
+    height: 48px;
+    width: 3px;
 }

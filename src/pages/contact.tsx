@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import styles from '~/styles/Contact.module.css'
 import { motion, Variants } from 'framer-motion';
+import { Line } from '~/Components/SvgIcons';
 
 const variants: Variants = {
     initial: {
-        scaleY: 0, originY: 0
+        scaleY: 0, origin: 0
     },
     animate: {
-        scaleY: 43,
+        scaleY: 50,
         origin: 0,
         transition: { duration: 2, ease: 'easeInOut', delay: 0.5 }
     }
@@ -17,11 +18,11 @@ export default function Contact() {
     return (
         <main className={styles.contact}>
             <motion.div
-                className={styles.verticalLine}
+                className={styles.verticalLineWrapper}
                 animate={'animate'}
                 variants={variants}
             >
-                <Image width={4} height={48} alt='vertical line' src="/icons/line.svg" />
+                <Line className={styles.verticalLine} />
             </motion.div>
             <motion.p
                 className={styles.contactDetails}

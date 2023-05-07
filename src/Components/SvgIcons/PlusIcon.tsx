@@ -6,13 +6,13 @@ const iconVariants: Variants = {
         transformOrigin: '50% 50%'
     },
     tapped: {
-        rotate: '90deg',
+        scaleY: 0,
         transition: {
             duration: 0.3
         }
     },
     nonTapped: {
-        rotate: '0deg',
+        scaleY: 1,
         transition: {
             duration: 0.4,
         }
@@ -33,7 +33,7 @@ export const PlusIcon = ({className = ''}) => {
         viewBox="0 0 24 24" 
         fill="none" 
         stroke="currentColor" 
-        strokeWidth="2" 
+        strokeWidth="1" 
         strokeLinecap="round" 
         strokeLinejoin="round" 
         className={className}
