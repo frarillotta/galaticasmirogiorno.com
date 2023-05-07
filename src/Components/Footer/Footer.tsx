@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Routes } from '~/constants';
+import { PlusIcon } from '../SvgIcons';
 
 const getActiveRoute = (currentRoute: string): Routes => {
     switch (true) {
@@ -37,7 +38,7 @@ export const Footer = () => {
                 onClick={() => setLinksDisplayed((linksDisplayed) => !linksDisplayed)}
                 className={styles.plusSign}
             >
-                <Image width={32} height={32} alt='plus icon' src="/icons/plus.svg" />
+                <PlusIcon  />
             </button>
             <div className={styles.linksWrapper}>
                 <AnimatePresence>

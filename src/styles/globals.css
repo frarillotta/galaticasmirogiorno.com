@@ -137,11 +137,11 @@ a:hover {
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
-a:focus {
+*:focus {
     /* Provide a fallback style for browsers
 	 that don't support :focus-visible */
     outline: none;
-    background: lightgrey;
+    background: none;
 }
 
 a:focus:not(:focus-visible) {

@@ -1,5 +1,6 @@
 .footer {
     position: absolute;
+    isolation: isolate;
     bottom: var(--global-padding);
     left: var(--global-padding);
     right: var(--global-padding);
@@ -16,14 +17,17 @@
 }
 
 .plusSign {
+    height: 32px;
+    width: 32px;
     display: flex;
     transition: transform 0.5s ease-out;
     position: absolute;
+    z-index: 2;
 }
 
 .plusSign:hover {
     transition: transform 0.3s ease-in;
-    transform: rotate(180deg) scale(1.3);
+    transform: rotate(180deg) scale(1.2);
 }
 
 .routes {
