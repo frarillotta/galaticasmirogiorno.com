@@ -8,7 +8,7 @@ export const Icon7 = ({ className }: { className: string }) => {
         x="0px"
         y="0px"
         stroke-width='1px'
-        viewBox="183.66 277.79 228.68 286.47"
+        viewBox="178.66 277.79 238.68 286.47"
         {...variantsDefinition}
     >
         <motion.line

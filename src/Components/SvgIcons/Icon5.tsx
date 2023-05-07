@@ -10,7 +10,7 @@ export const Icon5 = ({ className }: { className: string }) => {
         x="0px"
         y="0px"
         stroke-width='1px'
-        viewBox="173.89 349.34 248.22 143.37"
+        viewBox="168.89 349.34 258.22 143.37"
         {...variantsDefinition}
     >
         <motion.line variants={variants}

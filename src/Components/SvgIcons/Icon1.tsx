@@ -10,7 +10,7 @@ export const Icon1 = ({ className }: { className: string }) => {
         x="0px"
         y="0px"
         stroke-width='1px'
-        viewBox="264.87 349.33 66.25 143.37"
+        viewBox="259.87 349.33 76.25 143.37"
         {...variantsDefinition}
     >
         <motion.path

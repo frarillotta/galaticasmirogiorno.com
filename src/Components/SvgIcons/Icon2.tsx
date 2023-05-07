@@ -3,7 +3,7 @@ import { transition, variants, variantsDefinition } from "./IconUtils"
 import styles from './IconCommon.module.css'
 
 export const Icon2 = ({ className }: { className: string }) => {
-    return <motion.svg {...variantsDefinition} className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="138.6 364.3 318 113.3"
+    return <motion.svg {...variantsDefinition} className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="133.6 364.3 328 113.3"
         stroke-width='1px'>
         <motion.polyline variants={variants}
             transition={transition} className={styles.stroke}

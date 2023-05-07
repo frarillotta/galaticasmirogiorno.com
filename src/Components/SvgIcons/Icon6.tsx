@@ -10,7 +10,7 @@ export const Icon6 = ({ className }: { className: string }) => {
         x="0px"
         y="0px"
         stroke-width='1px'
-        viewBox="172.69 349.34 250.62 143.37"
+        viewBox="167.69 349.34 260.62 143.37"
         {...variantsDefinition}
     >
         <motion.polyline
