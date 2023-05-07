@@ -6,10 +6,6 @@ const variants: Variants = {
     initial: {
         scaleY: 0, originY: 0
     },
-    exit: {
-        scaleY: 0,
-        transition: { duration: 1, ease: 'easeIn' }
-    },
     animate: {
         scaleY: 43,
         origin: 0,
@@ -22,7 +18,6 @@ export default function Contact() {
         <main className={styles.contact}>
             <motion.div
                 className={styles.verticalLine}
-                exit={'exit'}
                 animate={'animate'}
                 variants={variants}
             >
