@@ -30,4 +30,5 @@ export const variantsDefinition: MotionProps = {
     initial: 'hidden',
     animate: 'visible',
     whileHover: 'hover',
+    whileTap: 'visible'
 };

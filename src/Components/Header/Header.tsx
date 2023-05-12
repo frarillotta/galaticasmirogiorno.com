@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import styles from './Header.module.css'
-import Image from 'next/image'
 import { Routes } from '../../constants';
 import { useRouter } from 'next/router';
 import { useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 import { Line } from '../SvgIcons';
 
-//TODO: spacer nel centro - sarebbe carino fare qualche animazione di transizione?
 export const Header = () => {
     const router = useRouter();
     const [scope, animate] = useAnimate();
@@ -16,12 +14,12 @@ export const Header = () => {
         if (router.asPath === Routes.Projects) {
             animate(scope.current, {
                 originY: 0,
-                scaleY: 0
-            })
+                scaleY: 0,
+            }, {delay: 0.49, ease: 'linear', duration: 0.1})
         } else {
             animate(scope.current, {
                 originY: 0,
-                scaleY: 1
+                scaleY: 1,
             })
         }
     }, [router, animate, scope])
