@@ -1,0 +1,17 @@
+.precopertina {
+    grid-area: 4/7/9/9;
+}
+
+.copertina {
+    grid-area: 4/6/7/8;
+}
+.copertina2 {
+    grid-area: 4/1/7/4;
+}
+.copertina3 {
+    grid-area: 4/11/7/13;
+}
+
+.exhibition {
+    grid-area: 3/5/7/9;
+}

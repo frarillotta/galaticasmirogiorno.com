@@ -1,0 +1,29 @@
+.layout {
+    grid-area: 3/1/9/13;
+}
+
+.layout2 {
+
+    grid-area: 2/3/5/6;
+}
+
+.garden {
+
+    grid-area: 5/5/9/9;
+}
+
+.pianta {
+    grid-area: 2/2/8/6;
+}
+
+.landscape {
+    grid-area: 6/2/8/5;
+}
+
+.bedroom {
+    grid-area: 1/1/4/4;
+}
+
+.bedroom2 {
+    grid-area: 1/4/4/7;
+}

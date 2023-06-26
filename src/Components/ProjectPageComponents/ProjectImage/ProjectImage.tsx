@@ -10,7 +10,7 @@ type ProjectImageProps = {
     priority?: boolean;
     loading?: 'eager' | 'lazy';
     className?: string;
-    format?: 'jpg' | 'png'
+    format?: 'jpg' | 'png' | 'avif'
 }
 
 const MotionImage = motion(Image);
@@ -37,7 +37,7 @@ const imageVariants: Variants = {
     }
 }
 
-export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'jpg', priority = false, className = '' }) => {
+export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'avif', priority = false, className = '' }) => {
     return <div
         className={`${styles.pictureWrapper} ${className}`}
     >

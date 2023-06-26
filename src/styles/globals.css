@@ -170,6 +170,10 @@ a:focus-visible {
     outline: 2px solid red;
     background: transparent;
 }
+/* temp?  */
+main::-webkit-scrollbar {
+  display: none;
+}
 
 main {
   /* 100% - height of header - height of footer  */

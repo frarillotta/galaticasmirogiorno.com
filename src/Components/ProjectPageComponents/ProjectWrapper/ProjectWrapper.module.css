@@ -5,3 +5,7 @@
     padding: var(--gap);
     scroll-snap-type: y mandatory;
 }
+
+.main > article:not(:last-child) {
+    margin-bottom: 15px;
+}

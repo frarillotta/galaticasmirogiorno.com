@@ -1,0 +1,23 @@
+.layout {
+    grid-area: 3/10/9/13;
+}
+
+.internoold {
+    grid-area: 2/1/6/6;
+}
+
+.interno1 {
+    grid-area: 5/1/9/6;
+}
+
+.layout2 {
+    grid-area: 2/4/8/10;
+}
+
+.layout3 {
+    grid-area: 5/9/9/13;
+}
+
+.interno2 {
+    grid-area: 5/7/9/12;
+}
