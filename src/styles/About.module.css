@@ -3,7 +3,7 @@
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(16, 1fr);
     grid-gap: 12px;
-    padding: 24px 0px;
+    padding: 24px 0px 0px 0px;
 }
 
 
@@ -12,13 +12,13 @@
 }
 
 .iconWrapper {
-    grid-area: 7/1/17/9;
+    grid-area: 6/1/17/7;
 }
 
 @media screen and (max-width: 600px) {
     
     .iconWrapper {
-        grid-area: 7/1/17/13;
+        grid-area: 8/1/17/13;
     }
 }
 .icon {
