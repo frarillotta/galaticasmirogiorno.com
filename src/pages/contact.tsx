@@ -22,7 +22,7 @@ export default function Contact() {
     return (
         <main className={styles.contact}>
             <motion.div
-                className={styles.verticalLineWrapper}
+                className={`${styles.verticalLineWrapper} verticalLineWrapperWorkaround`}
                 animate={'animate'}
                 exit={'exit'}
                 variants={variants}
