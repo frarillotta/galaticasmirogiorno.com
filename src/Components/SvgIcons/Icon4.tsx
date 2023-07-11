@@ -9,17 +9,17 @@ export const Icon4 = ({ className }: { className: string }) => {
         version="1.1"
         x="0px"
         y="0px"
-        stroke-width='1px'
+        strokeWidth='1px'
         viewBox="236.81 278.16 122.38 285.73"
         {...variantsDefinition}
     >
         <motion.line
-            variants={variants}
+            variants={variants()}
             transition={transition}
             className={styles.stroke}
             x1="332.84" y1="563.39" x2="242.31" y2="278.66" />
         <motion.rect
-            variants={variants}
+            variants={variants()}
             transition={transition}
             x="321.69" y="278.66" className={styles.stroke}
             width="32" height="51.62" />

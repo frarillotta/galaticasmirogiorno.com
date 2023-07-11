@@ -9,14 +9,14 @@ export const Icon1 = ({ className }: { className: string }) => {
         version="1.1"
         x="0px"
         y="0px"
-        stroke-width='1px'
+        strokeWidth='1px'
         viewBox="259.87 349.33 76.25 143.37"
         {...variantsDefinition}
     >
         <motion.path
             className={styles.stroke}
             d="M265.37,415.09v71.18l60.23,5.93V385.43l5.02-32.63l-48.82-2.97C280.17,372.38,274.61,394.46,265.37,415.09z"
-            variants={variants}
+            variants={variants()}
             transition={transition}
         />
     </motion.svg>
