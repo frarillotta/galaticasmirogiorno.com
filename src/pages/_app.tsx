@@ -11,10 +11,6 @@ export default function App({ Component, pageProps }: AppProps) {
   //fix for https://github.com/vercel/next.js/issues/17464
   useNextCssRemovalPrevention();
   return <Layout>
-    <AnimatePresence 
-      // mode="wait"
-    >
       <Component key={pathname} {...pageProps} />
-    </AnimatePresence>
   </Layout>
 }
