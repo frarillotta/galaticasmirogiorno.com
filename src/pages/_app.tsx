@@ -9,7 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
   const { pathname } =  useRouter();
   
   return <Layout>
-    <AnimatePresence mode="wait">
+    <AnimatePresence 
+      // mode="wait
+    >
       <Component key={pathname} {...pageProps} />
     </AnimatePresence>
   </Layout>
