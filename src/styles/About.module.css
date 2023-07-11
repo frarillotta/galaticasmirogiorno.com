@@ -1,0 +1,29 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-gap: 12px;
+    padding: 24px 0px;
+}
+
+
+.aboutTitle {
+    grid-area: 1/-1/1/1;
+}
+
+.iconWrapper {
+    grid-area: 7/1/17/9;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .iconWrapper {
+        grid-area: 7/1/17/13;
+    }
+}
+.icon {
+    height: 100%;
+    width: 100%;
+}
+
+

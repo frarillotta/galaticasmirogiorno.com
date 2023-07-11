@@ -1,0 +1,31 @@
+.livingroom {
+    grid-area: 3/7/7/12;
+}
+
+.layout {
+    grid-area: 7/7/9/13;
+}
+
+.livingroom2 {
+    grid-area: 2/4/4/7;
+}
+
+.livingroom3 {
+    grid-area: 4/4/6/7;
+}
+
+.livingroom4 {
+    grid-area: 6/4/8/7;
+}
+
+.kitchen {
+    grid-area: 5/7/9/12;
+}
+
+.layout2 {
+    grid-area: 3/1/7/7;
+}
+
+.layout3 {
+    grid-area: 3/7/7/10;
+}

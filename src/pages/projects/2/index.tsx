@@ -1,7 +1,7 @@
 import styles from './Project2.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-export default function Project2() {
+export default function LeTrain() {
     return (
       <ProjectWrapper>
         <ProjectScreen>

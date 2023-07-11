@@ -1,7 +1,7 @@
 import styles from './Project3.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-export default function Project3() {
+export default function CB() {
     return (
       <ProjectWrapper>
         <ProjectScreen>

@@ -1,7 +1,7 @@
 import styles from './Project5.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-export default function Project5() {
+export default function OuiQuiMagazine() {
     return (
       <ProjectWrapper>
         <ProjectScreen>
@@ -21,7 +21,9 @@ export default function Project5() {
           <ProjectImage loading='eager' className={styles.copertina3} pictureName={'copertina3'} height={800} width={500} projNumber={5} />
         </ProjectScreen>
         <ProjectScreen>
-          Mancano le immagini
+        <ProjectImage loading='eager' className={styles.inside1} pictureName={'inside1'} height={704} width={406} projNumber={5} />          
+        <ProjectImage loading='eager' className={styles.inside2} pictureName={'inside2'} height={704} width={406} projNumber={5} />          
+        <ProjectImage loading='eager' className={styles.inside3} pictureName={'inside3'} height={704} width={406} projNumber={5} />
         </ProjectScreen>
         <ProjectScreen>
         <ProjectImage loading='eager' className={styles.exhibition} pictureName={'exhibition'} height={400} width={600} projNumber={5} />

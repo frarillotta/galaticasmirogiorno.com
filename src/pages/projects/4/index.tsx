@@ -1,7 +1,7 @@
 import styles from './Project4.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-export default function Project4() {
+export default function D6() {
     return (
       <ProjectWrapper>
         <ProjectScreen>

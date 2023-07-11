@@ -1,7 +1,7 @@
 import styles from './Project1.module.css';
 import { ProjectImage, ProjectScreen, ProjectPageDescription, ProjectWrapper } from '~/Components/ProjectPageComponents';
 
-export default function Project1() {
+export default function GL130() {
   return (
     <ProjectWrapper>
       <ProjectScreen>
