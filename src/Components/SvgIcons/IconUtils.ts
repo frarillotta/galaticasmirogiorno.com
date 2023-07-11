@@ -3,7 +3,7 @@ import { AnimationProps, MotionProps } from "framer-motion"
 export const variants: AnimationProps['variants'] = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
-        pathLength: 1.2,
+        pathLength: 1.4,
         opacity: 1,
         pathOffset: 0,
         transition: {
@@ -20,7 +20,6 @@ export const variants: AnimationProps['variants'] = {
         }
     },
 };
-
 
 export const transition: AnimationProps['transition'] = {
     duration: 2
