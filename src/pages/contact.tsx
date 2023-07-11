@@ -11,20 +11,20 @@ const variants: Variants = {
         origin: 0,
         transition: { duration: 2, ease: 'easeInOut', delay: 0.5 }
     },
-    exit: {
-        scaleY: 0,
-        origin: 0,
-        transition: {duration: 0.5, ease: 'linear'}
-    }
+    // exit: {
+    //     scaleY: 0,
+    //     origin: 0,
+    //     transition: {duration: 0.5, ease: 'linear'}
+    // }
 }
 
 export default function Contact() {
     return (
         <main className={styles.contact}>
             <motion.div
-                className={`${styles.verticalLineWrapper} verticalLineWrapperWorkaround`}
+                className={styles.verticalLineWrapper}
                 animate={'animate'}
-                exit={'exit'}
+                // exit={'exit'}
                 variants={variants}
             >
                 <Line className={styles.verticalLine} />

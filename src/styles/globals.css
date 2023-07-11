@@ -188,10 +188,3 @@ main {
   position: relative;
   isolation: isolate;
 }
-
-.verticalLineWrapperWorkaround {
-    position: absolute;
-    left: calc(50% - 2px);
-    top: -48px;
-    z-index: 1;
-}
