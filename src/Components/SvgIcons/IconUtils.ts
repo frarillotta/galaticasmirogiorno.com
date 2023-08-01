@@ -10,12 +10,12 @@ export const variants: (props?: {
     pathSpacing?: number,
 }) => AnimationProps['variants'] = ({ 
     hoverPathLengthDuration = 1, 
-    pathOffset = 0.1,
+    pathOffset = 0.2,
     hoverPathLength = 0.8, 
-    transitionDuration = 1.5, 
+    transitionDuration = 2.5, 
     hoverOffsetDuration = 1.5,
     hoverPathSpacing = 0.2,
-    pathSpacing = 0.1,
+    pathSpacing = 0.4,
 } = {}) => ({
     hidden: { 
         pathLength: 0.001, 
