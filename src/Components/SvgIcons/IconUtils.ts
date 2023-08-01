@@ -1,22 +1,50 @@
 import { AnimationProps, MotionProps } from "framer-motion"
 
-export const variants: (props?: {hoverDuration?: number, transitionDuration?: number, hoverOffsetDuration?: number}) => AnimationProps['variants'] = ({hoverDuration = 1, transitionDuration = 1.5, hoverOffsetDuration = 40} = {}) => ({
-    hidden: { pathLength: 0, opacity: 0 },
+export const variants: (props?: { 
+    hoverPathLengthDuration?: number, 
+    transitionDuration?: number, 
+    hoverOffsetDuration?: number, 
+    hoverPathLength?: number,
+    hoverPathSpacing?: number,
+    pathOffset?: number,
+    pathSpacing?: number,
+}) => AnimationProps['variants'] = ({ 
+    hoverPathLengthDuration = 1, 
+    pathOffset = 0.1,
+    hoverPathLength = 0.8, 
+    transitionDuration = 1.5, 
+    hoverOffsetDuration = 1.5,
+    hoverPathSpacing = 0.2,
+    pathSpacing = 0.1,
+} = {}) => ({
+    hidden: { 
+        pathLength: 0.001, 
+        opacity: 0,
+        pathSpacing,
+        pathOffset,
+    },
     visible: {
         pathLength: 1.4,
         opacity: 1,
         pathOffset: 0,
+        pathSpacing: 0,
         transition: {
-            pathLength: { type: "spring", duration: transitionDuration },
-            opacity: { duration: 0.01 }
+            duration: transitionDuration,
+            bounce: 0,
+            ease: 'easeOut',
+            pathLength: { duration: transitionDuration, bounce: 0 },
+            opacity: { duration: 0.1 },
+            pathOffset: {duration: transitionDuration/1.5},
         }
     },
     hover: {
-        pathOffset: 25,
-        pathLength: 0.9,
+        pathOffset: 2,
+        pathLength: hoverPathLength,
+        pathSpacing: hoverPathSpacing,
         transition: {
-            pathLength: { duration: hoverDuration },
-            pathOffset: { ease: "linear", duration: hoverOffsetDuration, repeat: Infinity }
+            pathLength: {duration: 0},
+            pathSpacing: {duration: 0},
+            pathOffset: { ease: "linear", duration: hoverOffsetDuration, repeat: Infinity, bounce: 0 }
         }
     },
 });
@@ -29,5 +57,5 @@ export const variantsDefinition: MotionProps = {
     initial: 'hidden',
     animate: 'visible',
     whileHover: 'hover',
-    whileTap: 'visible'
+    whileTap: 'visible',
 };

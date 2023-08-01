@@ -3,12 +3,12 @@
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(16, 1fr);
     grid-gap: 12px;
-    padding: 24px 0px 0px 0px;
+    padding: 0px;
 }
 
 
 .aboutTitle {
-    grid-area: 1/-1/1/1;
+    grid-area: 1/12/1/1;
 }
 
 .iconWrapper {

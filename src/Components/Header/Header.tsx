@@ -35,10 +35,8 @@ export const Header = () => {
         </Link>
         <Line className={styles.verticalLine} ref={scope} />
 
-        <div >
             <h1 className={styles.label}>
                 ARCHITECTURE
             </h1>
-        </div>
     </header>
 }
