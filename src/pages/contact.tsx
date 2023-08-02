@@ -5,13 +5,13 @@ import { Line } from '~/Components/SvgIcons';
 const variants: Variants = {
     initial: {
         scaleY: 0, 
-        origin: 0,
+        originY: 0,
         //workaround cause safari sucks
         z: 0.1
     },
     animate: {
-        scaleY: 50,
-        origin: 0,
+        scaleY: 40,
+        originY: 0,
         z: 0.1,
         transition: { duration: 2, ease: 'easeInOut', delay: 0.5 }
     },
@@ -31,6 +31,7 @@ export default function Contact() {
             >
                 <MotionLine 
                     className={styles.verticalLine} 
+                    initial={'initial'}
                     animate={'animate'}
                     // exit={'exit'}
                     variants={variants}

@@ -3,8 +3,6 @@ import { forwardRef } from "react"
 
 export const Line = forwardRef<SVGSVGElement, { className?: string }>(({ className = '' }, ref) => {
     return <svg 
-        //workaround cause safari sucks
-        style={{transform: 'translateZ(0.1px)'}} 
         preserveAspectRatio="xMidYMid slice" 
         ref={ref} 
         className={className} 

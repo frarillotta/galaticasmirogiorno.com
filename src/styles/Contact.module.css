@@ -22,4 +22,5 @@
 .verticalLine {
     height: 48px;
     width: 4px;
+    transform: scaleY(0);
 }
