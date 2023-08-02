@@ -12,7 +12,7 @@ export default function PAFF32() {
             <br />
             <span>+ RENATO GALATI CASMIRO</span><br />
             <br />
-            <span>AN ARCHED CIRCLE CONNECTIONS THE LIVING AREA TO THE SLEEPING AREA.</span><br />
+            <span>AN ARCHED CIRCLE CONNECTS THE LIVING AREA TO THE SLEEPING AREA.</span><br />
           </ProjectPageDescription>
           <ProjectImage loading='eager' priority={true} className={styles.livingroom} pictureName={'livingroom'} height={864} width={1536} projNumber={7} />
           <ProjectImage loading='eager' priority={true} className={styles.layout} pictureName={'layout'} height={300} width={1000} projNumber={7} />

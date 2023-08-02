@@ -4,11 +4,15 @@ import { Line } from '~/Components/SvgIcons';
 
 const variants: Variants = {
     initial: {
-        scaleY: 0, origin: 0
+        scaleY: 0, 
+        origin: 0,
+        //workaround cause safari sucks
+        z: 0.1
     },
     animate: {
         scaleY: 50,
         origin: 0,
+        z: 0.1,
         transition: { duration: 2, ease: 'easeInOut', delay: 0.5 }
     },
     // exit: {
@@ -17,17 +21,20 @@ const variants: Variants = {
     //     transition: {duration: 0.5, ease: 'linear'}
     // }
 }
+const MotionLine = motion(Line)
 
 export default function Contact() {
     return (
         <main className={styles.contact}>
             <motion.div
                 className={styles.verticalLineWrapper}
-                animate={'animate'}
-                // exit={'exit'}
-                variants={variants}
             >
-                <Line className={styles.verticalLine} />
+                <MotionLine 
+                    className={styles.verticalLine} 
+                    animate={'animate'}
+                    // exit={'exit'}
+                    variants={variants}
+                />
             </motion.div>
             <motion.p
                 className={styles.contactDetails}

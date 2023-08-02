@@ -20,6 +20,8 @@ export const Header = () => {
             animate(scope.current, {
                 originY: 0,
                 scaleY: 1,
+                //workaround cause safari sucks
+                z: 0.1,
             })
         }
     }, [router, animate, scope])
@@ -33,8 +35,9 @@ export const Header = () => {
                 CLAUDIA GIORNO
             </h1>
         </Link>
-        <Line className={styles.verticalLine} ref={scope} />
-
+        <div className={styles.lineWrapper}>
+            <Line className={styles.verticalLine} ref={scope} />
+        </div>
             <h1 className={styles.label}>
                 ARCHITECTURE
             </h1>

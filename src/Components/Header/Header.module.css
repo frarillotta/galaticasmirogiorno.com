@@ -26,6 +26,12 @@
 .verticalLine {
     height: 100%;
     width: 4px;
+}
+
+.lineWrapper {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: calc(50% - 2px);
+    display: flex;
+    justify-content: center;
 }
