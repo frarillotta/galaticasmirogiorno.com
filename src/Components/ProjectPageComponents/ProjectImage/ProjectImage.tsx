@@ -47,26 +47,25 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
         if (isImageInView) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-                transition: {
-                    ease: 'easeOut',
-                    duration: 2,
-                    delay: 0.1
-                }
+            }, {
+                ease: 'easeOut',
+                duration: 2,
+                delay: 0.1
             });
         }
         animateBar(barScope.current, {
             top: '100%',
-            opacity: 0,
-            transition: {
+            opacity: 0
+        }, {
+            ease: 'easeOut',
+            duration: 2,
+            delay: 0.1,
+            opacity: {
                 ease: 'easeOut',
-                duration: 2,
+                duration: 1,
                 delay: 0.1,
-                opacity: {
-                    ease: 'easeOut',
-                    duration: 1,
-                    delay: 0.1,
-                }
             }
+
         })
     }, [isImageInView, animateBar, animateImage, barScope, imageScope])
     return <div
