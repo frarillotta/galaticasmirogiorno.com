@@ -47,11 +47,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 initial={'initial'}
                 whileHover={'whileHover'}
                 whileInView={'reveal'}
-                // viewport={{ once: false }}
-                onLoad={() => {
-
-                }}
-
+                viewport={{ once: true }}
                 loading={loading}
                 priority={priority}
                 className={styles.projectPicture}
