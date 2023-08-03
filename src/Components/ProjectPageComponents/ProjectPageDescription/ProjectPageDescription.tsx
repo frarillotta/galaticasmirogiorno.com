@@ -11,7 +11,7 @@ function template({ scaleY }: {scaleY: number}) {
 
 export const ProjectPageDescription: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className = '' }) => {
   return <AnimatePresence>
-    <div className={`${styles.description} ${className}`}>
+    <div className={`${className} ${styles.description}`}>
       <div className={styles.paragraphWrapper}>
         <motion.div
           className={styles.verticalLineWrapper}

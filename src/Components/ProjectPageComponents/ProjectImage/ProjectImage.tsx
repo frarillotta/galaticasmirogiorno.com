@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './ProjectImage.module.css';
-import { Variants, motion } from 'framer-motion';
+import { AnimatePresence, Variants, motion } from 'framer-motion';
 
 type ProjectImageProps = {
     pictureName: string;
@@ -31,7 +31,7 @@ const imageVariants: Variants = {
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         transition: {
             ease: 'easeOut',
-            duration: 0.5,
+            duration: 1,
             delay: 0.1
         }
     }
@@ -41,20 +41,39 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     return <div
         className={`${styles.pictureWrapper} ${className}`}
     >
-        <MotionImage
-            // variants={imageVariants}
-            initial={'initial'}
-            whileHover={'whileHover'}
-            whileInView={'reveal'}
-            viewport={{ once: false }}
+        <AnimatePresence>
+            <MotionImage
+                variants={imageVariants}
+                initial={'initial'}
+                whileHover={'whileHover'}
+                whileInView={'reveal'}
+                // viewport={{ once: false }}
+                onLoad={() => {
 
-            loading={loading}
-            priority={priority}
-            className={styles.projectPicture}
-            alt={`project ${projNumber} ${pictureName} Picture`}
-            src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
-            width={width}
-            height={height}
-        />
+                }}
+
+                loading={loading}
+                priority={priority}
+                className={styles.projectPicture}
+                alt={`project ${projNumber} ${pictureName} Picture`}
+                src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
+                width={width}
+                height={height}
+            />
+            <motion.div animate={{
+                top: '100%',
+                opacity: 0, 
+                transition: {
+                    ease: 'easeOut',
+                    duration: 1,
+                    delay: 0.1,
+                    opacity: {
+                        ease: 'easeOut',
+                        duration: 0.45,
+                        delay: 0.1,
+                    }
+                }
+            }} className={styles.blackBar} />
+        </AnimatePresence>
     </div>
 };
