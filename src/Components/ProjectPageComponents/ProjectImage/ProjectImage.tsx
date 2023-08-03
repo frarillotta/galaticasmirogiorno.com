@@ -49,7 +49,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
                 transition: {
                     ease: 'easeOut',
-                    duration: 1,
+                    duration: 2,
                     delay: 0.1
                 }
             });
@@ -59,11 +59,11 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
             opacity: 0,
             transition: {
                 ease: 'easeOut',
-                duration: 1,
+                duration: 2,
                 delay: 0.1,
                 opacity: {
                     ease: 'easeOut',
-                    duration: 0.45,
+                    duration: 1,
                     delay: 0.1,
                 }
             }
