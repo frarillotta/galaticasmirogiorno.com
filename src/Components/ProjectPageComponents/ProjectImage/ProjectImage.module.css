@@ -4,7 +4,7 @@
     width: auto;
     object-fit: contain;
     background-color:white;
-    margin-top: 1px;
+    margin-top: 4px;
 }
 
 .pictureContainer {
@@ -23,9 +23,3 @@
     filter: drop-shadow(-1px 1px 0px rgba(54, 54, 54, 1));
 }
 
-.blackBar {
-    width: 100%;
-    border-bottom: 1px solid rgb(54, 54, 54);
-    position: absolute;
-    top: 0;
-}
