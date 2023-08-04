@@ -1,7 +1,3 @@
-
-.withBackground {
-    background-color:rgb(54, 54, 54);
-}
 .projectPicture {
     height: auto;
     width: auto;
@@ -21,6 +17,7 @@
     display: grid;
     justify-items: stretch;
     align-items: center;
+    filter: drop-shadow(-1px 1px 0px rgba(54, 54, 54, 1));
 }
 
 .blackBar {
