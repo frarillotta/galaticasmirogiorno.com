@@ -77,23 +77,21 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
         ref={wrapperScope}
         className={`${styles.pictureContainer} ${className}`}
     >
-        <AnimatePresence>
-                <MotionImage
-                    ref={imageScope}
-                    // whileHover={'whileHover'}
-                    // whileInView={'reveal'}
-                    // ref={imageRef}
-                    variants={imageVariants}
-                    initial={'initial'}
-                    loading={loading}
-                    priority={priority}
-                    onLoadingComplete={onLoadComplete}
-                    className={styles.projectPicture}
-                    alt={`project ${projNumber} ${pictureName} Picture`}
-                    src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
-                    width={width}
-                    height={height}
-                />
-        </AnimatePresence>
+        <MotionImage
+            ref={imageScope}
+            // whileHover={'whileHover'}
+            // whileInView={'reveal'}
+            // ref={imageRef}
+            variants={imageVariants}
+            initial={'initial'}
+            loading={loading}
+            priority={priority}
+            onLoadingComplete={onLoadComplete}
+            className={styles.projectPicture}
+            alt={`project ${projNumber} ${pictureName} Picture`}
+            src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
+            width={width}
+            height={height}
+        />
     </motion.div>
 };
