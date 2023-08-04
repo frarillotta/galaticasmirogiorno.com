@@ -32,7 +32,7 @@ const imageVariants: Variants = {
         transition: {
             ease: 'easeOut',
             duration: 1.5,
-            delay: 0.35
+            delay: 0.5
         }
     }
 }
@@ -51,18 +51,19 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
             }, {
                 ease: 'easeOut',
                 duration: 1.5,
-                delay: 0.35
+                delay: 0.5
             });
             animateShadow(wrapperScope.current, {
                 filter: 'drop-shadow(-1px 1px 0px rgba(54, 54, 54, 0))'
             }, {
                 ease: 'easeOut',
                 duration: 1.5,
-                delay: 0.35
+                delay: 0.5
             })
+            imageScope.current.classList.remove(styles.withBackground);
             setRendered(true)
         }
-    }, [isImageInView, animateImage, imageScope, rendered, wrapperScope, animateShadow])
+    }, [isImageInView, imageScope, rendered, animateImage, animateShadow, wrapperScope])
 
     const onLoadComplete = useCallback(() => {
         animateIn();
@@ -89,7 +90,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     loading={loading}
                     priority={priority}
                     onLoadingComplete={onLoadComplete}
-                    className={styles.projectPicture}
+                    className={`${styles.projectPicture} ${styles.withBackground}`}
                     alt={`project ${projNumber} ${pictureName} Picture`}
                     src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
                     width={width}
