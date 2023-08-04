@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './ProjectImage.module.css';
 import { AnimatePresence, Variants, motion, useAnimate, useInView } from 'framer-motion';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 type ProjectImageProps = {
     pictureName: string;
@@ -18,7 +18,7 @@ const MotionImage = motion(Image);
 
 const imageVariants: Variants = {
     initial: {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 1%, 0% 1%)',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 1px, 0% 1px)',
     },
     whileHover: {
         scale: 1.1,
@@ -40,9 +40,13 @@ const imageVariants: Variants = {
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'avif', priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
+    const [wrapperScope, animateShadow] = useAnimate();
+
     const isImageInView = useInView(imageScope);
-    const onLoadComplete = useCallback(() => {
-        if (isImageInView) {
+    const [rendered, setRendered] = useState(false);
+
+    const animateIn = useCallback(() => {
+        if (isImageInView && imageScope.current?.complete && !rendered) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -50,12 +54,28 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 duration: 1.5,
                 delay: 0.5
             });
-            console.log(imageScope.current.classList)
-            imageScope.current.classList.remove(styles.withBackground)
-        }
-    }, [isImageInView, animateImage, imageScope]);
 
-    return <div
+            animateShadow(wrapperScope.current, {
+                filter: 'drop-shadow(0px 2px 0px rgba(54, 54, 54, 0))'
+            }, {
+                ease: 'easeOut',
+                duration: 1.5,
+                delay: 0.5
+            })
+            setRendered(true)
+        }
+    }, [isImageInView, imageScope, rendered, animateImage, animateShadow, wrapperScope]);
+
+    const onLoadComplete = useCallback(() => {
+        animateIn();
+    }, [animateIn]);
+
+    useEffect(() => {
+        animateIn();
+    }, [animateIn]);
+    
+    return <motion.div
+        ref={wrapperScope}
         className={`${styles.pictureContainer} ${className}`}
     >
         <AnimatePresence>
@@ -78,5 +98,5 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 />
             </div>
         </AnimatePresence>
-    </div>
+    </motion.div>
 };
