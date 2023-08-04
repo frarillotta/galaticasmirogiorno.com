@@ -52,21 +52,27 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 duration: 2,
                 delay: 0.1
             });
-        }
-        animateBar(barScope.current, {
-            top: '100%',
-            opacity: 0
-        }, {
-            ease: 'easeOut',
-            duration: 2,
-            delay: 0.1,
-            opacity: {
+            animateBar(barScope.current, {
+                y: imageScope.current.height,
+                opacity: 0
+            }, {
                 ease: 'easeOut',
-                duration: 1,
+                duration: 2,
                 delay: 0.1,
-            }
+                opacity: {
+                    ease: 'easeOut',
+                    duration: 1,
+                    delay: 0.1,
+                }
 
-        })
+            })
+        } else {
+            animateBar(barScope.current, {
+                opacity: 0
+            }, {
+                duration: 0,
+            })
+        }
     }, [isImageInView, animateBar, animateImage, barScope, imageScope])
     return <div
         className={`${styles.pictureWrapper} ${className}`}
