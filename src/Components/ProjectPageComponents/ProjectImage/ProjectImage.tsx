@@ -41,8 +41,9 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
 
     const [imageScope, animateImage] = useAnimate();
     const isImageInView = useInView(imageScope);
+
     const onLoadComplete = useCallback(() => {
-        if (isImageInView) {
+        if (isImageInView && imageScope.current.complete) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -65,7 +66,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     variants={imageVariants}
                     initial={'initial'}
                     // whileHover={'whileHover'}
-                    whileInView={'reveal'}
+                    // whileInView={'reveal'}
                     viewport={{ once: true }}
                     loading={loading}
                     priority={priority}
