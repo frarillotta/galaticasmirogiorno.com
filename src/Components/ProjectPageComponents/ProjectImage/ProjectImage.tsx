@@ -46,6 +46,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
 
     const animateIn = useCallback(() => {
         if (isImageInView && imageScope.current.complete && !rendered) {
+            imageScope.current.classList.remove(styles.withBackground);
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -89,7 +90,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     loading={loading}
                     priority={priority}
                     onLoadingComplete={onLoadComplete}
-                    className={styles.projectPicture}
+                    className={`${styles.projectPicture} ${styles.withBackground}`}
                     alt={`project ${projNumber} ${pictureName} Picture`}
                     src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
                     width={width}

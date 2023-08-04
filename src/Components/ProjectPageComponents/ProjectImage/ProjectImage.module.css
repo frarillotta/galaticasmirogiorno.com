@@ -1,9 +1,10 @@
-
+.withBackground {
+    background-color: rgb(54, 54, 54);
+}
 .projectPicture {
     height: auto;
     width: auto;
     object-fit: contain;
-    background-color:white;
     margin-top: 4px;
 }
 
