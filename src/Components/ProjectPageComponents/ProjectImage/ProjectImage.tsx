@@ -19,7 +19,6 @@ const MotionImage = motion(Image);
 const imageVariants: Variants = {
     initial: {
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 1%, 0% 1%)',
-        transition: { duration: .4 }
     },
     whileHover: {
         scale: 1.1,
@@ -32,7 +31,7 @@ const imageVariants: Variants = {
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         transition: {
             ease: 'easeOut',
-            duration: 1,
+            duration: 1.5,
             delay: 0.1
         }
     }
@@ -48,7 +47,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
                 ease: 'easeOut',
-                duration: 2,
+                duration: 1.5,
                 delay: 0.1
             });
         }
@@ -63,7 +62,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     ref={imageScope}
                     variants={imageVariants}
                     initial={'initial'}
-                    whileHover={'whileHover'}
+                    // whileHover={'whileHover'}
                     whileInView={'reveal'}
                     viewport={{ once: true }}
                     loading={loading}
