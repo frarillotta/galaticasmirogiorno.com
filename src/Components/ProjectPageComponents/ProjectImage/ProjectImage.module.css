@@ -4,6 +4,7 @@
     width: auto;
     object-fit: contain;
     background-color:white;
+    margin-top: 1px;
 }
 
 .pictureContainer {
