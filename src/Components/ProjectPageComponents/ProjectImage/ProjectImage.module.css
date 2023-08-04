@@ -1,11 +1,9 @@
-.withBackground {
-    background-color: rgb(54, 54, 54);
-}
 .projectPicture {
     height: auto;
     width: auto;
     object-fit: contain;
-    margin-top: 4px;
+    padding-top: 2px;
+    background-color: white;
 }
 
 .pictureContainer {
@@ -20,7 +18,12 @@
     height: 100%;
     display: grid;
     justify-items: stretch;
-    align-items: center;
-    filter: drop-shadow(-1px 1px 0px rgba(54, 54, 54, 1));
+    align-items: stretch;
+    place-content: center;
+    filter: drop-shadow(0px 2px 0px rgba(54, 54, 54, 1));
 }
 
+.oneMoreWrapper {
+    width: auto;
+    height: auto;
+}

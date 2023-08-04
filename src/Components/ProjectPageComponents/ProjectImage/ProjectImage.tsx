@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './ProjectImage.module.css';
 import { AnimatePresence, Variants, motion, useAnimate, useInView } from 'framer-motion';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 type ProjectImageProps = {
     pictureName: string;
@@ -18,7 +18,7 @@ const MotionImage = motion(Image);
 
 const imageVariants: Variants = {
     initial: {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 0.5px, 0% 0.5px)',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 1px, 0% 1px)',
     },
     whileHover: {
         scale: 1.1,
@@ -39,14 +39,14 @@ const imageVariants: Variants = {
 
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'avif', priority = false, className = '' }) => {
 
+    const imageRef = useRef<HTMLImageElement>(null);
     const [imageScope, animateImage] = useAnimate();
     const [wrapperScope, animateShadow] = useAnimate();
     const isImageInView = useInView(imageScope);
     const [rendered, setRendered] = useState(false);
 
     const animateIn = useCallback(() => {
-        if (isImageInView && imageScope.current.complete && !rendered) {
-            imageScope.current.classList.remove(styles.withBackground);
+        if (isImageInView && imageRef.current?.complete && !rendered) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -70,32 +70,34 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     }, [animateIn]);
 
     useEffect(() => {
-        if (isImageInView && imageScope.current.complete) {
-            animateIn()
-        }
-    }, [isImageInView, animateIn, imageScope]);
+        animateIn()
+    }, [animateIn]);
 
     return <div
         className={`${styles.pictureContainer} ${className}`}
     >
         <AnimatePresence>
             <div ref={wrapperScope} className={styles.pictureWrapper}>
-                <MotionImage
+                <motion.div 
+                    className={styles.oneMoreWrapper}
                     ref={imageScope}
                     variants={imageVariants}
                     initial={'initial'}
-                    // whileHover={'whileHover'}
-                    // whileInView={'reveal'}
-                    viewport={{ once: true }}
-                    loading={loading}
-                    priority={priority}
-                    onLoadingComplete={onLoadComplete}
-                    className={`${styles.projectPicture} ${styles.withBackground}`}
-                    alt={`project ${projNumber} ${pictureName} Picture`}
-                    src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
-                    width={width}
-                    height={height}
-                />
+                >
+                    <Image
+                        // whileHover={'whileHover'}
+                        // whileInView={'reveal'}
+                        ref={imageRef}
+                        loading={loading}
+                        priority={priority}
+                        onLoadingComplete={onLoadComplete}
+                        className={styles.projectPicture}
+                        alt={`project ${projNumber} ${pictureName} Picture`}
+                        src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
+                        width={width}
+                        height={height}
+                    />
+                </motion.div>
             </div>
         </AnimatePresence>
     </div>
