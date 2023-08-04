@@ -46,7 +46,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     const [rendered, setRendered] = useState(false);
 
     const animateIn = useCallback(() => {
-        if (isImageInView && imageRef.current?.complete && !rendered) {
+        if (isImageInView && imageScope.current?.complete && !rendered) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -74,28 +74,26 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     }, [animateIn]);
 
     return <motion.div
-        ref={wrapperScope} 
+        ref={wrapperScope}
         className={`${styles.pictureContainer} ${className}`}
     >
         <AnimatePresence>
-            <motion.div className={styles.pictureWrapper} 
+                <MotionImage
                     ref={imageScope}
+                    // whileHover={'whileHover'}
+                    // whileInView={'reveal'}
+                    // ref={imageRef}
                     variants={imageVariants}
-                    initial={'initial'}>
-                    <Image
-                        // whileHover={'whileHover'}
-                        // whileInView={'reveal'}
-                        ref={imageRef}
-                        loading={loading}
-                        priority={priority}
-                        onLoadingComplete={onLoadComplete}
-                        className={styles.projectPicture}
-                        alt={`project ${projNumber} ${pictureName} Picture`}
-                        src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
-                        width={width}
-                        height={height}
-                    />
-                </motion.div>
+                    initial={'initial'}
+                    loading={loading}
+                    priority={priority}
+                    onLoadingComplete={onLoadComplete}
+                    className={styles.projectPicture}
+                    alt={`project ${projNumber} ${pictureName} Picture`}
+                    src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
+                    width={width}
+                    height={height}
+                />
         </AnimatePresence>
     </motion.div>
 };
