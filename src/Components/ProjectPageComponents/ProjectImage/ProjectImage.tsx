@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './ProjectImage.module.css';
 import { AnimatePresence, Variants, motion, useAnimate, useInView } from 'framer-motion';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback } from 'react';
 
 type ProjectImageProps = {
     pictureName: string;
@@ -18,7 +18,7 @@ const MotionImage = motion(Image);
 
 const imageVariants: Variants = {
     initial: {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 1px, 0% 1px)',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 1%, 0% 1%)',
     },
     whileHover: {
         scale: 1.1,
@@ -39,14 +39,10 @@ const imageVariants: Variants = {
 
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'avif', priority = false, className = '' }) => {
 
-    const imageRef = useRef<HTMLImageElement>(null);
     const [imageScope, animateImage] = useAnimate();
-    const [wrapperScope, animateShadow] = useAnimate();
     const isImageInView = useInView(imageScope);
-    const [rendered, setRendered] = useState(false);
-
-    const animateIn = useCallback(() => {
-        if (isImageInView && imageScope.current?.complete && !rendered) {
+    const onLoadComplete = useCallback(() => {
+        if (isImageInView) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -54,44 +50,33 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 duration: 1.5,
                 delay: 0.5
             });
-            animateShadow(wrapperScope.current, {
-                filter: 'drop-shadow(0px 2px 0px rgba(54, 54, 54, 0))'
-            }, {
-                ease: 'easeOut',
-                duration: 1.5,
-                delay: 0.5
-            })
-            setRendered(true)
+            console.log(imageScope.current.classList)
+            imageScope.current.classList.remove(styles.withBackground)
         }
-    }, [isImageInView, imageScope, rendered, animateImage, animateShadow, wrapperScope])
+    }, [isImageInView, animateImage, imageScope]);
 
-    const onLoadComplete = useCallback(() => {
-        animateIn();
-    }, [animateIn]);
-
-    useEffect(() => {
-        animateIn()
-    }, [animateIn]);
-
-    return <motion.div
-        ref={wrapperScope}
+    return <div
         className={`${styles.pictureContainer} ${className}`}
     >
-        <MotionImage
-            ref={imageScope}
-            // whileHover={'whileHover'}
-            // whileInView={'reveal'}
-            // ref={imageRef}
-            variants={imageVariants}
-            initial={'initial'}
-            loading={loading}
-            priority={priority}
-            onLoadingComplete={onLoadComplete}
-            className={styles.projectPicture}
-            alt={`project ${projNumber} ${pictureName} Picture`}
-            src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
-            width={width}
-            height={height}
-        />
-    </motion.div>
+        <AnimatePresence>
+            <div className={styles.pictureWrapper}>
+                <MotionImage
+                    ref={imageScope}
+                    variants={imageVariants}
+                    initial={'initial'}
+                    // whileHover={'whileHover'}
+                    whileInView={'reveal'}
+                    viewport={{ once: true }}
+                    loading={loading}
+                    priority={priority}
+                    onLoadingComplete={onLoadComplete}
+                    className={`${styles.projectPicture} ${styles.withBackground}`}
+                    alt={`project ${projNumber} ${pictureName} Picture`}
+                    src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
+                    width={width}
+                    height={height}
+                />
+            </div>
+        </AnimatePresence>
+    </div>
 };
