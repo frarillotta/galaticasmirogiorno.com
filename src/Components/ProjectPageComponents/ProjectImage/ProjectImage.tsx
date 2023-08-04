@@ -18,7 +18,7 @@ const MotionImage = motion(Image);
 
 const imageVariants: Variants = {
     initial: {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 2px, 0% 2px)',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 0.5px, 0% 0.5px)',
     },
     whileHover: {
         scale: 1.1,
@@ -60,7 +60,6 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 duration: 1.5,
                 delay: 0.5
             })
-            imageScope.current.classList.remove(styles.withBackground);
             setRendered(true)
         }
     }, [isImageInView, imageScope, rendered, animateImage, animateShadow, wrapperScope])
@@ -90,7 +89,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     loading={loading}
                     priority={priority}
                     onLoadingComplete={onLoadComplete}
-                    className={`${styles.projectPicture} ${styles.withBackground}`}
+                    className={styles.projectPicture}
                     alt={`project ${projNumber} ${pictureName} Picture`}
                     src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
                     width={width}
