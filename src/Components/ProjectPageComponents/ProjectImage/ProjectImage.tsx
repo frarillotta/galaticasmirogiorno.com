@@ -32,7 +32,7 @@ const imageVariants: Variants = {
         transition: {
             ease: 'easeOut',
             duration: 1.5,
-            delay: 0.1
+            delay: 0.5
         }
     }
 }
@@ -48,8 +48,10 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
             }, {
                 ease: 'easeOut',
                 duration: 1.5,
-                delay: 0.1
+                delay: 0.5
             });
+            console.log(imageScope.current.classList)
+            imageScope.current.classList.remove(styles.withBackground)
         }
     }, [isImageInView, animateImage, imageScope]);
 
@@ -68,7 +70,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     loading={loading}
                     priority={priority}
                     onLoadingComplete={onLoadComplete}
-                    className={styles.projectPicture}
+                    className={`${styles.projectPicture} ${styles.withBackground}`}
                     alt={`project ${projNumber} ${pictureName} Picture`}
                     src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
                     width={width}
