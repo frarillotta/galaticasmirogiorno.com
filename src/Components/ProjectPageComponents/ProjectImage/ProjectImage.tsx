@@ -18,7 +18,7 @@ const MotionImage = motion(Image);
 
 const imageVariants: Variants = {
     initial: {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 1%, 0% 1%)',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 2px, 0% 2px)',
     },
     whileHover: {
         scale: 1.1,
