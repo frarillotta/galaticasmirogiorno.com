@@ -55,7 +55,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 delay: 0.5
             });
             animateShadow(wrapperScope.current, {
-                filter: 'drop-shadow(-1px 1px 0px rgba(54, 54, 54, 0))'
+                filter: 'drop-shadow(0px 2px 0px rgba(54, 54, 54, 0))'
             }, {
                 ease: 'easeOut',
                 duration: 1.5,
@@ -73,17 +73,15 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
         animateIn()
     }, [animateIn]);
 
-    return <div
+    return <motion.div
+        ref={wrapperScope} 
         className={`${styles.pictureContainer} ${className}`}
     >
         <AnimatePresence>
-            <div ref={wrapperScope} className={styles.pictureWrapper}>
-                <motion.div 
-                    className={styles.oneMoreWrapper}
+            <motion.div className={styles.pictureWrapper} 
                     ref={imageScope}
                     variants={imageVariants}
-                    initial={'initial'}
-                >
+                    initial={'initial'}>
                     <Image
                         // whileHover={'whileHover'}
                         // whileInView={'reveal'}
@@ -98,7 +96,6 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                         height={height}
                     />
                 </motion.div>
-            </div>
         </AnimatePresence>
-    </div>
+    </motion.div>
 };
