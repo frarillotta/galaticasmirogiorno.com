@@ -1,16 +1,24 @@
 
 
 .projectPicture {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    background-color:rgb(54, 54, 54);
 }
 
-.pictureWrapper {
+.pictureContainer {
     overflow: hidden;
     width: 100%;
     height: 100%;
     position: relative;
+}
+
+.pictureWrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
 }
 
 .blackBar {
