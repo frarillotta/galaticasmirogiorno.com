@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './ProjectImage.module.css';
-import { AnimatePresence, Variants, motion, useAnimate, useInView } from 'framer-motion';
+import { AnimatePresence, Variants, motion, useAnimate } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { mouseOutInEventListener } from '~/Components/Cursor/Cursor';
 
@@ -36,11 +36,11 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     const imageRef = useRef<HTMLImageElement>(null);
     const [wrapperScope, animateShadow] = useAnimate();
 
-    const isImageInView = useInView(imageScope);
+    // const isImageInView = useInView(imageScope);
     const [rendered, setRendered] = useState(false);
 
     const animateIn = useCallback(() => {
-        if (isImageInView && imageRef.current?.complete && !rendered) {
+        if (imageRef.current?.complete && !rendered) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -58,23 +58,21 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
             })
             setRendered(true)
         }
-    }, [isImageInView, imageScope, rendered, animateImage, animateShadow, wrapperScope]);
+    }, [imageScope, rendered, animateImage, animateShadow, wrapperScope]);
 
     const onLoadComplete = useCallback(() => {
         animateIn();
     }, [animateIn]);
 
-    useEffect(() => {
-        animateIn();
-    }, [animateIn]);
+    // useEffect(() => {
+    //     animateIn();
+    // }, [animateIn]);
 
     useEffect(() => {
-
         const el = imageRef.current;
         const eventsCleanup = mouseOutInEventListener(el);
-
+        
         return eventsCleanup;
-
     }, [imageScope])
 
     return <motion.div
