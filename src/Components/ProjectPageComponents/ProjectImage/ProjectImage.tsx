@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './ProjectImage.module.css';
 import { AnimatePresence, Variants, motion, useAnimate, useInView } from 'framer-motion';
 import { useCallback, useEffect, useState } from 'react';
+import { mouseOutInEventListener } from '~/Components/Cursor/Cursor';
 
 type ProjectImageProps = {
     pictureName: string;
@@ -25,14 +26,6 @@ const imageVariants: Variants = {
         transition: {
             duration: 0.3,
             ease: 'easeInOut'
-        }
-    },
-    reveal: {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-        transition: {
-            ease: 'easeOut',
-            duration: 1.5,
-            delay: 0.5
         }
     }
 }
@@ -75,6 +68,15 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
         animateIn();
     }, [animateIn]);
     
+    useEffect(() => {
+        
+        const el = wrapperScope.current;
+        const eventsCleanup = mouseOutInEventListener(el);
+
+        return eventsCleanup;
+
+    }, [wrapperScope])
+
     return <motion.div
         ref={wrapperScope}
         className={`${styles.pictureContainer} ${className}`}

@@ -14,7 +14,7 @@
 }
 
 .description {
-    grid-area: 1/7/5/13;
+    grid-area: 1/14/10/24;
     overflow: hidden;
     position: relative;
     isolation: isolate;

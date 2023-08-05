@@ -1,11 +1,10 @@
 import styles from './Footer.module.css'
-import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion';
-import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Routes } from '~/constants';
 import { PlusIcon } from '../SvgIcons';
+import { Link } from '../Link/Link';
 
 const getActiveRoute = (currentRoute: string): Routes => {
     switch (true) {
@@ -23,7 +22,6 @@ const getActiveRoute = (currentRoute: string): Routes => {
             return Routes.Home
     }
 }
-
 
 export const Footer = () => {
 

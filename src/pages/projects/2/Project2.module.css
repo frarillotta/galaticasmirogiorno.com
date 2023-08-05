@@ -1,32 +1,31 @@
 .pavillion {
-    grid-area: 6/1/9/4;
+    grid-area: 11/1/17/8;
 }
 
 .otherside {
-    grid-area: 6/4/9/7;
+    grid-area: 11/8/17/15;
 }
 
 .layout1 {
-    grid-area: 3/2/7/6;
+    grid-area: 6/2/12/14;
 }
 
 .interior {
-    grid-area: 3/8/7/12;
+    grid-area: 4/18/14/23;
 }
 
 .side {
-    grid-area: 3/3/7/8;
+    grid-area: 5/8/13/14;
 }
 
 .layout2 {
-    grid-area: 5/1/8/4;
+    grid-area: 8/1/16/7;
 }
 
 .outside {
-
-    grid-area: 5/4/8/8;
+    grid-area: 9/7/14/15;
 }
 
 .front {
-    grid-area: 3/1/7/5;
+    grid-area: 5/1/12/10;
 }

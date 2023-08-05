@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import styles from '~/styles/Projects.module.css'
-import Link from 'next/link';
 import { Routes } from '~/constants';
 import * as Icons from '~/Components/SvgIcons';
 import { useAnimate } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { Link } from '~/Components/Link/Link';
 
 type ProjectLinkProps = {
   projNumber: number;

@@ -1,7 +1,7 @@
 .screen {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     grid-gap: var(--gap);
 
     scroll-snap-align: center;

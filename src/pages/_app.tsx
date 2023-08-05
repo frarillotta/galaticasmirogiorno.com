@@ -4,6 +4,7 @@ import { Layout } from '~/Components/Layout/Layout'
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router';
 import { useNextCssRemovalPrevention } from '@madeinhaus/nextjs-page-transition';
+import { Cursor } from '~/Components/Cursor/Cursor';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -12,5 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
   // useNextCssRemovalPrevention();
   return <Layout>
       <Component key={pathname} {...pageProps} />
+      <Cursor />
   </Layout>
 }

@@ -1,10 +1,10 @@
-import Link from 'next/link'
 import styles from './Header.module.css'
 import { Routes } from '../../constants';
 import { useRouter } from 'next/router';
 import { useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 import { Line } from '../SvgIcons';
+import { Link } from '../Link/Link';
 
 export const Header = () => {
     const router = useRouter();

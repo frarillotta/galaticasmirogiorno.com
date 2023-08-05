@@ -1,7 +1,7 @@
 
 .projectPicture {
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
     background: white;
     padding-top: 1px;
@@ -18,7 +18,7 @@
 .pictureWrapper {
     width: 100%;
     height: 100%;
-    display: grid;
-    justify-items: stretch;
+    display: flex;
+    place-content: center;
     align-items: center;
 }

@@ -1,29 +1,28 @@
 .oldFront {
-    grid-area: 3/6/8/2;
+    grid-area: 5/5/15/10;
 }
 
 .front {
-    grid-area: 3/4/6/10;
+    grid-area: 7/10/13/18;
 }
 
 .layout {
-    grid-area: 6/7/9/11;
+    grid-area: 10/14/17/19;
 }
 
 .interior {
-    grid-area: 2/2/7/6;
+    grid-area: 4/3/13/8;
 }
 
 .mirrors {
-    grid-area: 6/7/8/13;
+    grid-area: 11/13/16/26;
 }
 
 .handle {
-    grid-area: 4/9/8/13;
-    
+    grid-area: 7/18/13/26;
 }
 
 .blueprint {
-    grid-area: 4/1/8/5;
+    grid-area: 7/1/15/7;
 
 }
