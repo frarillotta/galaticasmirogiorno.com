@@ -27,7 +27,7 @@ export default function PAFF32() {
         </ProjectScreen>
         <ProjectScreen>
           <ProjectImage loading='eager' className={styles.layout2} pictureName={'layout2'} height={1192} width={1686} projNumber={7} />
-          <ProjectImage loading='eager' className={styles.layout3} pictureName={'layout3'} height={1192} width={1686} projNumber={7} />
+          <ProjectImage loading='eager' className={styles.layout3} pictureName={'layout3fixed'} height={1192} width={1686} projNumber={7} />
         </ProjectScreen>
       </ProjectWrapper>
     )

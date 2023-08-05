@@ -23,7 +23,7 @@ export default function D6() {
           <ProjectImage loading='eager' className={styles.interno1} pictureName={'interno1'} height={325} width={487} projNumber={4} />
         </ProjectScreen>
         <ProjectScreen>
-          <ProjectImage loading='eager' className={styles.layout2} pictureName={'layout2'} height={800} width={550} projNumber={4} />
+          <ProjectImage loading='eager' className={styles.layout2} pictureName={'layoutGreen'} height={800} width={550} projNumber={4} />
           <ProjectImage loading='eager' className={styles.layout3} pictureName={'layout3'} height={800} width={550} projNumber={4} />
         </ProjectScreen>
         <ProjectScreen>

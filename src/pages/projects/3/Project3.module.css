@@ -1,29 +1,27 @@
 .layout {
-    grid-area: 3/1/9/13;
+    grid-area: 4/3/16/25;
 }
 
 .layout2 {
-
-    grid-area: 2/3/5/6;
+    grid-area: 3/9/9/12;
 }
 
 .garden {
-
-    grid-area: 5/5/9/9;
+    grid-area: 9/10/16/18;
 }
 
 .pianta {
-    grid-area: 2/2/8/6;
+    grid-area: 3/2/15/13;
 }
 
 .landscape {
-    grid-area: 6/2/8/5;
+    grid-area: 10/3/15/10;
 }
 
 .bedroom {
-    grid-area: 1/1/4/4;
+    grid-area: 1/1/6/7;
 }
 
 .bedroom2 {
-    grid-area: 1/4/4/7;
+    grid-area: 1/8/6/14;
 }
