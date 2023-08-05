@@ -12,7 +12,7 @@ function useCursorTracker(cursorRef: React.RefObject<HTMLDivElement>) {
     }, [cursorRef])
 }
 
-export function mouseOutInEventListener(el: HTMLAnchorElement | null) {
+export function mouseOutInEventListener(el: HTMLElement | null) {
 
     const cursor = window.document.getElementById("cursor");
     console.log(cursor, el)

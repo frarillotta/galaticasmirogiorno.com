@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './ProjectImage.module.css';
 import { AnimatePresence, Variants, motion, useAnimate, useInView } from 'framer-motion';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { mouseOutInEventListener } from '~/Components/Cursor/Cursor';
 
 type ProjectImageProps = {
@@ -33,6 +33,7 @@ const imageVariants: Variants = {
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'avif', priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
+    const imageRef = useRef<HTMLImageElement>(null);
     const [wrapperScope, animateShadow] = useAnimate();
 
     const isImageInView = useInView(imageScope);
@@ -40,7 +41,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
 
     const animateIn = useCallback(() => {
         console.log(isImageInView, imageScope.current?.complete, rendered)
-        if (isImageInView && imageScope.current?.complete && !rendered) {
+        if (isImageInView && imageRef.current?.complete && !rendered) {
             animateImage(imageScope.current, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             }, {
@@ -70,25 +71,27 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     
     useEffect(() => {
         
-        const el = wrapperScope.current;
+        const el = imageRef.current;
         const eventsCleanup = mouseOutInEventListener(el);
 
         return eventsCleanup;
 
-    }, [wrapperScope])
+    }, [imageScope])
 
     return <motion.div
         ref={wrapperScope}
         className={`${styles.pictureContainer} ${className}`}
     >
         <AnimatePresence>
-            <div className={styles.pictureWrapper}>
-                <MotionImage
+            <motion.div 
                     ref={imageScope}
                     variants={imageVariants}
                     initial={'initial'}
+                    className={styles.pictureWrapper}>
+                <MotionImage
                     // whileHover={'whileHover'}
                     // whileInView={'reveal'}
+                    ref={imageRef}
                     viewport={{ once: true }}
                     loading={loading}
                     priority={priority}
@@ -99,7 +102,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     width={width}
                     height={height}
                 />
-            </div>
+            </motion.div>
         </AnimatePresence>
     </motion.div>
 };

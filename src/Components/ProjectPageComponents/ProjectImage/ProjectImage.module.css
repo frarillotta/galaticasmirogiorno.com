@@ -1,7 +1,7 @@
 
 .projectPicture {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     object-fit: contain;
     background: white;
     padding-top: 1px;
@@ -21,4 +21,5 @@
     display: flex;
     place-content: center;
     align-items: center;
+    background: white;
 }

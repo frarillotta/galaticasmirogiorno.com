@@ -38,6 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 * {
+  cursor: none!important;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -137,14 +138,12 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background: white;
   padding: var(--global-padding);
-  cursor: none!important;
 }
 
 a {
     text-decoration: none;
     color: var(--color-link);
     outline: none;
-    cursor: none!important;
 }
 
 a:hover {

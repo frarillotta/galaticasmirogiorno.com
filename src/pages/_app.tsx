@@ -8,11 +8,13 @@ import { Cursor } from '~/Components/Cursor/Cursor';
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  const { pathname } =  useRouter();
+  const { pathname } = useRouter();
   //fix for https://github.com/vercel/next.js/issues/17464
   // useNextCssRemovalPrevention();
-  return <Layout>
+  return <>
+    <Layout>
       <Component key={pathname} {...pageProps} />
-      <Cursor />
-  </Layout>
+    </Layout>
+    <Cursor />
+  </>
 }
