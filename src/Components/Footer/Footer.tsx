@@ -49,7 +49,7 @@ export const Footer = () => {
                         >
                             <motion.div
                                 initial={{ x: 18, opacity: 0 }}
-                                // the first one should be different, to give padding to the left
+                                // the first one should be different, to give padding to the left - 32px + 4 padding
                                 animate={{ x: 38, opacity: 1 }}
                                 transition={{ duration: 0.5, ease: 'easeOut' }}
                                 className={styles.routes}

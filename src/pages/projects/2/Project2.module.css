@@ -29,3 +29,39 @@
 .front {
     grid-area: 5/1/12/10;
 }
+
+@media screen and (max-width: 600px) {
+
+    .pavillion {
+        grid-area: 6/1/10/8;
+    }
+    
+    .otherside {
+        grid-area: 6/8/10/15;
+    }
+    
+    .layout1 {
+        grid-area: 1/1/5/15;
+    }
+    
+    .interior {
+        grid-area: 5/1/9/15;
+    }
+    
+    .side {
+        grid-area: 5/7/9/15;
+    }
+    
+    .layout2 {
+        grid-area: 6/1/10/8;
+    }
+    
+    .outside {
+        grid-area: 6/8/10/15;
+    }
+    
+    .front {
+        grid-area: 5/1/9/12;
+    }
+
+}

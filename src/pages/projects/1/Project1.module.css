@@ -26,3 +26,37 @@
     grid-area: 7/1/15/7;
 
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .oldFront {
+        grid-area: 3/1/8/7;
+    }
+    
+    .front {
+        grid-area: 5/4/9/15;
+    }
+    
+    .layout {
+        grid-area: 5/7/9/14;
+    }
+    
+    .interior {
+        grid-area: 1/1/7/8;
+    }
+    
+    .mirrors {
+        grid-area: 6/1/9/15;
+    }
+    
+    .handle {
+        grid-area: 6/9/11/16;
+    }
+    
+    .blueprint {
+        grid-area: 6/1/11/8;
+    
+    }
+
+}

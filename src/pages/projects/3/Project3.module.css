@@ -25,3 +25,35 @@
 .bedroom2 {
     grid-area: 1/8/6/14;
 }
+
+@media screen and (max-width: 600px) {
+
+    .layout {
+        grid-area: 6/1/10/15;
+    }
+    
+    .layout2 {
+        grid-area: 2/1/7/9;
+    }
+    
+    .garden {
+        grid-area: 6/8/10/15;
+    }
+    
+    .pianta {
+        grid-area: 2/2/8/14;
+    }
+    
+    .landscape {
+        grid-area: 5/1/9/12;
+    }
+    
+    .bedroom {
+        grid-area: 1/1/5/8;
+    }
+    
+    .bedroom2 {
+        grid-area: 1/8/5/15;
+    }
+
+}

@@ -5,7 +5,7 @@ import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } f
 export default function Incompiute() {
   return (
     <ProjectWrapper>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectPageDescription className={styles.descriptionOverride}>
           <span>INCOMPIUTE</span><br />
           <span>&quot;UNFINISHED&quot;</span><br />
@@ -48,25 +48,25 @@ export default function Incompiute() {
         <ProjectImage loading='eager'className={styles.piscinaOutside2} pictureName={'piscina/outside2'} height={140} width={240} projNumber={6} />
         <ProjectImage loading='eager'className={styles.piscinaWall} pictureName={'piscina/wall'} height={140} width={240} projNumber={6} />
       </ProjectScreen>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectImage loading='eager' className={styles.mercatoterme} pictureName={'mercatoterme'} height={1500} width={3000} projNumber={6} />
       </ProjectScreen>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectImage loading='eager' className={styles.mercato} pictureName={'mercato'} height={1500} width={1500} projNumber={6} />
       </ProjectScreen>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectImage loading='eager' className={styles.pic2} pictureName={'pic2'} height={750} width={1500} projNumber={6} />
         <ProjectImage loading='eager' className={styles.pic3} pictureName={'pic3'} height={750} width={1500} projNumber={6} />
         <ProjectImage loading='eager' className={styles.pic6} pictureName={'pic6'} height={750} width={1500} projNumber={6} />
       </ProjectScreen>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectImage loading='eager' className={styles.termesezione} pictureName={'termesezione'} height={1500} width={1500} projNumber={6} />
       </ProjectScreen>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectImage loading='eager' className={styles.pic1} pictureName={'pic1'} height={750} width={1500} projNumber={6} />
         <ProjectImage loading='eager' className={styles.pic5} pictureName={'pic5'} height={750} width={1500} projNumber={6} />
       </ProjectScreen>
-      <ProjectScreen className={styles.gridOverride}>
+      <ProjectScreen>
         <ProjectImage loading='eager' className={styles.pic33} pictureName={'pic33'} height={750} width={1500} projNumber={6} />
         <ProjectImage loading='eager' className={styles.pic22} pictureName={'pic22'} height={750} width={1500} projNumber={6} />
       </ProjectScreen>

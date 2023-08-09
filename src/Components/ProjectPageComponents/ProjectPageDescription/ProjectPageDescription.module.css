@@ -6,7 +6,8 @@
 
 .verticalLine {
     height: 100%;
-    width: 4px;
+    width: 8px;
+    /* min-width: 8px; */
 }
 
 .paragraphWrapper {
@@ -28,13 +29,8 @@
     padding: 12px;
 }
 
-.screen {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-gap: var(--gap);
-
-    scroll-snap-align: center;
-    height: 100%;
-    width: 100%;
+@media screen and (max-width: 600px) {
+    .description {
+        grid-area: 1/8/10/15;
+    }
 }

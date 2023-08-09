@@ -8,3 +8,11 @@
     height: 100%;
     width: 100%;
 }
+
+
+@media screen and (max-width: 600px) {
+    .screen {
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+}

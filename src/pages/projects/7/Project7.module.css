@@ -29,3 +29,39 @@
 .layout3 {
     grid-area: 6/14/12/19;
 }
+
+@media screen and (max-width: 600px) {
+
+    .livingroom {
+        grid-area: 7/1/10/10;
+    }
+    
+    .layout {
+        grid-area: 5/1/7/15;
+    }
+    
+    .livingroom2 {
+        grid-area: 1/7/4/15;
+    }
+    
+    .livingroom3 {
+        grid-area: 4/7/7/15;
+    }
+    
+    .livingroom4 {
+        grid-area: 7/7/10/15;
+    }
+    
+    .kitchen {
+        grid-area: 6/4/10/15;
+    }
+    
+    .layout2 {
+        grid-area: 1/1/5/15;
+    }
+    
+    .layout3 {
+        grid-area: 5/1/9/15;
+    }
+
+}

@@ -1,19 +1,10 @@
-.gridOverride {
-    grid-template-columns: repeat(24, 1fr)!important;
-    grid-template-rows: repeat(16, 1fr)!important;
-}
-
 .smallerGridOverride {
     grid-template-columns: repeat(22, 1fr)!important;
     grid-template-rows: repeat(20, 1fr)!important;
 }
 
-.descriptionOverride {
-    grid-area: 1/13/10/25!important;
-}
-
 .trepunti {
-    grid-area: 4/2/16/13;
+    grid-area: 4/2/16/14;
 }
 
 .mercatoterme {
@@ -126,40 +117,195 @@
     grid-area: 3/20/5/23;
 }
 .mercato {
-    grid-area: 2/13/16/23;
+    grid-area: 2/14/16/27;
 }
 
 .pic2 {
-    grid-area: 9/1/15/8;
+    grid-area: 9/1/15/9;
 }
-
 
 .pic3 {
-    grid-area: 9/8/15/15;
+    grid-area: 9/9/15/17;
 }
 
-
 .pic6 {
-    grid-area: 9/18/15/25;
+    grid-area: 9/19/15/27;
 }
 
 .termesezione {
-    grid-area: 3/6/17/20;
+    grid-area: 3/6/17/22;
 }
 
 .pic1 {
-    grid-area: 11/1/16/9;
+    grid-area: 12/1/17/9;
 }
 
 .pic5 {
-    grid-area: 11/17/16/25;
+    grid-area: 12/19/17/27;
 }
 
 .pic33 {
-    grid-area: 1/13/6/20;
+    grid-area: 1/14/6/22;
 }
 
 
 .pic22 {
-    grid-area: 12/13/17/20;
+    grid-area: 12/14/17/22;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .trepunti {
+        grid-area: 4/1/10/12;
+    }
+    
+    .mercatoterme {
+        grid-area: 4/1/8/15;
+    }
+    
+    .saloneInside1 {
+        grid-area: 9/7/13/10;
+    }
+    
+    .saloneInside2 {
+        grid-area: 5/20/7/23;
+    }
+    
+    .saloneInside3 {
+        grid-area: 5/13/7/16;
+    }
+    
+    .saloneInside4 {
+        grid-area: 17/20/21/23;
+    }
+    
+    .saloneInside5 {
+        grid-area: 7/20/9/23;
+    }
+    
+    .saloneOutside1 {
+        grid-area: 1/13/3/16;
+    }
+    
+    .saloneOutside2 {
+        grid-area: 13/3/15/6;
+    }
+    
+    .saloneOutside3 {
+        grid-area: 7/9/5/12;
+    }
+    
+    .saloneOutside4 {
+        grid-area: 11/3/13/6;
+    }
+    
+    .saloneOutside5 {
+        grid-area: 9/3/11/6;
+    }
+    
+    .saloneOutside6 {
+        grid-area: 15/3/17/6;
+    }
+    
+    .saloneOutside7 {
+        grid-area: 3/13/5/16;
+    }
+    
+    .saloneOutside8 {
+        grid-area: 1/1/3/4;
+    }
+    
+    .saloneWall {
+        grid-area: 9/20/11/23;
+    }
+    
+    .piscinaInside1 {
+        grid-area: 8/10/10/14;
+    }
+    
+    .piscinaInside2 {
+        grid-area: 8/5/10/8;
+    }
+    
+    .piscinaInside3 {
+        grid-area: 6/5/8/8;
+    }
+    
+    .piscinaInside4 {
+        grid-area: 14/20/16/23;
+    }
+    
+    .piscinaInside5 {
+        grid-area: 16/16/21/19;
+    }
+    
+    .piscinaInside6 {
+        grid-area: 16/20/18/23;
+    }
+    
+    .piscinaInside7 {
+        grid-area: 14/10/16/14;
+    }
+    
+    .piscinaInside8 {
+        grid-area: 10/5/12/8;
+    }
+    
+    .piscinaInside9 {
+        grid-area: 12/5/14/8;
+    }
+    
+    .piscinaInside10 {
+        grid-area: 12/20/14/23;
+    }
+    
+    .piscinaOutside1 {
+        grid-area: 1/20/3/23;
+    }
+    .piscinaOutside2 {
+        grid-area: 3/10/1/14;
+    }
+    .piscinaWall {
+        grid-area: 3/20/5/23;
+    }
+    .mercato {
+        grid-area: 2/5/8/15;
+    }
+    
+    .pic2 {
+        grid-area: 2/1/4/8;
+    }
+    
+    
+    .pic3 {
+        grid-area: 4/1/6/8;
+    }
+    
+    .pic6 {
+        grid-area: 7/8/9/15;
+    }
+    
+    .termesezione {
+        grid-area: 2/5/8/15;
+    }
+    
+    .pic1 {
+        grid-area: 7/1/10/8;
+    }
+    
+    .pic5 {
+        grid-area: 7/8/10/15;
+    }
+    
+    .pic33 {
+        grid-area: 1/5/4/15;
+    }
+    
+    
+    .pic22 {
+        grid-area: 6/5/9/15;
+    }
+    
+
 }

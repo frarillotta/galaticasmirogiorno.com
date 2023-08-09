@@ -15,7 +15,6 @@ function useCursorTracker(cursorRef: React.RefObject<HTMLDivElement>) {
 export function mouseOutInEventListener(el: HTMLElement | null) {
 
     const cursor = window.document.getElementById("cursor");
-    console.log(cursor, el)
     if (!cursor || !el) return;
     
     const mouseoverEvent = el.addEventListener("mouseover", ()=>{
