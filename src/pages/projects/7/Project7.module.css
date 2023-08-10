@@ -1,3 +1,7 @@
+.descriptionOverride {
+    grid-area: 1/14/6/24;
+}
+
 .livingroom {
     grid-area: 5/14/11/23;
 }

@@ -5,7 +5,7 @@ export default function PAFF32() {
     return (
       <ProjectWrapper>
         <ProjectScreen>
-          <ProjectPageDescription>
+          <ProjectPageDescription className={styles.descriptionOverride}>
             <span>PA FF32</span><br />
             <span>PALERMO, ITALY</span><br />
             <span>2022-2023</span><br />

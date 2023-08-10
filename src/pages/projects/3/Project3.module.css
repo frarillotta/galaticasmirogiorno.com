@@ -1,5 +1,5 @@
 .layout {
-    grid-area: 4/3/16/25;
+    grid-area: 8/2/16/26;
 }
 
 .layout2 {
@@ -29,7 +29,7 @@
 @media screen and (max-width: 600px) {
 
     .layout {
-        grid-area: 6/1/10/15;
+        grid-area: 7/1/10/15;
     }
     
     .layout2 {

@@ -14,7 +14,7 @@ export default function CB() {
             <br />
             <span>A PRIVATE VILLA WITH A SWIMMING POOL WHERE ONE CAN WATCH THE SUN SET.</span><br />
           </ProjectPageDescription>
-          <ProjectImage loading='eager' priority={true} className={styles.layout} pictureName={'layout'} height={500} width={750} projNumber={3} />
+          <ProjectImage loading='eager' priority={true} className={styles.layout} pictureName={'layoutnew'} height={500} width={750} projNumber={3} />
         </ProjectScreen>
         <ProjectScreen>
           <ProjectImage loading='eager' className={styles.layout2} pictureName={'layout2'} height={750} width={500} projNumber={3} />

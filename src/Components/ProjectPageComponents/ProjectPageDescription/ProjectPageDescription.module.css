@@ -27,10 +27,17 @@
 
 .descriptionParagraph {
     padding: 12px;
+    font-size: clamp(0.6rem, 1.5cqh, 0.99rem);
 }
 
 @media screen and (max-width: 600px) {
     .description {
         grid-area: 1/8/10/15;
     }
+
+    .descriptionParagraph {
+        padding: 12px;
+        font-size: inherit;
+    }
+
 }
