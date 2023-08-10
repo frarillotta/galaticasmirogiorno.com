@@ -68,12 +68,12 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     //     animateIn();
     // }, [animateIn]);
 
-    // useEffect(() => {
-    //     const el = imageRef.current;
-    //     const eventsCleanup = mouseOutInEventListener(el);
+    useEffect(() => {
+        const el = imageRef.current;
+        const eventsCleanup = mouseOutInEventListener(el);
         
-    //     return eventsCleanup;
-    // }, [imageScope])
+        return eventsCleanup;
+    }, [imageScope])
 
     return <motion.div
         ref={wrapperScope}

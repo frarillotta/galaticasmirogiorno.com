@@ -18,10 +18,10 @@ export function mouseOutInEventListener(el: HTMLElement | null) {
     if (!cursor || !el) return;
     
     const mouseoverEvent = el.addEventListener("mouseover", ()=>{
-        cursor.style.top = "-20px";        
-        cursor.style.left = "-20px";     
-        cursor.style.height = "40px";  
-        cursor.style.width = "40px";
+        cursor.style.top = "-30px";        
+        cursor.style.left = "-30px";     
+        cursor.style.height = "50px";  
+        cursor.style.width = "50px";
     });
 
     const clickEvent = el.addEventListener("click", ()=>{
