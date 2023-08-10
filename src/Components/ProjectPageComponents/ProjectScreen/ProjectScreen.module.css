@@ -5,6 +5,8 @@
     grid-gap: var(--gap);
 
     scroll-snap-align: center;
+    scroll-snap-stop: always;
+
     height: 100%;
     width: 100%;
 }
