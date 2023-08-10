@@ -18,27 +18,27 @@ export function mouseOutInEventListener(el: HTMLElement | null) {
     if (!cursor || !el) return;
     
     const mouseoverEvent = el.addEventListener("mouseover", ()=>{
-        cursor.style.top = "-40px";        
-        cursor.style.left = "-40px";     
-        cursor.style.height = "80px";  
-        cursor.style.width = "80px";
-    });
-
-    const clickEvent = el.addEventListener("click", ()=>{
-        
         cursor.style.top = "-20px";        
         cursor.style.left = "-20px";     
         cursor.style.height = "40px";  
         cursor.style.width = "40px";
+    });
+
+    const clickEvent = el.addEventListener("click", ()=>{
+        
+        cursor.style.top = "-10px";        
+        cursor.style.left = "-10px";     
+        cursor.style.height = "20px";  
+        cursor.style.width = "20px";
         
     });
 
     const mouseoutEvent = el.addEventListener("mouseout", ()=>{
         
-        cursor.style.top = "-20px";        
-        cursor.style.left = "-20px";     
-        cursor.style.height = "40px";  
-        cursor.style.width = "40px";
+        cursor.style.top = "-10px";        
+        cursor.style.left = "-10px";     
+        cursor.style.height = "20px";  
+        cursor.style.width = "20px";
         
     }); 
 

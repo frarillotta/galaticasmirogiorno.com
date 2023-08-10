@@ -39,41 +39,41 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     // const isImageInView = useInView(imageScope);
     const [rendered, setRendered] = useState(false);
 
-    const animateIn = useCallback(() => {
-        if (imageRef.current?.complete && !rendered) {
-            animateImage(imageScope.current, {
-                clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-            }, {
-                ease: 'easeOut',
-                duration: 1.5,
-                delay: 0.5
-            });
+    // const animateIn = useCallback(() => {
+    //     if (imageRef.current?.complete && !rendered) {
+    //         animateImage(imageScope.current, {
+    //             clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    //         }, {
+    //             ease: 'easeOut',
+    //             duration: 1.5,
+    //             delay: 0.2
+    //         });
 
-            animateShadow(wrapperScope.current, {
-                filter: 'drop-shadow(0px 2px 0px rgba(54, 54, 54, 0))'
-            }, {
-                ease: 'easeOut',
-                duration: 1.5,
-                delay: 0.5
-            })
-            setRendered(true)
-        }
-    }, [imageScope, rendered, animateImage, animateShadow, wrapperScope]);
+    //         animateShadow(wrapperScope.current, {
+    //             filter: 'drop-shadow(0px 2px 0px rgba(54, 54, 54, 0))'
+    //         }, {
+    //             ease: 'easeOut',
+    //             duration: 1.5,
+    //             delay: 0.2
+    //         })
+    //         setRendered(true)
+    //     }
+    // }, [imageScope, rendered, animateImage, animateShadow, wrapperScope]);
 
-    const onLoadComplete = useCallback(() => {
-        animateIn();
-    }, [animateIn]);
+    // const onLoadComplete = useCallback(() => {
+    //     animateIn();
+    // }, [animateIn]);
 
     // useEffect(() => {
     //     animateIn();
     // }, [animateIn]);
 
-    useEffect(() => {
-        const el = imageRef.current;
-        const eventsCleanup = mouseOutInEventListener(el);
+    // useEffect(() => {
+    //     const el = imageRef.current;
+    //     const eventsCleanup = mouseOutInEventListener(el);
         
-        return eventsCleanup;
-    }, [imageScope])
+    //     return eventsCleanup;
+    // }, [imageScope])
 
     return <motion.div
         ref={wrapperScope}
@@ -82,7 +82,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
         <AnimatePresence>
             <motion.div
                 ref={imageScope}
-                variants={imageVariants}
+                // variants={imageVariants}
                 initial={'initial'}
                 className={styles.pictureWrapper}>
                 <MotionImage
@@ -92,7 +92,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     viewport={{ once: true }}
                     loading={loading}
                     priority={priority}
-                    onLoadingComplete={onLoadComplete}
+                    // onLoadingComplete={onLoadComplete}
                     className={`${styles.projectPicture} ${styles.withBackground}`}
                     alt={`project ${projNumber} ${pictureName} Picture`}
                     src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
