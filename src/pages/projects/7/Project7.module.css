@@ -35,7 +35,9 @@
 }
 
 @media screen and (max-width: 600px) {
-
+    .descriptionOverride {
+        grid-area: 1/8/7/15;
+    }
     .livingroom {
         grid-area: 7/1/10/10;
     }
