@@ -1,5 +1,6 @@
 .contact {
-
+    /* problem on safari 15 */
+    isolation: inherit;
 }
 
 .contactDetails {
