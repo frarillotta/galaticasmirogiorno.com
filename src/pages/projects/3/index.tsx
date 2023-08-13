@@ -1,7 +1,7 @@
 import styles from './Project3.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-import layout from 'public/projects/3/pictures/layout.avif'
+import layout from 'public/projects/3/pictures/layoutnew.avif'
 import layout2 from 'public/projects/3/pictures/layout2.avif'
 import garden from 'public/projects/3/pictures/garden.avif'
 import pianta from 'public/projects/3/pictures/pianta.avif'
@@ -22,7 +22,7 @@ export default function CB() {
             <br />
             <span>A PRIVATE VILLA WITH A SWIMMING POOL WHERE ONE CAN WATCH THE SUN SET.</span><br />
           </ProjectPageDescription>
-          <ProjectImage image={layout} loading='eager' priority={true} className={styles.layout} pictureName={'layoutnew'} height={500} width={750} projNumber={3} />
+          <ProjectImage image={layout} loading='eager' priority={true} className={styles.layout} pictureName={'layout'} height={500} width={750} projNumber={3} />
         </ProjectScreen>
         <ProjectScreen>
           <ProjectImage image={layout2} loading='eager' className={styles.layout2} pictureName={'layout2'} height={750} width={500} projNumber={3} />
