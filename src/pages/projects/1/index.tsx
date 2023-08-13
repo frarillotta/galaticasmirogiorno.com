@@ -1,5 +1,6 @@
 import styles from './Project1.module.css';
 import { ProjectImage, ProjectScreen, ProjectPageDescription, ProjectWrapper } from '~/Components/ProjectPageComponents';
+
 import frontOld from '/projects/1/pictures/front-old.jpg'
 import front from '/projects/1/pictures/front.jpg'
 import layout from '/projects/1/pictures/layout.jpg'

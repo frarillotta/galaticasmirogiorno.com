@@ -1,6 +1,15 @@
 import styles from './Project5.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
+import precopertina from '/projects/5/pictures/precopertina.avif'
+import copertina2 from '/projects/5/pictures/copertina2.avif'
+import copertina from '/projects/5/pictures/copertina.avif'
+import copertina3 from '/projects/5/pictures/copertina3.avif'
+import inside1 from '/projects/5/pictures/inside1.avif'
+import inside2 from '/projects/5/pictures/inside2.avif'
+import inside3 from '/projects/5/pictures/inside3.avif'
+import exhibition from '/projects/5/pictures/exhibition.avif'
+
 export default function OuiQuiMagazine() {
     return (
       <ProjectWrapper>
@@ -13,20 +22,20 @@ export default function OuiQuiMagazine() {
             <br />
             <span>A MAGAZINE ABOUT ARCHITECTURE AND VISUAL ARTS, THAT WAS DISTRIBUTED FOR FREE AT THE MEDITERRANEA UNIVERSITY OF REGGIO CALABRIA DURING TWO CONSECUTIVE ACADEMIC YEARS, AND WAS AVAILABLE ONLINE IN ITALIAN, ENGLISH AND SPANISH.</span><br />
           </ProjectPageDescription>
-          <ProjectImage loading='eager' priority={true} className={styles.precopertina} pictureName={'precopertina'} height={800} width={500} projNumber={5} />
+          <ProjectImage image={precopertina} loading='eager' priority={true} className={styles.precopertina} pictureName={'precopertina'} height={800} width={500} projNumber={5} />
         </ProjectScreen>
         <ProjectScreen>
-          <ProjectImage loading='eager' className={styles.copertina2} pictureName={'copertina2'} height={800} width={500} projNumber={5} />
-          <ProjectImage loading='eager' className={styles.copertina} pictureName={'copertina'} height={800} width={500} projNumber={5} />
-          <ProjectImage loading='eager' className={styles.copertina3} pictureName={'copertina3'} height={800} width={500} projNumber={5} />
+          <ProjectImage image={copertina2} loading='eager' className={styles.copertina2} pictureName={'copertina2'} height={800} width={500} projNumber={5} />
+          <ProjectImage image={copertina} loading='eager' className={styles.copertina} pictureName={'copertina'} height={800} width={500} projNumber={5} />
+          <ProjectImage image={copertina3} loading='eager' className={styles.copertina3} pictureName={'copertina3'} height={800} width={500} projNumber={5} />
         </ProjectScreen>
         <ProjectScreen>
-        <ProjectImage loading='eager' className={styles.inside1} pictureName={'inside1'} height={704} width={406} projNumber={5} />          
-        <ProjectImage loading='eager' className={styles.inside2} pictureName={'inside2'} height={704} width={406} projNumber={5} />          
-        <ProjectImage loading='eager' className={styles.inside3} pictureName={'inside3'} height={704} width={406} projNumber={5} />
+        <ProjectImage image={inside1} loading='eager' className={styles.inside1} pictureName={'inside1'} height={704} width={406} projNumber={5} />          
+        <ProjectImage image={inside2} loading='eager' className={styles.inside2} pictureName={'inside2'} height={704} width={406} projNumber={5} />          
+        <ProjectImage image={inside3} loading='eager' className={styles.inside3} pictureName={'inside3'} height={704} width={406} projNumber={5} />
         </ProjectScreen>
         <ProjectScreen>
-        <ProjectImage loading='eager' className={styles.exhibition} pictureName={'exhibition'} height={400} width={600} projNumber={5} />
+        <ProjectImage image={exhibition} loading='eager' className={styles.exhibition} pictureName={'exhibition'} height={400} width={600} projNumber={5} />
         </ProjectScreen>
       </ProjectWrapper>
     )
