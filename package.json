@@ -10,23 +10,23 @@
   },
   "dependencies": {
     "@madeinhaus/nextjs-page-transition": "^3.1.0",
-    "@react-three/drei": "^9.65.5",
-    "@react-three/fiber": "^8.12.2",
-    "@react-three/postprocessing": "^2.7.1",
-    "@types/node": "18.15.12",
-    "@types/react": "18.0.37",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "framer-motion": "^10.12.4",
-    "next": "13.3.0",
+    "@react-three/drei": "^9.80.2",
+    "@react-three/fiber": "^8.13.6",
+    "@react-three/postprocessing": "^2.15.0",
+    "@types/node": "20.4.10",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.13",
+    "framer-motion": "^10.15.1",
+    "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "three": "^0.151.3",
+    "three": "^0.155.0",
     "tunnel-rat": "^0.1.2",
-    "typescript": "5.0.4"
+    "typescript": "5.1.6"
   },
   "devDependencies": {
-    "next-transpile-modules": "^10.0.0"
+    "next-transpile-modules": "^10.0.1"
   }
 }
