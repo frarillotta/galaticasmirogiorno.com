@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import styles from './ProjectImage.module.css';
 import { AnimatePresence, Variants, motion, useAnimate } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -9,10 +9,10 @@ type ProjectImageProps = {
     projNumber: number;
     width: number;
     height: number;
+    image: StaticImageData;
     priority?: boolean;
     loading?: 'eager' | 'lazy';
     className?: string;
-    format?: 'jpg' | 'png' | 'avif'
 }
 
 const MotionImage = motion(Image);
@@ -30,7 +30,7 @@ const imageVariants: Variants = {
     }
 }
 
-export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, format = 'avif', priority = false, className = '' }) => {
+export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, image, priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
     const imageRef = useRef<HTMLImageElement>(null);
@@ -71,7 +71,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     useEffect(() => {
         const el = imageRef.current;
         const eventsCleanup = mouseOutInEventListener(el);
-        
+
         return eventsCleanup;
     }, [imageScope])
 
@@ -95,7 +95,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     // onLoadingComplete={onLoadComplete}
                     className={`${styles.projectPicture} ${styles.withBackground}`}
                     alt={`project ${projNumber} ${pictureName} Picture`}
-                    src={`/projects/${projNumber}/pictures/${pictureName}.${format}`}
+                    src={image}
                     width={width}
                     height={height}
                 />
