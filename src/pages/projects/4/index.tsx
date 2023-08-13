@@ -1,12 +1,12 @@
 import styles from './Project4.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-import layout from 'public/projects/4/pictures/layout.avif'
-import internoold from 'public/projects/4/pictures/internoold.avif'
-import interno1 from 'public/projects/4/pictures/interno1.avif'
-import layoutGreen from 'public/projects/4/pictures/layoutGreen.avif'
-import layout3 from 'public/projects/4/pictures/layout3.avif'
-import interno2 from 'public/projects/4/pictures/interno2.avif'
+import layout from 'public/projects/4/pictures/layout.jpg'
+import internoold from 'public/projects/4/pictures/internoold.jpg'
+import interno1 from 'public/projects/4/pictures/interno1.jpg'
+import layoutGreen from 'public/projects/4/pictures/layoutGreen.jpg'
+import layout3 from 'public/projects/4/pictures/layout3.jpg'
+import interno2 from 'public/projects/4/pictures/interno2.jpg'
 
 export default function D6() {
     return (

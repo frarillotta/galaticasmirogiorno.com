@@ -1,13 +1,13 @@
 import styles from './Project3.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-import layout from 'public/projects/3/pictures/layoutnew.avif'
-import layout2 from 'public/projects/3/pictures/layout2.avif'
-import garden from 'public/projects/3/pictures/garden.avif'
-import pianta from 'public/projects/3/pictures/pianta.avif'
-import landscape from 'public/projects/3/pictures/landscape.avif'
-import bedroom from 'public/projects/3/pictures/bedroom.avif'
-import bedroom2 from 'public/projects/3/pictures/bedroom2.avif'
+import layout from 'public/projects/3/pictures/layoutnew.jpg'
+import layout2 from 'public/projects/3/pictures/layout2.jpg'
+import garden from 'public/projects/3/pictures/garden.jpg'
+import pianta from 'public/projects/3/pictures/pianta.jpg'
+import landscape from 'public/projects/3/pictures/landscape.jpg'
+import bedroom from 'public/projects/3/pictures/bedroom.jpg'
+import bedroom2 from 'public/projects/3/pictures/bedroom2.jpg'
 
 export default function CB() {
     return (
