@@ -52,7 +52,7 @@ export default function Incompiute() {
           <br />
           <span>A PROJECT ABOUT TWO UNFINISHED BUILDINGS IN GIARRE, SICILY</span><br />
         </ProjectPageDescription>
-        <ProjectImage image={trepunti} loading='lazy' priority={true} className={styles.trepunti} pictureName={'trepunti'} height={2500} width={2500} projNumber={6} />
+        <ProjectImage image={trepunti} priority={true} className={styles.trepunti} pictureName={'trepunti'} height={2500} width={2500} projNumber={6} />
       </ProjectScreen>
       {/* yea i know this sucks */}
       <ProjectScreen className={styles.smallerGridOverride}>
