@@ -1,14 +1,14 @@
 import styles from './Project2.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-import pavillion from '/projects/2/pictures/pavillion.avif'
-import otherside from '/projects/2/pictures/otherside.avif'
-import layout1 from '/projects/2/pictures/layout1.avif'
-import interior from '/projects/2/pictures/interior.avif'
-import side from '/projects/2/pictures/side.avif'
-import layout2 from '/projects/2/pictures/layout2.avif'
-import outside from '/projects/2/pictures/outside.avif'
-import front from '/projects/2/pictures/front.avif'
+import pavillion from 'public/projects/2/pictures/pavillion.avif'
+import otherside from 'public/projects/2/pictures/otherside.avif'
+import layout1 from 'public/projects/2/pictures/layout1.avif'
+import interior from 'public/projects/2/pictures/interior.avif'
+import side from 'public/projects/2/pictures/side.avif'
+import layout2 from 'public/projects/2/pictures/layout2.avif'
+import outside from 'public/projects/2/pictures/outside.avif'
+import front from 'public/projects/2/pictures/front.avif'
 
 export default function LeTrain() {
     return (

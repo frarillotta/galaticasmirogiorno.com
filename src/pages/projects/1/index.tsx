@@ -1,13 +1,13 @@
 import styles from './Project1.module.css';
 import { ProjectImage, ProjectScreen, ProjectPageDescription, ProjectWrapper } from '~/Components/ProjectPageComponents';
 
-import frontOld from '/projects/1/pictures/front-old.jpg'
-import front from '/projects/1/pictures/front.jpg'
-import layout from '/projects/1/pictures/layout.jpg'
-import interior from '/projects/1/pictures/interior.jpg'
-import mirrors from '/projects/1/pictures/mirrors.jpg'
-import handle from '/projects/1/pictures/handle.jpg'
-import blueprint from '/projects/1/pictures/blueprint.jpg'
+import frontOld from 'public/projects/1/pictures/front-old.jpg'
+import front from 'public/projects/1/pictures/front.jpg'
+import layout from 'public/projects/1/pictures/layout.jpg'
+import interior from 'public/projects/1/pictures/interior.jpg'
+import mirrors from 'public/projects/1/pictures/mirrors.jpg'
+import handle from 'public/projects/1/pictures/handle.jpg'
+import blueprint from 'public/projects/1/pictures/blueprint.jpg'
 
 export default function GL130() {
   return (

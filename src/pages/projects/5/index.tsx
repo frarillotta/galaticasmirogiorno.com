@@ -1,14 +1,14 @@
 import styles from './Project5.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-import precopertina from '/projects/5/pictures/precopertina.avif'
-import copertina2 from '/projects/5/pictures/copertina2.avif'
-import copertina from '/projects/5/pictures/copertina.avif'
-import copertina3 from '/projects/5/pictures/copertina3.avif'
-import inside1 from '/projects/5/pictures/inside1.avif'
-import inside2 from '/projects/5/pictures/inside2.avif'
-import inside3 from '/projects/5/pictures/inside3.avif'
-import exhibition from '/projects/5/pictures/exhibition.avif'
+import precopertina from 'public/projects/5/pictures/precopertina.avif'
+import copertina2 from 'public/projects/5/pictures/copertina2.avif'
+import copertina from 'public/projects/5/pictures/copertina.avif'
+import copertina3 from 'public/projects/5/pictures/copertina3.avif'
+import inside1 from 'public/projects/5/pictures/inside1.avif'
+import inside2 from 'public/projects/5/pictures/inside2.avif'
+import inside3 from 'public/projects/5/pictures/inside3.avif'
+import exhibition from 'public/projects/5/pictures/exhibition.avif'
 
 export default function OuiQuiMagazine() {
     return (

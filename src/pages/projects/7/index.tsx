@@ -1,14 +1,14 @@
 import styles from './Project7.module.css';
 import { ProjectImage, ProjectPageDescription, ProjectWrapper, ProjectScreen } from '~/Components/ProjectPageComponents'
 
-import livingroom from '/projects/7/pictures/livingroom.avif'
-import layout from '/projects/7/pictures/layout.avif'
-import livingroom2 from '/projects/7/pictures/livingroom2.avif'
-import livingroom3 from '/projects/7/pictures/livingroom3.avif'
-import livingroom4 from '/projects/7/pictures/livingroom4.avif'
-import kitchen from '/projects/7/pictures/kitchen.avif'
-import layout2 from '/projects/7/pictures/layout2.avif'
-import layout3fixed from '/projects/7/pictures/layout3fixed.avif'
+import livingroom from 'public/projects/7/pictures/livingroom.avif'
+import layout from 'public/projects/7/pictures/layout.avif'
+import livingroom2 from 'public/projects/7/pictures/livingroom2.avif'
+import livingroom3 from 'public/projects/7/pictures/livingroom3.avif'
+import livingroom4 from 'public/projects/7/pictures/livingroom4.avif'
+import kitchen from 'public/projects/7/pictures/kitchen.avif'
+import layout2 from 'public/projects/7/pictures/layout2.avif'
+import layout3fixed from 'public/projects/7/pictures/layout3fixed.avif'
 
 export default function PAFF32() {
     return (
