@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     formats: ['image/webp', 'image/avif'],
   },
+  redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/projects',
+        permanent: true,
+      },
+    ]
+  }
 }
 
 module.exports = nextConfig

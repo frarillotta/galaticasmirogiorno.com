@@ -1,6 +1,7 @@
 import styles from '~/styles/Contact.module.css'
 import { motion, Variants } from 'framer-motion';
 import { Line } from '~/Components/SvgIcons';
+import { Link } from '~/Components/Link/Link';
 
 const variants: Variants = {
     initial: {
@@ -49,6 +50,16 @@ export default function Contact() {
                 <span>INFO@GALATICASMIROGIORNO.COM</span><br />
                 <span>+39 346 37 266 07</span><br />
                 <span>+39 393 89 31 973</span><br />
+            </motion.p>
+            <motion.p
+                className={styles.credits}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <span>DESIGN BY </span><u className={styles.names}>CLAUDIA GIORNO</u>
+                <br />
+                <span>CODE BY </span><Link href={'.'}><u className={styles.names}>FRANCESCO ARILLOTTA</u></Link>
             </motion.p>
         </main>
     )

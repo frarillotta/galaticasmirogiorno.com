@@ -5,7 +5,7 @@ import NextLink from "next/link";
 export const Link :React.FC<{
     href: string,
     children: React.ReactNode,
-    className: string,
+    className?: string,
 }> = ({href, children, className, ...delegate}) => {
 
     const ref = useRef<HTMLAnchorElement>(null);
