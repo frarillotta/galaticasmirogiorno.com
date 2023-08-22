@@ -8,9 +8,10 @@
     height: 20px;
     background-color: white;
     mix-blend-mode: difference;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     transition: height .25s,width .25s,top .25s,left .25s;
     transition-timing-function: cubic-bezier(.68,-.55,.27,1.55);
+    z-index: 9999999;
 }
 @media screen and (max-width: 600px) {
 

@@ -38,6 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 * {
+  -webkit-text-size-adjust: 100%;
   cursor: none!important;
   box-sizing: border-box;
   padding: 0;

@@ -1,4 +1,5 @@
 .header {
+    isolation: isolate;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;

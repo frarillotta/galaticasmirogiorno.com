@@ -20,7 +20,7 @@ export default function OuiQuiMagazine() {
             <br />
             <span>+ LORENZO ARLIA, MARIO IDONE, ARIANNA ISOLA</span><br />
             <br />
-            <span>A MAGAZINE ABOUT ARCHITECTURE AND VISUAL ARTS, THAT WAS DISTRIBUTED FOR FREE AT THE MEDITERRANEA UNIVERSITY OF REGGIO CALABRIA DURING TWO CONSECUTIVE ACADEMIC YEARS, AND WAS AVAILABLE ONLINE IN ITALIAN, ENGLISH AND SPANISH.</span><br />
+            <span>A MAGAZINE ABOUT ARCHITECTURE AND VISUAL ARTS.</span><br />
           </ProjectPageDescription>
           <ProjectImage image={precopertina} loading='eager' priority={true} className={styles.precopertina} pictureName={'precopertina'} height={800} width={500} projNumber={5} />
         </ProjectScreen>
