@@ -15,7 +15,8 @@
 }
 
 .name {
-
+    /* ffs */
+    z-index: 2;
 }
 
 .label {
