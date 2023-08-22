@@ -36,7 +36,7 @@ export const Footer = () => {
                 onClick={() => setLinksDisplayed((linksDisplayed) => !linksDisplayed)}
                 className={styles.plusSign}
             >
-                <PlusIcon  />
+                <PlusIcon isTapped={areLinksDisplayed}  />
             </button>
             <div className={styles.linksWrapper}>
                 <AnimatePresence>

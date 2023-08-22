@@ -57,9 +57,9 @@ export default function Contact() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-                <span>DESIGN BY </span><u className={styles.names}>CLAUDIA GIORNO</u>
-                <br />
-                <span>CODE BY </span><Link href={'.'}><u className={styles.names}>FRANCESCO ARILLOTTA</u></Link>
+                {/* <span>DESIGN BY </span><u className={styles.names}>CLAUDIA GIORNO</u>
+                <br /> */}
+                <span>CODE BY </span><Link href={'https://frannn.co'}><u className={styles.names}>FRANCESCO ARILLOTTA</u></Link>
             </motion.p>
         </main>
     )

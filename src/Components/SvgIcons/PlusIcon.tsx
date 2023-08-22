@@ -19,14 +19,9 @@ const iconVariants: Variants = {
     }
 }
 
-export const PlusIcon = ({ className = '' }) => {
-
-    const [isTapped, setIsTapped] = useState(false);
+export const PlusIcon = ({ className = '', isTapped = false }) => {
 
     return <motion.svg
-        onTap={() => {
-            setIsTapped(!isTapped)
-        }}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
