@@ -25,7 +25,7 @@ const getActiveRoute = (currentRoute: string): Routes => {
 
 export const Footer = () => {
 
-    const [areLinksDisplayed, setLinksDisplayed] = useState(true);
+    const [areLinksDisplayed, setLinksDisplayed] = useState(false);
     const router = useRouter();
 
     const activeRoute = getActiveRoute(router.pathname);
