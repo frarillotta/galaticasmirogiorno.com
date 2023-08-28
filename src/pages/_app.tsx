@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router';
 import { useNextCssRemovalPrevention } from '@madeinhaus/nextjs-page-transition';
 import { Cursor } from '~/Components/Cursor/Cursor';
+import { Metadata } from 'next';
 
 export default function App({ Component, pageProps }: AppProps) {
 

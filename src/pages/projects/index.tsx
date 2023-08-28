@@ -10,13 +10,14 @@ type ProjectLinkProps = {
   projNumber: number;
   projectName: string;
   projectDate?: string;
+  projectCode: string;
   width: number;
   height: number;
   className?: string;
 }
 
 //TODO: add label to each of these
-const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, projNumber, className = '' }) => {
+const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, projNumber, projectCode, className = '' }) => {
   // const [scope, animate] = useAnimate()
   // const linkRef = useRef<HTMLAnchorElement>(null);
   // useEffect(() => {
@@ -33,7 +34,7 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, pro
   // })
   //@ts-ignore horrible ik
   const Icon = Icons[`Icon${projNumber}`]
-  return <Link href={`${Routes.Projects}/${projNumber}`} className={`${styles.iconWrapper} ${styles[`icon${projNumber}`]}`}>
+  return <Link href={`${Routes.Projects}/${projectCode}`} className={`${styles.iconWrapper} ${styles[`icon${projNumber}`]}`}>
     <Icon className={`${styles.projectIcon} ${className}`} />
     {/* <div ref={scope} className={styles.label}>
       <span>{projectName}</span>
@@ -46,41 +47,48 @@ const projects = [
   {
     width: 65,
     height: 117,
+    projectCode: "GL130",
     projectName: 'Massimiliano Parrucchieri',
     projectDate: '2021'
   },
   {
     width: 257,
     height: 86,
-    projectName: 'idk'
+    projectCode: "LETRAIN",
+    projectName: 'Le Train - La Gallina Matta'
   }, {
     width: 77,
     height: 217,
-    projectName: 'idk'
+    projectCode: "CB",
+    projectName: 'CB'
   }, {
     width: 106,
     height: 233,
-    projectName: 'idk'
+    projectCode: "D6",
+    projectName: 'D6'
   }, {
     width: 257,
     height: 157,
-    projectName: 'idk'
+    projectCode: "OUIQUI",
+    projectName: 'OUI QUI'
   }, {
     width: 256,
     height: 158,
-    projectName: 'idk'
+    projectCode: "INCOMPIUTE",
+    projectName: 'INCOMPIUTE'
   }, {
     width: 256,
     height: 299,
-    projectName: 'idk'
+    projectCode: "PAFF32",
+    projectName: 'PA FF32'
   },
 ]
 
 export default function Projects() {
   return (
     <main className={styles.main}>
-      {projects.map(({ width, height, projectName, projectDate }, index) =>
-        <ProjectLink width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={index + 1} key={`projectNumber${index + 1}`} />
+      {projects.map(({ width, height, projectName, projectDate, projectCode }, index) =>
+        <ProjectLink projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={index + 1} key={`projectNumber${index + 1}`} />
       )}
     </main>
   )
