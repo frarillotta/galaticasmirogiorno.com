@@ -32,7 +32,7 @@ export default function GL130() {
       </ProjectScreen>
       <ProjectScreen>
         <ProjectImage image={interior} loading='eager' className={styles.interior} pictureName={'interior'} height={590} width={392} projNumber={1} />
-        <ProjectImage image={mirrors} loading='eager' className={styles.mirrors} pictureName={'mirrors'} height={112} width={417} projNumber={1} />
+        <ProjectImage image={mirrors} loading='eager' className={styles.mirrors} pictureName={'mirrors'} height={500} width={1000} projNumber={1} />
       </ProjectScreen>
       <ProjectScreen>
         <ProjectImage image={handle} loading='eager' className={styles.handle} pictureName={'handle'} height={304} width={451} projNumber={1} />
