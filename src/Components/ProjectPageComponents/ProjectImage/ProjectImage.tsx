@@ -10,6 +10,7 @@ type ProjectImageProps = {
     width: number;
     height: number;
     image: StaticImageData;
+    quality?: number;
     priority?: boolean;
     loading?: 'eager' | 'lazy';
     className?: string;
@@ -30,7 +31,7 @@ const imageVariants: Variants = {
     }
 }
 
-export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, image, priority = false, className = '' }) => {
+export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, image, quality = 80, priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
     const imageRef = useRef<HTMLImageElement>(null);
@@ -89,6 +90,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                     // whileHover={'whileHover'}
                     // whileInView={'reveal'}
                     ref={imageRef}
+                    quality={quality}
                     viewport={{ once: true }}
                     loading={loading}
                     priority={priority}

@@ -22,7 +22,7 @@ export default function CB() {
             <br />
             <span>A PRIVATE VILLA WITH A SWIMMING POOL WHERE ONE CAN WATCH THE SUN SET.</span><br />
           </ProjectPageDescription>
-          <ProjectImage image={layout} loading='eager' priority={true} className={styles.layout} pictureName={'layout'} height={1250} width={1500} projNumber={3} />
+          <ProjectImage quality={100} image={layout} loading='eager' priority={true} className={styles.layout} pictureName={'layout'} height={1250} width={2000} projNumber={3} />
         </ProjectScreen>
         <ProjectScreen>
           <ProjectImage image={layout2} loading='eager' className={styles.layout2} pictureName={'layout2'} height={750} width={500} projNumber={3} />
