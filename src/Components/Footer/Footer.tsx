@@ -14,8 +14,6 @@ const getActiveRoute = (currentRoute: string): Routes => {
             return Routes.About
         case currentRoute === Routes.Contact:
             return Routes.Contact
-        case currentRoute === Routes.Projects:
-            return Routes.Projects
         case currentRoute.includes(`${Routes.Projects}/`) === true:
             return Routes.Projects
         default:
@@ -54,11 +52,11 @@ export const Footer = () => {
                                 transition={{ duration: 0.5, ease: 'easeOut' }}
                                 className={styles.routes}
                             >
-                                <Link href={Routes.Projects} className={`
+                                <Link href={Routes.Home} className={`
                                     ${styles.firstRoutesLink}
                                     ${styles.routesLink} 
                                     ${styles['routesLink--metis']} 
-                                    ${activeRoute === Routes.Projects ? styles['routesLink--metis-active'] : ''}
+                                    ${activeRoute === Routes.Home ? styles['routesLink--metis-active'] : ''}
                                 `}>
                                     PROJECTS
                                 </Link>

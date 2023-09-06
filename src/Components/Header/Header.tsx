@@ -11,7 +11,7 @@ export const Header = () => {
     const [scope, animate] = useAnimate();
     
     useEffect(() => {
-        if (router.asPath === Routes.Projects) {
+        if (router.asPath === Routes.Home) {
             animate(scope.current, {
                 originY: 0,
                 scaleY: 0,
@@ -27,7 +27,7 @@ export const Header = () => {
     }, [router, animate, scope])
 
     return <header className={styles.header}>
-        <Link href={Routes.Projects} className={styles.namesWrapper}>
+        <Link href={Routes.Home} className={styles.namesWrapper}>
             <h1 className={styles.name}>
                 RUGGIERO GALATI CASMIRO
             </h1>
