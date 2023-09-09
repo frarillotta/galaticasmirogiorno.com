@@ -50,7 +50,8 @@ export const variants: (props?: {
 });
 
 export const transition: AnimationProps['transition'] = {
-    duration: 2
+    duration: 3,
+    ease: 'easeOut'
 };
 
 export const variantsDefinition: MotionProps = {
