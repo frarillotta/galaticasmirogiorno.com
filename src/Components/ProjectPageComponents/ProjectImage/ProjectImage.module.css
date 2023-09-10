@@ -23,3 +23,34 @@
     align-items: center;
     background: white;
 }
+
+.opacityLater {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: black;
+    opacity: 0;
+    /* pointer-events: none; */
+    z-index: 1;
+}
+
+.expandedPictureWrapper {
+    position: absolute;
+    top: 10vh;
+    bottom: 10vh;
+    left: 10vw;
+    right: 10vw;
+    border: 2px solid black;
+    border-right: none;
+    filter: drop-shadow(2px 0px 0px rgba(54, 54, 54, 1));
+    clip-path: polygon(0% 0%, 0px 1px, 1px 1px, 1px 0px);
+    z-index: 2;
+
+}
+
+.expandedPicture {
+}
