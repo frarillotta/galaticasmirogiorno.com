@@ -80,9 +80,11 @@ const ExpandedProjectImage: React.FC<ProjectImageProps> = ({
     }, [imageScope])
 
 
-    return <AnimatePresence >
-        <motion.div onClick={onTap} className={styles.opacityLater} animate={{ opacity: 0.3 }} />
+    return < >
+        <motion.div onClick={onTap} className={styles.opacityLater} initial={{ opacity: 0 }} animate={{ opacity: 0.3 }} exit={{ opacity: 0 }} />
         <motion.div
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             onTap={onTap}
             ref={imageScope}
             className={styles.expandedPictureWrapper}
@@ -107,7 +109,7 @@ const ExpandedProjectImage: React.FC<ProjectImageProps> = ({
                 height={height}
             />
         </motion.div>
-    </AnimatePresence>
+    </>
 }
 
 export const ProjectImage: React.FC<ProjectImageProps> = ({
@@ -197,24 +199,21 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
                 </motion.div>
             </AnimatePresence>
         </motion.div>
-        {selected && <AnimatePresence >
-
-            <ExpandedProjectImage
-                pictureName={pictureName}
-                height={height * 2}
-                width={width * 2}
-                image={image}
-                projNumber={projNumber}
-                loading={'eager'}
-                priority={true}
-                quality={100}
-                onTap={(e) => {
-                    console.log(e)
-                    setSelected(!selected)
-                    e.stopPropagation();
-                }}
-                key={`expanded ${pictureName}`}
-            />
-        </AnimatePresence>}
+        <AnimatePresence>{selected && <ExpandedProjectImage
+            pictureName={pictureName}
+            height={height * 2}
+            width={width * 2}
+            image={image}
+            projNumber={projNumber}
+            loading={'eager'}
+            priority={true}
+            quality={100}
+            onTap={(e) => {
+                setSelected(!selected)
+                e.stopPropagation();
+            }}
+            key={`expanded ${pictureName}`}
+        />}
+        </AnimatePresence>
     </>
 };
