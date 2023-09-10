@@ -31,11 +31,19 @@ const imageVariants: Variants = {
     }
 }
 
+const wrapperVariants: Variants = {
+    tapped: {
+        scale: 2
+    }
+}
+
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, image, quality = 80, priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
     const imageRef = useRef<HTMLImageElement>(null);
     const [wrapperScope, animateShadow] = useAnimate();
+
+    const [tapped, setTapped] = useState(false);
 
     // const isImageInView = useInView(imageScope);
     const [rendered, setRendered] = useState(false);
@@ -78,29 +86,42 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
 
     return <motion.div
         ref={wrapperScope}
-        className={`${styles.pictureContainer} ${className}`}
+        variants={wrapperVariants}
+        layout
+        // transition={{ duration: 10 }}
+        // animate={tapped ? 'tapped' : false}
+        className={`${tapped ? styles.openedPictureContainer : styles.pictureContainer} ${className}`}
+        onTap={() => {
+            setTapped(!tapped);
+        }}
     >
         <AnimatePresence>
             <motion.div
+                layout
+                // transition={{ duration: 10 }}
                 ref={imageScope}
                 // variants={imageVariants}
                 initial={'initial'}
                 className={styles.pictureWrapper}>
-                <MotionImage
-                    // whileHover={'whileHover'}
-                    // whileInView={'reveal'}
-                    ref={imageRef}
-                    quality={quality}
-                    viewport={{ once: true }}
-                    loading={loading}
-                    priority={priority}
-                    // onLoadingComplete={onLoadComplete}
-                    className={`${styles.projectPicture} ${styles.withBackground}`}
-                    alt={`project ${projNumber} ${pictureName} Picture`}
-                    src={image}
-                    width={width}
-                    height={height}
-                />
+                {/* <div className={styles.wrapper2}> */}
+                    <MotionImage
+                        // layout
+                        // transition={{ duration: 10 }}
+                        // whileHover={'whileHover'}
+                        // whileInView={'reveal'}
+                        ref={imageRef}
+                        quality={quality}
+                        viewport={{ once: true }}
+                        loading={loading}
+                        priority={priority}
+                        // onLoadingComplete={onLoadComplete}
+                        className={` ${styles.projectPicture} ${styles.withBackground}`}
+                        alt={`project ${projNumber} ${pictureName} Picture`}
+                        src={image}
+                        width={width}
+                        height={height}
+                    />
+                {/* </div> */}
             </motion.div>
         </AnimatePresence>
     </motion.div>
