@@ -27,10 +27,10 @@ export function mouseOutInEventListener(el: HTMLElement | null) {
     });
 
     const mouseDownEvent = el.addEventListener("mousedown", ()=>{
-        cursor.style.top = "-40px";        
-        cursor.style.left = "-40px";     
-        cursor.style.height = "60px";  
-        cursor.style.width = "60px";
+        cursor.style.top = "-5px";        
+        cursor.style.left = "-5px";     
+        cursor.style.height = "10px";  
+        cursor.style.width = "10px";
     });
 
     const mouseUpEvent = el.addEventListener("mouseup", ()=>{

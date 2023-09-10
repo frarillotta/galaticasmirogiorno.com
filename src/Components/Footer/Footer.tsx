@@ -1,10 +1,11 @@
 import styles from './Footer.module.css'
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Routes } from '~/constants';
 import { PlusIcon } from '../SvgIcons';
 import { Link } from '../Link/Link';
+import { mouseOutInEventListener } from '../Cursor/Cursor';
 
 const getActiveRoute = (currentRoute: string): Routes => {
     switch (true) {
@@ -21,6 +22,30 @@ const getActiveRoute = (currentRoute: string): Routes => {
     }
 }
 
+const Button: React.FC<{
+    areLinksDisplayed: boolean; setLinksDisplayed: Dispatch<SetStateAction<boolean>>
+}> = ({ areLinksDisplayed, setLinksDisplayed }) => {
+
+    const ref = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+
+        const el = ref.current;
+        const eventsCleanup = mouseOutInEventListener(el);
+
+        return eventsCleanup;
+
+    }, [])
+
+    return < button
+        ref={ref}
+        onClick={() => setLinksDisplayed((linksDisplayed) => !linksDisplayed)}
+        className={styles.plusSign}
+    >
+        <PlusIcon isTapped={areLinksDisplayed} />
+    </button >
+}
+
 export const Footer = () => {
 
     const [areLinksDisplayed, setLinksDisplayed] = useState(false);
@@ -30,12 +55,7 @@ export const Footer = () => {
 
     return <footer className={styles.footer}>
         <div className={styles.footerContainer}>
-            <button
-                onClick={() => setLinksDisplayed((linksDisplayed) => !linksDisplayed)}
-                className={styles.plusSign}
-            >
-                <PlusIcon isTapped={areLinksDisplayed}  />
-            </button>
+            <Button areLinksDisplayed={areLinksDisplayed} setLinksDisplayed={setLinksDisplayed} />
             <div className={styles.linksWrapper}>
                 <AnimatePresence>
                     {areLinksDisplayed &&
