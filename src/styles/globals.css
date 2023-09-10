@@ -188,6 +188,5 @@ main {
   place-content: center;
 
   overflow: hidden;
-  position: relative;
   isolation: isolate;
 }
