@@ -41,6 +41,7 @@ const Button: React.FC<{
         ref={ref}
         onClick={() => setLinksDisplayed((linksDisplayed) => !linksDisplayed)}
         className={styles.plusSign}
+        aria-label={'expand footer menu'}
     >
         <PlusIcon isTapped={areLinksDisplayed} />
     </button >
@@ -72,7 +73,7 @@ export const Footer = () => {
                                 transition={{ duration: 0.5, ease: 'easeOut' }}
                                 className={styles.routes}
                             >
-                                <Link href={Routes.Home} className={`
+                                <Link ariaLabel={'Home'} href={Routes.Home} className={`
                                     ${styles.firstRoutesLink}
                                     ${styles.routesLink} 
                                     ${styles['routesLink--metis']} 
@@ -87,7 +88,7 @@ export const Footer = () => {
                                 transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
                                 className={styles.routes}
                             >
-                                <Link href={Routes.About} className={`
+                                <Link ariaLabel={'About us'} href={Routes.About} className={`
                                     ${styles.routesLink} 
                                     ${styles['routesLink--metis']} 
                                     ${activeRoute === Routes.About ? styles['routesLink--metis-active'] : ''}
@@ -101,7 +102,7 @@ export const Footer = () => {
                                 transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
                                 className={styles.routes}
                             >
-                                <Link href={Routes.Contact} className={`
+                                <Link ariaLabel={'Contact us'} href={Routes.Contact} className={`
                                     ${styles.routesLink} 
                                     ${styles['routesLink--metis']} 
                                     ${activeRoute === Routes.Contact ? styles['routesLink--metis-active'] : ''}
