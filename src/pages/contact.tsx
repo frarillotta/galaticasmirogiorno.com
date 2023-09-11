@@ -59,7 +59,7 @@ export default function Contact() {
             >
                 {/* <span>DESIGN BY </span><u className={styles.names}>CLAUDIA GIORNO</u>
                 <br /> */}
-                <span>CODE BY </span><Link href={'https://frannn.co'}><u className={styles.names}>FRANCESCO ARILLOTTA</u></Link>
+                <span>CODE BY </span><Link ariaLabel="frannn.co website" href={'https://frannn.co'}><u className={styles.names}>FRANCESCO ARILLOTTA</u></Link>
             </motion.p>
         </main>
     )
