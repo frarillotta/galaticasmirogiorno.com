@@ -27,7 +27,7 @@ export const Header = () => {
     }, [router, animate, scope])
 
     return <header className={styles.header}>
-        <Link ariaLabel="Home" href={Routes.Home} className={styles.namesWrapper}>
+        <Link ariaLabel="RUGGIERO GALATI CASMIRO CLAUDIA GIORNO" href={Routes.Home} className={styles.namesWrapper}>
             <h1 className={styles.name}>
                 RUGGIERO GALATI CASMIRO
             </h1>
