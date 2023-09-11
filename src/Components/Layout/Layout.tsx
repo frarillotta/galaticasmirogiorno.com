@@ -21,7 +21,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     />
                     <meta 
                         name="keywords" 
-                        content="galati, casmiro, giorno, catania, architettura, sicilia, calabria" 
+                        content="ruggiero, galati, casmiro, claudia, giorno, catania, architettura, sicilia, calabria" 
                     />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="icon" href="/favicon.ico" />
