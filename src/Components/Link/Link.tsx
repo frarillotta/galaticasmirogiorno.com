@@ -5,8 +5,9 @@ import NextLink from "next/link";
 export const Link :React.FC<{
     href: string,
     children: React.ReactNode,
+    ariaLabel: string,
     className?: string,
-}> = ({href, children, className, ...delegate}) => {
+}> = ({href, children, className, ariaLabel, ...delegate}) => {
 
     const ref = useRef<HTMLAnchorElement>(null);
 
@@ -20,7 +21,7 @@ export const Link :React.FC<{
     }, [])
 
     return (
-        <NextLink {...delegate} href={href} ref={ref} className={className}>
+        <NextLink aria-label={ariaLabel} {...delegate} href={href} ref={ref} className={className}>
            {children}
         </NextLink>
     )

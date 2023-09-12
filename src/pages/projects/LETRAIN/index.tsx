@@ -28,7 +28,7 @@ export default function LeTrain() {
           <ProjectImage image={otherside} loading='eager' priority={true} className={styles.otherside} pictureName={'otherside'} height={350} width={500} projNumber={2} />
         </ProjectScreen>
         <ProjectScreen>
-          <ProjectImage image={layout1} loading='eager' className={styles.layout1} pictureName={'layout1'} height={700} width={400} projNumber={2} />
+          <ProjectImage image={layout1} loading='eager' className={styles.layout1} pictureName={'layout1'} height={900} width={600} projNumber={2} />
           <ProjectImage image={interior} loading='eager' className={styles.interior} pictureName={'interior'} height={500} width={350} projNumber={2} />
         </ProjectScreen>
         <ProjectScreen>
