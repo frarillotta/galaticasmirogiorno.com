@@ -4,6 +4,7 @@ import { Header } from '~/Components/Header/Header'
 import { Footer } from '~/Components/Footer/Footer'
 import Head from 'next/head'
 import { Suspense, useRef } from 'react'
+import { Analytics } from '@vercel/analytics/react';
 
 
 //TODO: transizione per pagina
@@ -27,8 +28,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <Header />
-                <Suspense fallback={'potato'}>
+                <Suspense>
                     {children}
+                    <Analytics />
                 </Suspense>
                 <Footer />
             </div>
