@@ -35,11 +35,10 @@ const clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, 
 function calcTransformImage(el: HTMLElement, winHeight: number, winWidth: number) {
     const rect = el.getBoundingClientRect();
     const vals = {
-        scale: Math.max(winWidth > winHeight  ? (winWidth * 0.54 / rect.width) : (winHeight * 0.54 / rect.height), 1.05),
-        x: winWidth * 0.5 - (rect.left + rect.width / 2),
+        scale: Math.max(winWidth > winHeight ? (winWidth * 0.54 / rect.width) : (winHeight * 0.54 / rect.height), 1.05),
+        x: winWidth * 0.65 - (rect.left + rect.width / 2),
         y: winHeight * 0.50 - (rect.top + rect.height / 2)
     };
-    console.log(winHeight/rect.height, winWidth/rect.width, rect, winWidth, winHeight)
     // vals.scale = clamp(vals.scale, 1, winWidth > winHeight ? winWidth/rect.width : winHeight/rect.height)
 
     return vals;
@@ -106,6 +105,8 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                 // whileHover={'whileHover'}
                 // whileInView={'reveal'}
                 onTap={async () => {
+
+                    setTapped(!tapped);
                     const { scale, x, y } = calcTransformImage(imageScope.current, window.innerHeight, window.innerWidth);
                     // when opening, we want to be on top
                     if (!tapped) {
@@ -114,6 +115,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                             x,
                             y,
                             scale,
+                            borderRadius: '4px'
                         }, {
                             duration: .5,
                             ease: 'easeInOut'
@@ -125,13 +127,13 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
                             x: 0,
                             y: 0,
                             scale: 1,
+                            borderRadius: '0px'
                         }, {
                             duration: .5,
                             ease: 'easeInOut'
                         })
                         imageScope.current.style.zIndex = 1;
                     }
-                    setTapped(!tapped);
                 }}
                 ref={imageScope}
                 quality={quality}
@@ -147,5 +149,25 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
             />
         </motion.div>
         {/* </AnimatePresence> */}
+        <AnimatePresence>
+            {tapped && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.overlay}>
+                <div className={styles.textWrapper}>
+                    <motion.article className={styles.text}>
+                        <motion.div className={styles.titleTextContainer}>
+                            <motion.h1 className={styles.title} initial={{ y: '150%', rotate: '-5deg' }} animate={{ y: 0, rotate: 0 }} transition={{ duration: 0.5,ease: 'easeOut', delay: 0.1 }}>Image name</motion.h1>
+                            </motion.div>
+                        <motion.div className={styles.textContainer}>
+                            <motion.p initial={{ y: '150%', rotate: '-5deg' }} animate={{ y: 0, rotate: 0 }} transition={{ duration: 0.5,ease: 'easeOut', delay: 0.2 }}>Lorem ipsum dolor sit amet</motion.p>
+                        </motion.div>
+                        <motion.div className={styles.textContainer}>
+                            <motion.p initial={{ y: '150%', rotate: '-5deg' }} animate={{ y: 0, rotate: 0 }} transition={{ duration: 0.5,ease: 'easeOut', delay: 0.3 }}>sed do eiusmod tempor </motion.p>
+                        </motion.div>
+                        <motion.div className={styles.textContainer}>
+                            <motion.p initial={{ y: '150%', rotate: '-5deg' }} animate={{ y: 0, rotate: 0 }} transition={{ duration: 0.5,ease: 'easeOut', delay: 0.4 }}>Cras tincidunt lobortis feugiat</motion.p>
+                        </motion.div>
+                    </motion.article>
+                </div>
+            </motion.div>}
+        </AnimatePresence>
     </motion.div>
 };
