@@ -30,21 +30,27 @@ const imageVariants: Variants = {
         }
     }
 }
+const clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, min), max);
 
-const wrapperVariants: Variants = {
-    tapped: {
-        scale: 2
-    }
+function calcTransformImage(el: HTMLElement, winHeight: number, winWidth: number) {
+    const rect = el.getBoundingClientRect();
+    const vals = {
+        scale: Math.max(winWidth > winHeight  ? (winWidth * 0.54 / rect.width) : (winHeight * 0.54 / rect.height), 1.05),
+        x: winWidth * 0.5 - (rect.left + rect.width / 2),
+        y: winHeight * 0.50 - (rect.top + rect.height / 2)
+    };
+    console.log(winHeight/rect.height, winWidth/rect.width, rect, winWidth, winHeight)
+    // vals.scale = clamp(vals.scale, 1, winWidth > winHeight ? winWidth/rect.width : winHeight/rect.height)
+
+    return vals;
 }
 
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, image, quality = 80, priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
     const imageRef = useRef<HTMLImageElement>(null);
-    const [wrapperScope, animateShadow] = useAnimate();
-
+    const [wrapperScope, animateWrapper] = useAnimate();
     const [tapped, setTapped] = useState(false);
-
     // const isImageInView = useInView(imageScope);
     const [rendered, setRendered] = useState(false);
 
@@ -82,47 +88,64 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
         const eventsCleanup = mouseOutInEventListener(el);
 
         return eventsCleanup;
-    }, [imageScope])
+    }, [imageScope]);
 
     return <motion.div
         ref={wrapperScope}
-        variants={wrapperVariants}
-        layout
-        // transition={{ duration: 10 }}
-        // animate={tapped ? 'tapped' : false}
-        className={`${tapped ? styles.openedPictureContainer : styles.pictureContainer} ${className}`}
-        onTap={() => {
-            setTapped(!tapped);
-        }}
+        className={`${styles.pictureContainer} ${className}`}
+
     >
-        <AnimatePresence>
-            <motion.div
-                layout
-                // transition={{ duration: 10 }}
+        {/* <AnimatePresence> */}
+        <motion.div
+            // ref={imageScope}
+            // variants={imageVariants}
+            initial={'initial'}
+            className={styles.pictureWrapper}
+        >
+            <MotionImage
+                // whileHover={'whileHover'}
+                // whileInView={'reveal'}
+                onTap={async () => {
+                    const { scale, x, y } = calcTransformImage(imageScope.current, window.innerHeight, window.innerWidth);
+                    // when opening, we want to be on top
+                    if (!tapped) {
+                        imageScope.current.style.zIndex = 100;
+                        await animateImage(imageScope.current, {
+                            x,
+                            y,
+                            scale,
+                        }, {
+                            duration: .5,
+                            ease: 'easeInOut'
+                        })
+                    }
+                    //when closing, wait for animation to finish then reset zIndex to 1
+                    if (tapped) {
+                        await animateImage(imageScope.current, {
+                            x: 0,
+                            y: 0,
+                            scale: 1,
+                        }, {
+                            duration: .5,
+                            ease: 'easeInOut'
+                        })
+                        imageScope.current.style.zIndex = 1;
+                    }
+                    setTapped(!tapped);
+                }}
                 ref={imageScope}
-                // variants={imageVariants}
-                initial={'initial'}
-                className={styles.pictureWrapper}>
-                {/* <div className={styles.wrapper2}> */}
-                    <MotionImage
-                        // layout
-                        // transition={{ duration: 10 }}
-                        // whileHover={'whileHover'}
-                        // whileInView={'reveal'}
-                        ref={imageRef}
-                        quality={quality}
-                        viewport={{ once: true }}
-                        loading={loading}
-                        priority={priority}
-                        // onLoadingComplete={onLoadComplete}
-                        className={` ${styles.projectPicture} ${styles.withBackground}`}
-                        alt={`project ${projNumber} ${pictureName} Picture`}
-                        src={image}
-                        width={width}
-                        height={height}
-                    />
-                {/* </div> */}
-            </motion.div>
-        </AnimatePresence>
+                quality={quality}
+                viewport={{ once: true }}
+                loading={loading}
+                priority={priority}
+                // onLoadingComplete={onLoadComplete}
+                className={`${styles.projectPicture} ${styles.withBackground}`}
+                alt={`project ${projNumber} ${pictureName} Picture`}
+                src={image}
+                width={width}
+                height={height}
+            />
+        </motion.div>
+        {/* </AnimatePresence> */}
     </motion.div>
 };
