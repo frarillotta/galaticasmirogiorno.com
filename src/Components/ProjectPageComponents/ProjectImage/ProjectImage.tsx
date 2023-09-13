@@ -84,7 +84,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNum
     // }, [animateIn]);
 
     useEffect(() => {
-        const el = imageRef.current;
+        const el = wrapperScope.current;
         const eventsCleanup = mouseOutInEventListener(el);
 
         return eventsCleanup;

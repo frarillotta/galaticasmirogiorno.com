@@ -1,10 +1,6 @@
 import { Variants, motion } from "framer-motion";
-import { useState } from "react";
 
 const iconVariants: Variants = {
-    initial: {
-        transformOrigin: '50% 50%'
-    },
     tapped: {
         scaleY: 0,
         transition: {
