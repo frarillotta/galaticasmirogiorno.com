@@ -33,15 +33,17 @@ const imageVariants: Variants = {
 const clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, min), max);
 
 function calcTransformImage(el: HTMLElement, winHeight: number, winWidth: number) {
-    const rect = el.getBoundingClientRect();
+    const { width, height, left, top } = el.getBoundingClientRect();
+    const ratio = winWidth > winHeight ? winHeight / winWidth : winWidth / winHeight
     const vals = {
-        scale: Math.max(winWidth > winHeight  ? (winWidth * 0.54 / rect.width) : (winHeight * 0.54 / rect.height), 1.05),
-        x: winWidth * 0.5 - (rect.left + rect.width / 2),
-        y: winHeight * 0.50 - (rect.top + rect.height / 2)
+        scale: Math.max(width > height ? (winWidth * ratio / width) : (winHeight * ratio / height), 1.05),
+        x: winWidth * 0.5 - (left + width / 2),
+        y: winHeight * 0.50 - (top + height / 2)
     };
-    console.log(winHeight/rect.height, winWidth/rect.width, rect, winWidth, winHeight)
-    // vals.scale = clamp(vals.scale, 1, winWidth > winHeight ? winWidth/rect.width : winHeight/rect.height)
-
+    
+    // never exceed height or width
+    vals.scale = clamp(vals.scale, 1.05, winWidth > winHeight ? winWidth/width : winHeight/height )
+    
     return vals;
 }
 
