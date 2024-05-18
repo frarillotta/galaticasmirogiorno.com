@@ -5,7 +5,7 @@ import { Footer } from '~/Components/Footer/Footer'
 import Head from 'next/head'
 import { Suspense, useRef } from 'react'
 import { Analytics } from '@vercel/analytics/react';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 //TODO: transizione per pagina
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -31,6 +31,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 <Suspense>
                     {children}
                     <Analytics />
+                    <SpeedInsights />
                 </Suspense>
                 <Footer />
             </div>
