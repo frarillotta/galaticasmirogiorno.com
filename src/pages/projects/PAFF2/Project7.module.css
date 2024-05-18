@@ -1,0 +1,178 @@
+.descriptionOverride {
+    grid-area: 1/14/6/27;
+}
+
+.atrio {
+    grid-area: 6/14/12/21;
+}
+
+.layout1 {
+    grid-area: 12/14/17/25;
+}
+
+.cucina {
+    grid-area: 4/20/15/26;
+}
+
+.soggiorno {
+    grid-area: 4/2/15/8;
+}
+
+.soggiorno2 {
+    grid-area: 4/14/15/20;
+}
+
+.cucina2 {
+    grid-area: 4/5/15/23;
+}
+
+.vetrina {
+    grid-area: 4/8/12/14;
+}
+
+.cucina3 {
+    grid-area: 8/15/16/24;
+}
+
+.armadio {
+    grid-area: 6/7/14/21;
+}
+
+.layout2 {
+    grid-area: 5/1/13/14;
+}
+
+.layout3 {
+    grid-area: 5/14/13/21;
+}
+
+.bagno2 {
+    grid-area: 7/18/16/23;
+}
+
+.bagno3 {
+    grid-area: 1/14/7/21;
+}
+
+.bagno4 {
+    grid-area: 4/5/14/9;
+}
+
+.bagno5 {
+    grid-area: 4/14/14/18;
+}
+
+.bagno6 {
+    grid-area: 4/18/14/22;
+}
+
+.bagno7 {
+    grid-area: 5/1/16/8;
+}
+
+.bagno {
+    grid-area: 4/9/14/14;
+}
+
+.lampada {
+    grid-area: 2/11/12/19;
+}
+
+.lampada2 {
+    grid-area: 2/8/7/14;
+}
+
+.lampada3 {
+    grid-area: 6/22/14/27;
+}
+
+@media screen and (max-width: 600px) {
+    .descriptionOverride {
+        grid-area: 1/8/7/15;
+    }
+
+    .atrio {
+        grid-area: 4/1/6/8;
+    }
+
+    .layout1 {
+        grid-area: 7/1/9/15;
+    }
+
+    .cucina {
+        grid-area: 6/8/9/15;
+    }
+
+    .soggiorno {
+        grid-area: 1/1/4/8;
+    }
+
+    .soggiorno2 {
+        grid-area: 3/8/6/15;
+    }
+
+    .cucina2 {
+        grid-area: 3/2/7/14;
+    }
+
+    .vetrina {
+        grid-area: 1/1/5/8;
+    }
+
+    .cucina3 {
+        grid-area: 5/1/9/15;
+    }
+
+    .armadio {
+        grid-area: 4/1/8/15;
+    }
+
+    .layout2 {
+        grid-area: 1/1/5/15;
+    }
+
+    .layout3 {
+        grid-area: 4/3/7/13;
+    }
+
+    .bagno2 {
+        grid-area: 5/7/10/15;
+    }
+
+    .bagno3 {
+        grid-area: 1/1/5/15;
+    }
+
+    .bagno4 {
+        grid-area: 1/1/4/8;
+    }
+    
+    .bagno5 {
+        grid-area: 3/8/6/15;
+    }
+    
+    .bagno6 {
+        grid-area: 6/8/9/15;
+    }
+
+    .bagno7 {
+        grid-area: 4/1/9/9;
+    }
+
+    .bagno {
+        grid-area: 2/9/8/2;
+    }
+
+    .lampada {
+        grid-area: 1/5/8/13;
+    }
+
+    .lampada2 {
+        grid-area: 1/1/4/12;
+    }
+
+    .lampada3 {
+        grid-area: 4/8/9/15;
+    }
+
+}
