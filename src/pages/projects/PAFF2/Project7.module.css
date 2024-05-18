@@ -144,15 +144,15 @@
     }
 
     .bagno4 {
-        grid-area: 1/8/4/15;
+        grid-area: 1/1/4/8;
     }
     
     .bagno5 {
-        grid-area: 3/1/6/8;
+        grid-area: 3/8/6/15;
     }
     
     .bagno6 {
-        grid-area: 6/1/9/8;
+        grid-area: 6/8/9/15;
     }
 
     .bagno7 {
