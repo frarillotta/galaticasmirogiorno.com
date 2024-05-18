@@ -50,11 +50,11 @@ function calcTransformImage(el: HTMLElement, winHeight: number, winWidth: number
 export const ProjectImage: React.FC<ProjectImageProps> = ({ pictureName, projNumber, width, height, loading, image, quality = 80, priority = false, className = '' }) => {
 
     const [imageScope, animateImage] = useAnimate();
-    const imageRef = useRef<HTMLImageElement>(null);
+    // const imageRef = useRef<HTMLImageElement>(null);
     const [wrapperScope, animateWrapper] = useAnimate();
     const [tapped, setTapped] = useState(false);
     // const isImageInView = useInView(imageScope);
-    const [rendered, setRendered] = useState(false);
+    // const [rendered, setRendered] = useState(false);
 
     // const animateIn = useCallback(() => {
     //     if (imageRef.current?.complete && !rendered) {

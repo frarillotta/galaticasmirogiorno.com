@@ -79,8 +79,8 @@ const projects = [
   }, {
     width: 256,
     height: 299,
-    projectCode: "PAFF32",
-    projectName: 'PA FF32'
+    projectCode: "PAFF2",
+    projectName: 'PA FF2'
   },
 ]
 
