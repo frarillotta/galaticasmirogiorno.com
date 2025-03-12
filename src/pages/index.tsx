@@ -2,9 +2,10 @@ import Image from 'next/image'
 import styles from '~/styles/Projects.module.css'
 import { Routes } from '~/constants';
 import * as Icons from '~/Components/SvgIcons';
-import { useAnimate } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { motion, useAnimate } from 'framer-motion';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from '~/Components/Link/Link';
+import { ProjectWrapper } from '~/Components/ProjectPageComponents';
 
 type ProjectLinkProps = {
   projNumber: number;
@@ -13,11 +14,14 @@ type ProjectLinkProps = {
   projectCode: string;
   width: number;
   height: number;
+  setActiveElement: (el: number) => void
+  activeElement?: number;
   className?: string;
 }
 
+const getProjectLinkId = (projNumber: number) => `project${projNumber}Link`
 //TODO: add label to each of these
-const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, projNumber, projectCode, className = '' }) => {
+const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, projNumber, projectCode, setActiveElement, className = '' }) => {
   // const [scope, animate] = useAnimate()
   // const linkRef = useRef<HTMLAnchorElement>(null);
   // useEffect(() => {
@@ -32,15 +36,33 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, pro
   //     })
   //   });
   // })
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const observerCallback = useCallback((entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
+    if (entry.isIntersecting === true) {
+      setActiveElement?.(projNumber)
+    }
+  }, [projNumber, setActiveElement]);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    const observer = new IntersectionObserver(observerCallback, { threshold: 0.5 });
+    observer.observe(wrapperRef.current)
+    return () => {
+      if (wrapperRef.current) observer.unobserve(wrapperRef.current)
+    }
+  })
   //@ts-ignore horrible ik
   const Icon = Icons[`Icon${projNumber}`]
-  return <Link ariaLabel={`project ${projectName} page`} href={`${Routes.Projects}/${projectCode}`} className={`${styles.iconWrapper} ${styles[`icon${projNumber}`]}`}>
-    <Icon className={`${styles.projectIcon} ${className}`} />
-    {/* <div ref={scope} className={styles.label}>
+  return <div className={styles.iconWrapper} ref={wrapperRef}  id={getProjectLinkId(projNumber)} >
+    <Link ariaLabel={`project ${projectName} page`} href={`${Routes.Projects}/${projectCode}`} className={styles.iconWrapper}>
+      <Icon className={`${styles.projectIcon} ${className}`}/>
+      {/* <div ref={scope} className={styles.label}>
       <span>{projectName}</span>
       {projectDate && (<><br /><span>{projectDate}</span></>)}
     </div> */}
-  </Link>
+    </Link>
+  </div>
 };
 
 const projects = [
@@ -84,12 +106,41 @@ const projects = [
   },
 ]
 
+type ScrollIndicatorIconProps = {
+  projNumber: number;
+}
+const ScrollIndicatorIcon: React.FC<ScrollIndicatorIconProps> = ({ projNumber }) => {
+  const onClick = useCallback(() => {
+    console.log(projNumber, 'clicked', window?.document.querySelector(`#${getProjectLinkId(projNumber)}`))
+    window?.document.querySelector(`#${getProjectLinkId(projNumber)}`)?.scrollTo()
+  }, [projNumber])
+  //@ts-ignore
+  const Icon = Icons[`Icon${projNumber}`]
+  return <Icon onClick={onClick} />
+}
+
+const ScrollIndicator = ({activeElement}: {activeElement: number}) => {
+  return <div className={styles.scrollIndicator}>
+    {projects.map((proj, index) =>
+      <span className={styles.scrollIndicatorWrapper} key={proj.projectCode}>
+        <ScrollIndicatorIcon {...proj} projNumber={index + 1} />
+        {activeElement === index + 1 && <motion.div className={styles.scrollIndicatorIconBackground} layoutId="underline"></motion.div>}
+      </span>
+    )}
+  </div>
+}
+
 export default function Projects() {
+  const [activeElement, setActiveElement] = useState<number>(1);
+  console.log(activeElement)
   return (
-    <main className={styles.main}>
+    <ProjectWrapper>
+      <ScrollIndicator activeElement={activeElement} />
       {projects.map(({ width, height, projectName, projectDate, projectCode }, index) =>
-        <ProjectLink projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={index + 1} key={`projectNumber${index + 1}`} />
+        <div className={styles.homeScreen} key={`projectNumber${index + 1}`}>
+          <ProjectLink setActiveElement={setActiveElement} projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={index + 1} />
+        </div>
       )}
-    </main>
+    </ProjectWrapper>
   )
 }
