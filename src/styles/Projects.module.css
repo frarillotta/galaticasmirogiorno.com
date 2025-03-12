@@ -1,6 +1,6 @@
 .homeScreen {
   display: flex;
-  padding: 24px;
+  padding: 60px;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   height: 100%;
@@ -36,18 +36,22 @@
 .scrollIndicator {
   position: fixed;
   height: 66vh;
-  width: 10vw;
   right: var(--global-padding);
   display: flex;
   flex-direction: column;
-  gap: 16px
+  gap: 16px;
+  width: 9vw;
+  min-width: 40px;
+  max-width: 65px;
+  z-index: 2;
 }
+
 .scrollIndicatorWrapper {
-  /* display: contents; */
   position: relative;
-  background: white;
   padding: 4px;
+  background: white;
 }
+
 .scrollIndicatorIconBackground {
   position: absolute;
   top: 0;
@@ -59,7 +63,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  
+
   .main {
     grid-gap: 4px;
   }

@@ -2,14 +2,14 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from './IconUtils';
 import styles from './IconCommon.module.css'
 
-export const Icon4 = ({ className }: { className: string }) => {
+export const Icon4 = ({ className, strokeWidth = '1px' }: { className: string, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         x="0px"
         y="0px"
-        strokeWidth='1px'
+        strokeWidth={strokeWidth}
         viewBox="236.81 278.16 122.38 285.73"
         {...variantsDefinition}
     >

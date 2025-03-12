@@ -2,9 +2,9 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from "./IconUtils"
 import styles from './IconCommon.module.css'
 
-export const Icon2 = ({ className }: { className: string }) => {
+export const Icon2 = ({ className, strokeWidth = '1px' }: { className: string, strokeWidth: `${number}px` }) => {
     return <motion.svg {...variantsDefinition} className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="133.6 364.3 328 113.3"
-        strokeWidth='1px'>
+        strokeWidth={strokeWidth}>
         <motion.polyline variants={variants()}
             transition={transition} className={styles.stroke}
             points="369.8,364.8 340.8,364.8 340.8,434.5 340.8,436.4 340.8,477.1 369.8,477.1 369.8,436.4 369.8,434.5 	 		" />

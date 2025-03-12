@@ -6,6 +6,7 @@ import { motion, useAnimate } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from '~/Components/Link/Link';
 import { ProjectWrapper } from '~/Components/ProjectPageComponents';
+import { mouseOutInEventListener } from '~/Components/Cursor/Cursor';
 
 type ProjectLinkProps = {
   projNumber: number;
@@ -54,9 +55,9 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, pro
   })
   //@ts-ignore horrible ik
   const Icon = Icons[`Icon${projNumber}`]
-  return <div className={styles.iconWrapper} ref={wrapperRef}  id={getProjectLinkId(projNumber)} >
+  return <div className={styles.iconWrapper} ref={wrapperRef} id={getProjectLinkId(projNumber)} >
     <Link ariaLabel={`project ${projectName} page`} href={`${Routes.Projects}/${projectCode}`} className={styles.iconWrapper}>
-      <Icon className={`${styles.projectIcon} ${className}`}/>
+      <Icon className={`${styles.projectIcon} ${className}`} strokeWidth={'3px'} />
       {/* <div ref={scope} className={styles.label}>
       <span>{projectName}</span>
       {projectDate && (<><br /><span>{projectDate}</span></>)}
@@ -79,60 +80,70 @@ const projects = [
     projectCode: "LETRAIN",
     projectName: 'Le Train - La Gallina Matta'
   }, {
+    width: 256,
+    height: 299,
+    projectCode: "PAFF2",
+    projectName: 'PA FF2'
+  }, {
     width: 77,
     height: 217,
     projectCode: "CB",
     projectName: 'CB'
-  }, {
-    width: 106,
-    height: 233,
-    projectCode: "D6",
-    projectName: 'D6'
   }, {
     width: 257,
     height: 157,
     projectCode: "OUIQUI",
     projectName: 'OUI QUI'
   }, {
+    width: 106,
+    height: 233,
+    projectCode: "D6",
+    projectName: 'D6'
+  }, {
     width: 256,
     height: 158,
     projectCode: "INCOMPIUTE",
     projectName: 'INCOMPIUTE'
-  }, {
-    width: 256,
-    height: 299,
-    projectCode: "PAFF2",
-    projectName: 'PA FF2'
-  },
+  }
 ]
 
 type ScrollIndicatorIconProps = {
   projNumber: number;
+  isActive: boolean;
 }
-const ScrollIndicatorIcon: React.FC<ScrollIndicatorIconProps> = ({ projNumber }) => {
+const ScrollIndicatorIcon: React.FC<ScrollIndicatorIconProps> = ({ projNumber, isActive }) => {
+  const ref = useRef<HTMLSpanElement>(null);
   const onClick = useCallback(() => {
-    console.log(projNumber, 'clicked', window?.document.querySelector(`#${getProjectLinkId(projNumber)}`))
-    window?.document.querySelector(`#${getProjectLinkId(projNumber)}`)?.scrollTo()
+    window?.document.querySelector(`#${getProjectLinkId(projNumber)}`)?.scrollIntoView({ behavior: 'smooth' })
   }, [projNumber])
   //@ts-ignore
   const Icon = Icons[`Icon${projNumber}`]
-  return <Icon onClick={onClick} />
+
+  useEffect(() => {
+
+    const el = ref.current;
+    const eventsCleanup = mouseOutInEventListener(el);
+
+    return eventsCleanup;
+
+  }, [])
+
+  return <span ref={ref} onClick={onClick} className={styles.scrollIndicatorWrapper}>
+    <Icon />
+    {isActive ? <motion.div className={styles.scrollIndicatorIconBackground} layoutId="underline"></motion.div> : null}
+  </span>
 }
 
-const ScrollIndicator = ({activeElement}: {activeElement: number}) => {
+const ScrollIndicator = ({ activeElement }: { activeElement: number }) => {
   return <div className={styles.scrollIndicator}>
     {projects.map((proj, index) =>
-      <span className={styles.scrollIndicatorWrapper} key={proj.projectCode}>
-        <ScrollIndicatorIcon {...proj} projNumber={index + 1} />
-        {activeElement === index + 1 && <motion.div className={styles.scrollIndicatorIconBackground} layoutId="underline"></motion.div>}
-      </span>
+      <ScrollIndicatorIcon key={`${proj.projectCode}scrollIndicatorIcon`} projNumber={index + 1} isActive={activeElement === index + 1} />
     )}
   </div>
 }
 
 export default function Projects() {
   const [activeElement, setActiveElement] = useState<number>(1);
-  console.log(activeElement)
   return (
     <ProjectWrapper>
       <ScrollIndicator activeElement={activeElement} />
