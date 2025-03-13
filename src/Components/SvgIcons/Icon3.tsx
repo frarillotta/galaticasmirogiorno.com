@@ -11,7 +11,7 @@ export const Icon3 = ({ className, strokeWidth = '2px' }: { className: string, s
         y="0px"
         strokeWidth={strokeWidth}
         viewBox="254.22 278.3 87.56 285.45"
-        shape-rendering="crispEdges"
+        
         vector-effect='non-scaling-stroke'
         stroke-alignment="inside"
         {...variantsDefinition}
