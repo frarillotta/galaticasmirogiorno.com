@@ -10,7 +10,7 @@ export const Icon2 = ({ className, strokeWidth = '2px' }: { className: string, s
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        viewBox="133 364 328 113"
+        viewBox="133 363 328 118"
         shape-rendering="crispEdges"
         vector-effect='non-scaling-stroke'
         stroke-alignment="inside"

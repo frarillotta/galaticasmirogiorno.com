@@ -10,7 +10,7 @@ export const Icon5 = ({ className, strokeWidth = '2px' }: { className: string, s
         x="0px"
         y="0px"
         strokeWidth={strokeWidth}
-        viewBox="172 349 260 149"
+        viewBox="169 348 261 151"
         shape-rendering="crispEdges"
         vector-effect='non-scaling-stroke'
         stroke-alignment="inside"
