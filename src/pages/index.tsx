@@ -129,7 +129,7 @@ const ScrollIndicatorIcon: React.FC<ScrollIndicatorIconProps> = ({ projNumber, i
   }, [])
 
   return <span ref={ref} onClick={onClick} className={styles.scrollIndicatorWrapper}>
-    <Icon />
+    <Icon strokeWidth={'1px'} />
     {isActive ? <motion.div className={styles.scrollIndicatorIconBackground} layoutId="underline"></motion.div> : null}
   </span>
 }
