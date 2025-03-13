@@ -10,7 +10,10 @@ export const Icon1 = ({ className, strokeWidth = '2px' }: { className: string, s
         x="0px"
         y="0px"
         strokeWidth={strokeWidth}
-        viewBox="259.87 349.33 76.25 143.37"
+        viewBox="261 349 77 144"
+        shape-rendering="crispEdges"
+        vector-effect='non-scaling-stroke'
+        stroke-alignment="inside"
         {...variantsDefinition}
     >
         <motion.path

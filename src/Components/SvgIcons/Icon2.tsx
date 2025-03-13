@@ -3,23 +3,34 @@ import { transition, variants, variantsDefinition } from "./IconUtils"
 import styles from './IconCommon.module.css'
 
 export const Icon2 = ({ className, strokeWidth = '2px' }: { className: string, strokeWidth: `${number}px` }) => {
-    return <motion.svg {...variantsDefinition} className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="133.6 364.3 328 113.3"
-        strokeWidth={strokeWidth}>
+    return <motion.svg
+        {...variantsDefinition}
+        className={className}
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="133 364 328 113"
+        shape-rendering="crispEdges"
+        vector-effect='non-scaling-stroke'
+        stroke-alignment="inside"
+        strokeWidth={strokeWidth}
+    >
         <motion.polyline variants={variants()}
             transition={transition} className={styles.stroke}
-            points="369.8,364.8 340.8,364.8 340.8,434.5 340.8,436.4 340.8,477.1 369.8,477.1 369.8,436.4 369.8,434.5 	 		" />
+            points="370,365 341,365 341,435 341,436 341,477 370,477 370,436 370,435" />
         <motion.rect variants={variants()}
-            transition={transition} x="254.5" y="364.8" className={styles.stroke}
-            width="86.3" height="69.7" />
+            transition={transition} x="255" y="365" className={styles.stroke}
+            width="86" height="70" />
         <motion.polyline variants={variants()}
             transition={transition} className={styles.stroke}
-            points="254.5,364.8 225.4,364.8 225.4,434.5 225.4,436.4 225.4,475.1 225.4,477.1 254.5,477.1 254.5,475.1  		254.5,434.5 	" />
+            points="255,365 225,365 225,435 225,436 225,475 225,477 255,477 255,475 255,435" />
         <motion.rect variants={variants()}
-            transition={transition} x="369.8" y="364.8" className={styles.stroke}
-            width="86.3" height="69.7" />
+            transition={transition} x="370" y="365" className={styles.stroke}
+            width="86" height="70" />
         <motion.polyline variants={variants()}
             transition={transition} className={styles.stroke}
-            points="225.4,364.8 139.1,364.8 139.1,434.5 225.4,434.5 	" />
+            points="225,365 139,365 139,435 225,435" />
     </motion.svg>
 
 }

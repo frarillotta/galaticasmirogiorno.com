@@ -9,6 +9,9 @@ export const Icon7 = ({ className, strokeWidth = '2px' }: { className: string, s
         y="0px"
         strokeWidth={strokeWidth}
         viewBox="178.66 277.79 238.68 286.47"
+        shape-rendering="crispEdges"
+        vector-effect='non-scaling-stroke'
+        stroke-alignment="inside"
         {...variantsDefinition}
     >
         <motion.line
