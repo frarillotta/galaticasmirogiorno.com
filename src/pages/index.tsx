@@ -57,7 +57,7 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, pro
   const Icon = Icons[`Icon${projNumber}`]
   return <div className={styles.iconWrapper} ref={wrapperRef} id={getProjectLinkId(projNumber)} >
     <Link ariaLabel={`project ${projectName} page`} href={`${Routes.Projects}/${projectCode}`} className={styles.iconWrapper}>
-      <Icon className={`${styles.projectIcon} ${className}`} strokeWidth={'3px'} />
+      <Icon className={`${styles.projectIcon} ${className}`} />
       {/* <div ref={scope} className={styles.label}>
       <span>{projectName}</span>
       {projectDate && (<><br /><span>{projectDate}</span></>)}

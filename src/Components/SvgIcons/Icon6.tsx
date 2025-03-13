@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from './IconUtils';
 import styles from './IconCommon.module.css'
 
-export const Icon6 = ({ className, strokeWidth = '1px' }: { className: string, strokeWidth: `${number}px` }) => {
+export const Icon6 = ({ className, strokeWidth = '2px' }: { className: string, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         xmlns="http://www.w3.org/2000/svg"
