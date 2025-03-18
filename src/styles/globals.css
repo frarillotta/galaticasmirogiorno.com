@@ -19,7 +19,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 h1 {
-  font-size: 100%;
+  font-size: 102%;
 }
 
 @media screen and (max-width: 600px) {
@@ -31,7 +31,7 @@ h1 {
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td {
-    font-size: 98%;
+    font-size: 100%;
   }
 }
 
