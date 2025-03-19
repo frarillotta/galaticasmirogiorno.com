@@ -19,14 +19,16 @@ export const PlusIcon = ({ className = '', isTapped = false }) => {
 
     return <motion.svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width="40"
+        height="40"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"
+        vectorEffect='non-scaling-stroke'
+        stroke-alignment="inside"
         className={className}
     >
         <motion.line
