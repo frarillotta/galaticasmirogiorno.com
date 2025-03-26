@@ -66,47 +66,6 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ projectName, projectDate, pro
   </div>
 };
 
-const projects = [
-  {
-    width: 65,
-    height: 117,
-    projectCode: "GL130",
-    projectName: 'Massimiliano Parrucchieri',
-    projectDate: '2021'
-  },
-  {
-    width: 257,
-    height: 86,
-    projectCode: "LETRAIN",
-    projectName: 'Le Train - La Gallina Matta'
-  }, {
-    width: 256,
-    height: 299,
-    projectCode: "PAFF2",
-    projectName: 'PA FF2'
-  }, {
-    width: 77,
-    height: 217,
-    projectCode: "CB",
-    projectName: 'CB'
-  }, {
-    width: 257,
-    height: 157,
-    projectCode: "OUIQUI",
-    projectName: 'OUI QUI'
-  }, {
-    width: 106,
-    height: 233,
-    projectCode: "D6",
-    projectName: 'D6'
-  }, {
-    width: 256,
-    height: 158,
-    projectCode: "INCOMPIUTE",
-    projectName: 'INCOMPIUTE'
-  }
-]
-
 type ScrollIndicatorIconProps = {
   projNumber: number;
   isActive: boolean;
@@ -134,24 +93,92 @@ const ScrollIndicatorIcon: React.FC<ScrollIndicatorIconProps> = ({ projNumber, i
   </span>
 }
 
-const ScrollIndicator = ({ activeElement }: { activeElement: number }) => {
+const ScrollIndicator = ({ activeElement, projects }: { activeElement: number, projects: typeof projectsMap }) => {
   return <div className={styles.scrollIndicator}>
-    {projects.map((proj, index) =>
-      <ScrollIndicatorIcon key={`${proj.projectCode}scrollIndicatorIcon`} projNumber={index + 1} isActive={activeElement === index + 1} />
+    {projects.map((proj) =>
+      <ScrollIndicatorIcon key={`${proj.projectCode}scrollIndicatorIcon`} projNumber={proj.iconNumber} isActive={activeElement === proj.iconNumber} />
     )}
   </div>
 }
 
-export default function Projects() {
+export default function Projects({projects}: {projects: typeof projectsMap}) {
   const [activeElement, setActiveElement] = useState<number>(1);
   return (
     <ProjectWrapper>
-      <ScrollIndicator activeElement={activeElement} />
-      {projects.map(({ width, height, projectName, projectDate, projectCode }, index) =>
-        <div className={styles.homeScreen} key={`projectNumber${index + 1}`}>
-          <ProjectLink setActiveElement={setActiveElement} projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={index + 1} />
+      <ScrollIndicator projects={projects} activeElement={activeElement} />
+      {projects.map(({ width, height, projectName, projectDate, projectCode, iconNumber }) =>
+        <div className={styles.homeScreen} key={`projectName-${projectName}`} data-testid={projectName + 'project'}>
+          <ProjectLink setActiveElement={setActiveElement} projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={iconNumber} />
         </div>
       )}
     </ProjectWrapper>
   )
+}
+
+function shuffle(array: any[]) {
+  const shuffledArray = [...array]
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = shuffledArray[i];
+    shuffledArray[i] = shuffledArray[j];
+    shuffledArray[j] = temp;
+  }
+  return shuffledArray
+}
+
+const projectsMap = [
+  {
+    width: 65,
+    height: 117,
+    projectCode: "GL130",
+    projectName: 'Massimiliano Parrucchieri',
+    projectDate: '2021',
+    iconNumber: 1,
+  },
+  {
+    width: 257,
+    height: 86,
+    projectCode: "LETRAIN",
+    projectName: 'Le Train - La Gallina Matta',
+    iconNumber: 2,
+  }, {
+    width: 256,
+    height: 299,
+    projectCode: "PAFF2",
+    projectName: 'PA FF2',
+    iconNumber: 3
+  }, {
+    width: 77,
+    height: 217,
+    projectCode: "CB",
+    projectName: 'CB',
+    iconNumber: 4,
+  }, {
+    width: 257,
+    height: 157,
+    projectCode: "OUIQUI",
+    projectName: 'OUI QUI',
+    iconNumber: 5,
+  }, {
+    width: 106,
+    height: 233,
+    projectCode: "D6",
+    projectName: 'D6',
+    iconNumber: 6
+  }, {
+    width: 256,
+    height: 158,
+    projectCode: "INCOMPIUTE",
+    projectName: 'INCOMPIUTE',
+    iconNumber: 7
+  }
+];
+
+export async function getStaticProps() {
+  return {
+    props: {
+      projects: shuffle(projectsMap),
+    },
+    revalidate: 1
+  }
 }

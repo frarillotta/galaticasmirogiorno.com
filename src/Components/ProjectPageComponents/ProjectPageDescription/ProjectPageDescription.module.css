@@ -15,7 +15,7 @@
 }
 
 .description {
-    grid-area: 1/14/10/24;
+    grid-area: 1/14/10/-1;
     overflow: hidden;
     position: relative;
     isolation: isolate;
@@ -27,12 +27,12 @@
 
 .descriptionParagraph {
     padding: 12px;
-    font-size: clamp(0.6rem, 1.5cqh, 0.99rem);
+    font-size: clamp(0.8em, 2cqh, 1.25em);
 }
 
 @media screen and (max-width: 600px) {
     .description {
-        grid-area: 1/8/10/15;
+        grid-area: 1/8/10/-1;
     }
 
     .descriptionParagraph {
