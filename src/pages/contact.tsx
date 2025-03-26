@@ -38,7 +38,7 @@ export default function Contact() {
                     variants={variants}
                 />
             </motion.div>
-            <motion.p
+            <motion.h1
                 className={styles.contactDetails}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -50,7 +50,7 @@ export default function Contact() {
                 <span>INFO@GALATICASMIROGIORNO.COM</span><br />
                 <span>+39 346 37 266 07</span><br />
                 <span>+39 393 89 31 973</span><br />
-            </motion.p>
+            </motion.h1>
             <motion.p
                 className={styles.credits}
                 initial={{ opacity: 0 }}
