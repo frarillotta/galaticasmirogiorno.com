@@ -179,6 +179,6 @@ export async function getStaticProps() {
     props: {
       projects: shuffle(projectsMap),
     },
-    revalidate: 0.01
+    revalidate: 1
   }
 }
