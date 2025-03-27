@@ -102,7 +102,7 @@ const ScrollIndicator = ({ activeElement, projects }: { activeElement: number, p
 }
 
 export default function Projects({projects}: {projects: typeof projectsMap}) {
-  const [activeElement, setActiveElement] = useState<number>(1);
+  const [activeElement, setActiveElement] = useState<number>(projects[0].iconNumber);
   return (
     <ProjectWrapper>
       <ScrollIndicator projects={projects} activeElement={activeElement} />
