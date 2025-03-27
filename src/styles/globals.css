@@ -181,7 +181,7 @@ a:focus-visible {
     background: transparent;
 }
 /* temp?  */
-main::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
 }
 
@@ -190,9 +190,6 @@ main {
   /* TODO: change this to work on mobile */
   height: calc(100% - 48px - 32px);
   width: 100%;
-
-  display: grid;
-  place-content: center;
 
   overflow: hidden;
   isolation: isolate;

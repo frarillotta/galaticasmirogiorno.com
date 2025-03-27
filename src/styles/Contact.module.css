@@ -2,6 +2,8 @@
     /* problem on safari 15 */
     isolation: inherit;
     position: relative;
+    display: grid;
+    place-content: center;
 }
 
 .contactDetails {
