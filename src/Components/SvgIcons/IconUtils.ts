@@ -42,8 +42,8 @@ export const variants: (props?: {
         pathLength: hoverPathLength,
         pathSpacing: hoverPathSpacing,
         transition: {
-            pathLength: {duration: 0},
-            pathSpacing: {duration: 0},
+            pathLength: {duration: 0.75, ease: 'easeIn', bounce: 0},
+            pathSpacing: {duration: 0.75, ease: 'easeIn', bounce: 0},
             pathOffset: { ease: "linear", duration: hoverOffsetDuration, repeat: Infinity, bounce: 0 }
         }
     },
