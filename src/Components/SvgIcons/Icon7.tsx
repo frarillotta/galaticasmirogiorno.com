@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from './IconUtils';
 import styles from './IconCommon.module.css';
 
-export const Icon7 = ({ className, strokeWidth = '2px' }: { className: string, strokeWidth: `${number}px` }) => {
+export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         x="0px"
@@ -12,7 +12,7 @@ export const Icon7 = ({ className, strokeWidth = '2px' }: { className: string, s
         
         vectorEffect='non-scaling-stroke'
         stroke-alignment="inside"
-        {...variantsDefinition}
+        {...(shouldAnimate && { ...variantsDefinition })}
     >
         <motion.line
             variants={variants()}
