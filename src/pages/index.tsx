@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from '~/styles/Projects.module.css'
 import { Routes } from '~/constants';
 import * as Icons from '~/Components/SvgIcons';
-import { motion, useAnimate } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from '~/Components/Link/Link';
 import { ProjectWrapper } from '~/Components/ProjectPageComponents';
@@ -148,13 +148,13 @@ const projectsMap = [
     height: 299,
     projectCode: "PAFF2",
     projectName: 'PA FF2',
-    iconNumber: 3
+    iconNumber: 7
   }, {
     width: 77,
     height: 217,
     projectCode: "CB",
     projectName: 'CB',
-    iconNumber: 4,
+    iconNumber: 3,
   }, {
     width: 257,
     height: 157,
@@ -166,13 +166,13 @@ const projectsMap = [
     height: 233,
     projectCode: "D6",
     projectName: 'D6',
-    iconNumber: 6
+    iconNumber: 4
   }, {
     width: 256,
     height: 158,
     projectCode: "INCOMPIUTE",
     projectName: 'INCOMPIUTE',
-    iconNumber: 7
+    iconNumber: 6
   }
 ];
 
