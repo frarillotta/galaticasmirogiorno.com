@@ -101,17 +101,19 @@ const ScrollIndicator = ({ activeElement, projects }: { activeElement: number, p
   </div>
 }
 
-export default function Projects({projects}: {projects: typeof projectsMap}) {
+export default function Projects({ projects }: { projects: typeof projectsMap }) {
   const [activeElement, setActiveElement] = useState<number>(projects[0].iconNumber);
   return (
-    <ProjectWrapper>
+    <>
       <ScrollIndicator projects={projects} activeElement={activeElement} />
-      {projects.map(({ width, height, projectName, projectDate, projectCode, iconNumber }) =>
-        <div className={styles.homeScreen} key={`projectName-${projectName}`} data-testid={projectName + 'project'}>
-          <ProjectLink setActiveElement={setActiveElement} projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={iconNumber} />
-        </div>
-      )}
-    </ProjectWrapper>
+      <ProjectWrapper>
+        {projects.map(({ width, height, projectName, projectDate, projectCode, iconNumber }) =>
+          <div className={styles.homeScreen} key={`projectName-${projectName}`} data-testid={projectName + 'project'}>
+            <ProjectLink setActiveElement={setActiveElement} projectCode={projectCode} width={width} height={height} projectDate={projectDate} projectName={projectName} projNumber={iconNumber} />
+          </div>
+        )}
+      </ProjectWrapper>
+    </>
   )
 }
 

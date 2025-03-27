@@ -35,6 +35,8 @@
 
 .scrollIndicator {
   position: fixed;
+  top: calc(var(--global-padding) + 52px);
+  -webkit-transform: translateZ(0);
   height: 66vh;
   right: var(--global-padding);
   display: flex;
@@ -43,7 +45,7 @@
   width: 9vw;
   min-width: 40px;
   max-width: 60px;
-  z-index: 2;
+  z-index: 20;
 }
 
 .scrollIndicatorWrapper {
