@@ -4,12 +4,12 @@ import styles from './IconCommon.module.css'
 
 
 const animationVars: Parameters<typeof variants>[number] = {
-    hoverPathLength: 0.2,
-    hoverOffsetDuration: 12,
-    transitionDuration: 3,
-    hoverPathSpacing: 0.1,
-    pathSpacing: 0.1,
-    pathOffset: 0.9,
+    hoverPathLength: 0.8,
+    hoverOffsetDuration: 6,
+    transitionDuration: 1.5,
+    hoverPathSpacing: 0.2,
+    pathSpacing: 0.9,
+    pathOffset: 0.2,
 }
 
 const collarAnimationVars: Parameters<typeof variants>[number] = {

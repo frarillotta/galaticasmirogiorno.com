@@ -12,10 +12,10 @@ export const variants: (props?: {
     hoverPathLengthDuration = 1, 
     pathOffset = 0.2,
     hoverPathLength = 0.8, 
-    transitionDuration = 2.5, 
+    transitionDuration = 1.5, 
     hoverOffsetDuration = 1.5,
     hoverPathSpacing = 0.2,
-    pathSpacing = 0.4,
+    pathSpacing = 0.9,
 } = {}) => ({
     hidden: { 
         pathLength: 0.001, 
@@ -42,8 +42,8 @@ export const variants: (props?: {
         pathLength: hoverPathLength,
         pathSpacing: hoverPathSpacing,
         transition: {
-            pathLength: {duration: 0.75, ease: 'easeIn', bounce: 0},
-            pathSpacing: {duration: 0.75, ease: 'easeIn', bounce: 0},
+            pathLength: {duration: 0.75, bounce: 0},
+            pathSpacing: {duration: 0.75, bounce: 0},
             pathOffset: { ease: "linear", duration: hoverOffsetDuration, repeat: Infinity, bounce: 0 }
         }
     },
