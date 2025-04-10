@@ -114,7 +114,7 @@ html, body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.4;
+  line-height: 1.15;
   -webkit-font-smoothing: antialiased;
 }
 

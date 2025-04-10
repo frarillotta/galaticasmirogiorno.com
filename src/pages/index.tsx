@@ -173,6 +173,12 @@ const projectsMap = [
     projectCode: "INCOMPIUTE",
     projectName: 'INCOMPIUTE',
     iconNumber: 6
+  }, {
+    width: 256,
+    height: 158,
+    projectCode: "VVE460",
+    projectName: 'VVE460',
+    iconNumber: 8
   }
 ];
 
