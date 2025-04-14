@@ -40,45 +40,45 @@ export default function PAFF2() {
         <ProjectImage image={layout1} loading='eager' priority={true} className={styles.layout1} pictureName={'layout1'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={cucina} loading='eager' priority={true} className={styles.cucina} pictureName={'cucina'} height={1500} width={1000} projNumber={7} />
-        <ProjectImage image={soggiorno} loading='eager' priority={true} className={styles.soggiorno} pictureName={'soggiorno'} height={1000} width={1500} projNumber={7} />
-        <ProjectImage image={soggiorno2} loading='eager' priority={true} className={styles.soggiorno2} pictureName={'soggiorno1'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={cucina} loading='eager' className={styles.cucina} pictureName={'cucina'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={soggiorno} loading='eager' className={styles.soggiorno} pictureName={'soggiorno'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={soggiorno2} loading='eager' className={styles.soggiorno2} pictureName={'soggiorno1'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={cucina2} loading='eager' priority={true} className={styles.cucina2} pictureName={'cucina2'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={cucina2} loading='eager' className={styles.cucina2} pictureName={'cucina2'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={vetrina} loading='eager' priority={true} className={styles.vetrina} pictureName={'vetrina'} height={1500} width={1000} projNumber={7} />
-        <ProjectImage image={cucina3} loading='eager' priority={true} className={styles.cucina3} pictureName={'cucina3'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={vetrina} loading='eager' className={styles.vetrina} pictureName={'vetrina'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={cucina3} loading='eager' className={styles.cucina3} pictureName={'cucina3'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={armadio} loading='eager' priority={true} className={styles.armadio} pictureName={'armadio'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={armadio} loading='eager' className={styles.armadio} pictureName={'armadio'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={layout2} loading='eager' priority={true} className={styles.layout2} pictureName={'layout2'} height={1000} width={1500} projNumber={7} />
-        <ProjectImage image={layout3} loading='eager' priority={true} className={styles.layout3} pictureName={'layout3'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={layout2} loading='eager' className={styles.layout2} pictureName={'layout2'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={layout3} loading='eager' className={styles.layout3} pictureName={'layout3'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={bagno2} loading='eager' priority={true} className={styles.bagno2} pictureName={'bagno2'} height={1500} width={1000} projNumber={7} />
-        <ProjectImage image={bagno3} loading='eager' priority={true} className={styles.bagno3} pictureName={'bagno3'} height={1000} width={1500} projNumber={7} />
+        <ProjectImage image={bagno2} loading='eager' className={styles.bagno2} pictureName={'bagno2'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={bagno3} loading='eager' className={styles.bagno3} pictureName={'bagno3'} height={1000} width={1500} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={bagno4} loading='eager' priority={true} className={styles.bagno4} pictureName={'bagno4'} height={1500} width={1000} projNumber={7} />
-        <ProjectImage image={bagno5} loading='eager' priority={true} className={styles.bagno5} pictureName={'bagno5'} height={1500} width={1000} projNumber={7} />
-        <ProjectImage image={bagno6} loading='eager' priority={true} className={styles.bagno6} pictureName={'bagno6'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={bagno4} loading='eager' className={styles.bagno4} pictureName={'bagno4'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={bagno5} loading='eager' className={styles.bagno5} pictureName={'bagno5'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={bagno6} loading='eager' className={styles.bagno6} pictureName={'bagno6'} height={1500} width={1000} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={bagno7} loading='eager' priority={true} className={styles.bagno7} pictureName={'bagno7'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={bagno7} loading='eager' className={styles.bagno7} pictureName={'bagno7'} height={1500} width={1000} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={bagno} loading='eager' priority={true} className={styles.bagno} pictureName={'bagno'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={bagno} loading='eager' className={styles.bagno} pictureName={'bagno'} height={1500} width={1000} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={lampada} loading='eager' priority={true} className={styles.lampada} pictureName={'lampada'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={lampada} loading='eager' className={styles.lampada} pictureName={'lampada'} height={1500} width={1000} projNumber={7} />
       </ProjectScreen>
       <ProjectScreen>
-        <ProjectImage image={lampada2} loading='eager' priority={true} className={styles.lampada2} pictureName={'lampada2'} height={1500} width={1000} projNumber={7} />
-        <ProjectImage image={lampada3} loading='eager' priority={true} className={styles.lampada3} pictureName={'lampada3'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={lampada2} loading='eager' className={styles.lampada2} pictureName={'lampada2'} height={1500} width={1000} projNumber={7} />
+        <ProjectImage image={lampada3} loading='eager' className={styles.lampada3} pictureName={'lampada3'} height={1500} width={1000} projNumber={7} />
       </ProjectScreen>
     </ProjectWrapper>
   )

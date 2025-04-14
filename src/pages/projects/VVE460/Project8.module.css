@@ -1,3 +1,143 @@
 .descriptionOverride {
-    grid-area: 1/14/16/-1!important;
+    grid-area: 1/14/16/-1 !important;
+}
+
+.cucina {
+    grid-area: 6/1/17/8;
+}
+
+.corridoio {
+    grid-area: 4/1/14/7;
+}
+
+.corridoio2 {
+    grid-area: 4/21/14/27;
+}
+
+.pianta {
+    grid-area: 2/14/16/23;
+}
+
+.cucina2 {
+    grid-area: 2/1/11/6;
+}
+
+.salotto {
+    grid-area: 2/15/11/20;
+}
+
+.mensole {
+    grid-area: 11/13/17/17;
+}
+
+.salotto2 {
+    grid-area: 3/22/10/27;
+}
+
+.armadio {
+    grid-area: 5/1/13/7;
+}
+
+.letto9 {
+    grid-area: 7/8/16/14;
+}
+
+.letto10 {
+    grid-area: 7/15/14/24;
+}
+
+.doccia {
+    grid-area: 2/9/6/14;
+}
+
+.soffitto5 {
+    grid-area: 6/18/14/25;
+}
+
+.soffitto3 {
+    grid-area: 5/1/14/7;
+}
+
+.letto5 {
+    grid-area: 5/8/14/14;
+}
+
+.letto6 {
+    grid-area: 5/16/14/22;
+}
+
+.lampada3 {
+    grid-area: 6/11/11/17;
+}
+
+.lampada4 {
+    grid-area: 4/19/14/26;
+}
+
+.letto4 {
+    grid-area: 8/4/15/9;
+}
+
+.letto3 {
+    grid-area: 7/11/17/17;
+}
+
+.soffitto2 {
+    grid-area: 3/20/12/25;
+}
+
+.bagno3 {
+    grid-area: 7/4/16/10;
+}
+
+.lampada2 {
+    grid-area: 3/14/11/19;
+}
+
+.rubinetto {
+    grid-area: 8/1/14/9;
+}
+
+.letto8 {
+    grid-area: 7/11/16/17;
+}
+
+.soffitto4 {
+    grid-area: 2/19/11/25;
+}
+
+.letto7 {
+    grid-area: 7/7/16/12;
+}
+
+.sedia {
+    grid-area: 4/14/11/19;
+}
+
+.letto {
+    grid-area: 2/6/9/11;
+}
+
+.letto2 {
+    grid-area: 2/17/12/24;
+}
+
+.soffitto {
+    grid-area: 6/19/16/25;
+}
+
+.salotto3 {
+    grid-area: 7/3/16/8;
+}
+
+.bagno2 {
+    grid-area: 6/9/14/14;
+}
+
+.bagno {
+    grid-area: 6/19/16/25;
+}
+
+.lampada {
+    grid-area: 9/5/15/12;
 }

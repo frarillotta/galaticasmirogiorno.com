@@ -58,6 +58,72 @@ export default function PAFF2() {
           <br />
           <span>THE ORIGINAL SICILIAN CEMENT TILES HAVE BEEN RESTORED. INSPIRING THE PROJECT’S COLOR PALETTE, AND FURTHER LINKING THE NEW SPATIAL CONFIGURATION TO THE BUILDING’S HISTORICAL ROOTS.</span><br />
         </ProjectPageDescription>
+        <ProjectImage image={cucina} loading='eager' priority={true} className={styles.cucina} pictureName={'cucina'} height={1500} width={1000} projNumber={8} />
+
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={corridoio} loading='eager' className={styles.corridoio} pictureName={'corrodio'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={corridoio2} loading='eager' className={styles.corridoio2} pictureName={'corrodio2'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={pianta} loading='eager' className={styles.pianta} pictureName={'pianta'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={cucina2} loading='eager' className={styles.cucina2} pictureName={'cucina2'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={salotto} loading='eager' className={styles.salotto} pictureName={'salotto'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={mensole} loading='eager' className={styles.mensole} pictureName={'mensole'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={salotto2} loading='eager' className={styles.salotto2} pictureName={'salotto2'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={armadio} loading='eager' className={styles.armadio} pictureName={'armadio'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={letto9} loading='eager' className={styles.letto9} pictureName={'letto9'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={letto10} loading='eager' className={styles.letto10} pictureName={'letto10'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={doccia} loading='eager' className={styles.doccia} pictureName={'doccia'} height={1000} width={1500} projNumber={8} />
+        <ProjectImage image={soffitto5} loading='eager' className={styles.soffitto5} pictureName={'soffitto5'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={soffitto3} loading='eager' className={styles.soffitto3} pictureName={'soffitto3'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={letto5} loading='eager' className={styles.letto5} pictureName={'letto5'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={letto6} loading='eager' className={styles.letto6} pictureName={'letto6'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={lampada3} loading='eager' className={styles.lampada3} pictureName={'lampada3'} height={1000} width={1500} projNumber={8} />
+        <ProjectImage image={lampada4} loading='eager' className={styles.lampada4} pictureName={'lampada4'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={letto4} loading='eager' className={styles.letto4} pictureName={'letto4'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={letto3} loading='eager' className={styles.letto3} pictureName={'letto3'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={soffitto2} loading='eager' className={styles.soffitto2} pictureName={'soffitto2'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={bagno3} loading='eager' className={styles.bagno3} pictureName={'bagno3'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={lampada2} loading='eager' className={styles.lampada2} pictureName={'lampada2'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={rubinetto} loading='eager' className={styles.rubinetto} pictureName={'rubinetto'} height={1000} width={1500} projNumber={8} />
+        <ProjectImage image={letto8} loading='eager' className={styles.letto8} pictureName={'letto8'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={soffitto4} loading='eager' className={styles.soffitto4} pictureName={'soffitto4'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={letto7} loading='eager' className={styles.letto7} pictureName={'letto7'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={sedia} loading='eager' className={styles.sedia} pictureName={'sedia'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={letto} loading='eager' className={styles.letto} pictureName={'letto'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={letto2} loading='eager' className={styles.letto2} pictureName={'letto2'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={soffitto} loading='eager' className={styles.soffitto} pictureName={'soffitto'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={salotto3} loading='eager' className={styles.salotto3} pictureName={'salotto3'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={bagno2} loading='eager' className={styles.bagno2} pictureName={'bagno2'} height={1500} width={1000} projNumber={8} />
+        <ProjectImage image={bagno} loading='eager' className={styles.bagno} pictureName={'bagno'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectImage image={lampada} loading='eager' className={styles.lampada} pictureName={'lampada'} height={1000} width={1500} projNumber={8} />
       </ProjectScreen>
     </ProjectWrapper>
   )
