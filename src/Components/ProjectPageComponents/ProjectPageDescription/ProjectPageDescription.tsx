@@ -18,7 +18,7 @@ export const ProjectPageDescription: React.FC<{ children: React.ReactNode, class
           transformTemplate={template}
           initial={{ scaleY: 1, transformOrigin: '50% 100% 0px' }}
           animate={{ scaleY: 0, transformOrigin: '50% 100% 0px' }}
-          transition={{ duration: 3, ease: 'easeOut', delay: 0.5 }}
+          transition={{ duration: 2.5, ease: 'easeOut', delay: 0.5 }}
         />
         <p className={styles.descriptionParagraph}>
           {children}

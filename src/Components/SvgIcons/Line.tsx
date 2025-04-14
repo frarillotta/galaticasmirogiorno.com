@@ -8,6 +8,8 @@ export const Line = forwardRef<SVGSVGElement, { className?: string }>(({ classNa
         className={className}
         viewBox="0 0 3 400"
         xmlns="http://www.w3.org/2000/svg"
+        // force GPU rendering
+        style={{transform: 'translateZ(0px)'}}
     >
         <line
             x1="0"
@@ -18,7 +20,6 @@ export const Line = forwardRef<SVGSVGElement, { className?: string }>(({ classNa
             strokeWidth="30"
             shape-rendering="crispEdges"
             vectorEffect='non-scaling-stroke'
-            stroke-alignment="inside"
         />
     </svg>
 
