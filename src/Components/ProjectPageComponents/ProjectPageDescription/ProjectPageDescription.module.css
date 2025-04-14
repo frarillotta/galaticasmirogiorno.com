@@ -1,12 +1,8 @@
 
-.verticalLineWrapper {
-    position: absolute;
-    height: 100%;
-}
-
 .verticalLine {
     height: 100%;
-    width: 8px;
+    width: 3px;
+    position: absolute;
     /* min-width: 8px; */
 }
 
@@ -23,6 +19,13 @@
     --offset: calc(calc(calc(var(--gap) * -1) / 2) + -2px);
     transform: translate(var(--offset), var(--offset));
     margin-bottom: 12px;
+}
+
+.lineMask {
+    position: absolute;
+    height: 100%;
+    width: 8px;
+    background: white;
 }
 
 .descriptionParagraph {
