@@ -1,0 +1,11 @@
+.R1 {
+    grid-area: 6/5/14/23;
+}
+
+.R2Aperto {
+    grid-area: 4/1/10/10;
+}
+
+.R2Chiuso {
+    grid-area: 10/1/16/10;
+}
