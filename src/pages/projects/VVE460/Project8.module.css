@@ -145,19 +145,19 @@
 
 @media screen and (max-width: 600px) {
     .descriptionOverride {
-        grid-area: 1/8/16/-1 !important;
+        grid-area: 1/8/-1/-1 !important;
     }
 
     .cucina {
-        grid-area: 6/1/17/8;
+        grid-area: 3/1/7/8;
     }
 
     .corridoio {
-        grid-area: 4/1/8/7;
+        grid-area: 5/1/9/8;
     }
 
     .corridoio2 {
-        grid-area: 4/9/8/15;
+        grid-area: 1/1/5/8;
     }
 
     .pianta {

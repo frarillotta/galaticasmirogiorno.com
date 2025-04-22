@@ -51,17 +51,17 @@ export default function PAFF2() {
           <span>VVE460 IS A PROJECT THAT TRANSFORMS AN EARLY 20TH-CENTURY LIBERTY BUILDING APARTMENT, INTO A HOSPITALITY SPACE.</span><br />
           <br />
           <span>THE INITIAL LAYOUT, CHARACTERIZED BY A NARROW ENTRANCE AND A SEQUENCE OF INTERCONNECTED ROOMS, HAS BEEN REIMAGINED. OLD DOORS HAVE BEEN PRESERVED AND REPURPOSED AS WARDROBE FRONTS RECESSED INTO THE WALLS, INTEGRATING THE HISTORICAL ELEMENTS INTO A NEW SPATIAL CONCEPT.</span><br />
-          <br />
+        </ProjectPageDescription>
+        <ProjectImage image={cucina} loading='eager' priority={true} className={styles.cucina} pictureName={'cucina'} height={1500} width={1000} projNumber={8} />
+      </ProjectScreen>
+      <ProjectScreen>
+        <ProjectPageDescription className={styles.descriptionOverride}>
           <span>IN EACH ROOM, AN ARCHITECTURAL PARTITION ENCLOSES THE BATHROOM SPACE, WHILE LEAVING THE ORIGINAL VAULTED CEILINGS EXPOSED.</span><br />
           <br />
           <span>THE VISUAL AND FUNCTIONAL FOCAL POINT OF THE PROJECT IS A RED VOLUME AT THE ENTRANCE, DEFINING THE RECEPTION AND KITCHEN AREAS.</span><br />
           <br />
           <span>THE ORIGINAL SICILIAN CEMENT TILES HAVE BEEN RESTORED. INSPIRING THE PROJECT’S COLOR PALETTE, AND FURTHER LINKING THE NEW SPATIAL CONFIGURATION TO THE BUILDING’S HISTORICAL ROOTS.</span><br />
         </ProjectPageDescription>
-        <ProjectImage image={cucina} loading='eager' priority={true} className={styles.cucina} pictureName={'cucina'} height={1500} width={1000} projNumber={8} />
-
-      </ProjectScreen>
-      <ProjectScreen>
         <ProjectImage image={corridoio} loading='eager' className={styles.corridoio} pictureName={'corrodio'} height={1500} width={1000} projNumber={8} />
         <ProjectImage image={corridoio2} loading='eager' className={styles.corridoio2} pictureName={'corrodio2'} height={1500} width={1000} projNumber={8} />
       </ProjectScreen>
