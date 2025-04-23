@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from './IconUtils';
 import styles from './IconCommon.module.css'
 
-export const Icon6 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
+export const Icon6 = ({ className, shouldAnimate = true, strokeWidth = '3px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +19,7 @@ export const Icon6 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: 
         <motion.polyline
             variants={variants()}
             transition={transition}
+            shape-rendering="crispEdges"
             className={styles.stroke}
             points="173,350 173,492 344,492 344,464" />
         <motion.polyline

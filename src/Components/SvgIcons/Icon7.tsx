@@ -2,14 +2,13 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from './IconUtils';
 import styles from './IconCommon.module.css';
 
-export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
+export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '3px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         x="0px"
         y="0px"
         strokeWidth={strokeWidth}
         viewBox="178.66 276.79 238.68 289.47"
-        
         vectorEffect='non-scaling-stroke'
         stroke-alignment="inside"
         {...(shouldAnimate && { ...variantsDefinition })}
@@ -23,6 +22,7 @@ export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: 
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="184.16" y1="495.18" x2="263.01" y2="495.18" />
         <motion.line
             variants={variants()}
@@ -33,16 +33,19 @@ export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: 
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="263.56" y1="563.76" x2="411.84" y2="563.76" />
         <motion.line
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="411.84" y1="563.76" x2="411.84" y2="553.22" />
         <motion.line
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="411.84" y1="553.22" x2="367.38" y2="553.21" />
         <motion.line
             variants={variants()}
@@ -158,26 +161,31 @@ export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: 
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="310.19" y1="495.18" x2="310.19" y2="450.07" />
         <motion.line
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="310.19" y1="450.07" x2="411.84" y2="450.07" />
         <motion.line
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="411.84" y1="450.07" x2="411.84" y2="413.53" />
         <motion.line
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="411.84" y1="413.53" x2="310.19" y2="413.53" />
         <motion.line
             variants={variants()}
             transition={transition}
             className={styles.stroke}
+            shape-rendering="crispEdges"
             x1="310.19" y1="413.53" x2="310.19" y2="279.02" />
         <motion.line
             variants={variants()}
@@ -187,6 +195,7 @@ export const Icon7 = ({ className, shouldAnimate = true, strokeWidth = '2px' }: 
         <motion.line
             variants={variants()}
             transition={transition}
+            shape-rendering="crispEdges"
             className={styles.stroke}
             x1="279.17" y1="278.29" x2="279.17" y2="431.71" />
         <motion.line
