@@ -10,7 +10,7 @@ export const Icon4 = ({ className, shouldAnimate = true, strokeWidth = '3px' }: 
         x="0px"
         y="0px"
         strokeWidth={strokeWidth}
-        viewBox="236.81 278.16 122.38 285.73"
+        viewBox="236.81 275.16 122.38 285.73"
         vectorEffect='non-scaling-stroke'
         stroke-alignment="inside"
         {...(shouldAnimate && { ...variantsDefinition })}

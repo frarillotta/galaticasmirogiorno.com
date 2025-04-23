@@ -6,7 +6,7 @@ export const Icon8 = ({ className, shouldAnimate = true, strokeWidth = '3px' }: 
     return <motion.svg
         x="0px"
         y="0px"
-        viewBox="300 250 452 517"
+        viewBox="292 245 460 530"
         className={className}
         vectorEffect='non-scaling-stroke'
         stroke-alignment="inside"
