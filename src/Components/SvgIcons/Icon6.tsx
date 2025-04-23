@@ -2,27 +2,31 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from './IconUtils';
 import styles from './IconCommon.module.css'
 
-export const Icon6 = ({ className }: { className: string }) => {
+export const Icon6 = ({ className, shouldAnimate = true, strokeWidth = '3px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         x="0px"
         y="0px"
-        strokeWidth='1px'
-        viewBox="167.69 349.34 260.62 143.37"
-        {...variantsDefinition}
+        strokeWidth={strokeWidth}
+        viewBox="168 347 260 149"
+        
+        vectorEffect='non-scaling-stroke'
+        stroke-alignment="inside"
+        {...(shouldAnimate && { ...variantsDefinition })}
     >
         <motion.polyline
             variants={variants()}
             transition={transition}
+            shape-rendering="crispEdges"
             className={styles.stroke}
-            points="173.19,349.84 173.19,492.21 343.65,492.21 343.65,464.25 " />
+            points="173,350 173,492 344,492 344,464" />
         <motion.polyline
             variants={variants()}
             transition={transition}
             className={styles.stroke}
-            points="173.19,349.84 262.59,349.84 266.05,366.61 358.87,349.84 422.81,349.84 422.81,464.25 343.65,464.25   " />
+            points="173,350 263,350 266,367 359,350 423,350 423,464 344,464" />
         <motion.path
             variants={variants()}
             transition={transition}

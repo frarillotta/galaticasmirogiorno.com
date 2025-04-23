@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import styles from './ProjectPageDescription.module.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Line } from '~/Components/SvgIcons';
 
 
 //workaround for blurriness
-function template({ scaleY }: {scaleY: number}) {
+function template({ scaleY }: { scaleY: number }) {
   return `scaleY(${scaleY})`
 }
 
@@ -13,15 +12,14 @@ export const ProjectPageDescription: React.FC<{ children: React.ReactNode, class
   return <AnimatePresence>
     <div className={`${className} ${styles.description}`}>
       <div className={styles.paragraphWrapper}>
+        <Line className={styles.verticalLine} />
         <motion.div
-          className={styles.verticalLineWrapper}
+          className={styles.lineMask}
           transformTemplate={template}
-          initial={{ scaleY: 0, transformOrigin: '50% 0% 0px' }}
-          animate={{ scaleY: 1, transformOrigin: '50% 0% 0px' }}
-          transition={{ duration: 2, ease: 'easeInOut', delay: 0.5 }}
-        >
-          <Line className={styles.verticalLine} />
-        </motion.div>
+          initial={{ scaleY: 1, transformOrigin: '50% 100% 0px' }}
+          animate={{ scaleY: 0, transformOrigin: '50% 100% 0px' }}
+          transition={{ duration: 2.5, ease: 'easeOut', delay: 0.5 }}
+        />
         <p className={styles.descriptionParagraph}>
           {children}
         </p>

@@ -2,16 +2,18 @@ import { motion } from "framer-motion"
 import { transition, variants, variantsDefinition } from "./IconUtils"
 import styles from './IconCommon.module.css'
 
-export const Icon1 = ({ className }: { className: string }) => {
+export const Icon1 = ({ className, shouldAnimate = true, strokeWidth = '3px' }: { className: string, shouldAnimate?: boolean, strokeWidth: `${number}px` }) => {
     return <motion.svg
         className={className}
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         x="0px"
         y="0px"
-        strokeWidth='1px'
-        viewBox="259.87 349.33 76.25 143.37"
-        {...variantsDefinition}
+        strokeWidth={strokeWidth}
+        viewBox="261 349 77 144"
+        vectorEffect='non-scaling-stroke'
+        stroke-alignment="inside"
+        {...(shouldAnimate && { ...variantsDefinition })}
     >
         <motion.path
             className={styles.stroke}

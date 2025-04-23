@@ -54,7 +54,6 @@ export function mouseOutInEventListener(el: HTMLElement | null) {
         el.removeEventListener("click", mouseDownEvent as unknown as EventListenerOrEventListenerObject);
         el.removeEventListener("click", mouseUpEvent as unknown as EventListenerOrEventListenerObject);
 
-    
     }
 
 }

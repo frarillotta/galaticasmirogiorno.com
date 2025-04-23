@@ -1,14 +1,16 @@
-.main {
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(16, 1fr);
-  grid-gap: 12px;
-  padding: 24px;
+.homeScreen {
+  display: flex;
+  padding: 60px 80px 60px 60px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
 }
 
 .projectIcon {
   height: 100%;
-  width: 100%;
+  width: auto;
   object-fit: contain;
 }
 
@@ -23,47 +25,49 @@
 }
 
 .iconWrapper {
-
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  place-content: center;
+}
+
+.scrollIndicator {
+  position: fixed;
+  top: calc(var(--global-padding) + 52px);
+  -webkit-transform: translateZ(0);
+  height: 66vh;
+  right: var(--global-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 5.5vh;
+  min-width: 37px;
+  max-width: 60px;
+  z-index: 20;
+}
+
+.scrollIndicatorWrapper {
+  position: relative;
+  padding: 4px;
+  background: white;
+}
+
+.scrollIndicatorIconBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  background: white;
+  right: 0;
+  bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
-  
+
   .main {
     grid-gap: 4px;
   }
 
-}
-
-.icon1 {
-  grid-area: 1/1/3/3;
-}
-
-.icon2 {
-  grid-area: 1/7/3/13;
-
-}
-
-.icon3 {
-  grid-area: 3/15/7/17;
-}
-
-.icon4 {
-  grid-area: 11/20/15/24;
-}
-
-.icon5 {
-  grid-area: 13/16/15/20;
-}
-
-.icon6 {
-  grid-area: 15/7/17/11;
-}
-
-
-.icon7 {
-  grid-area: 8/3/12/7;
 }

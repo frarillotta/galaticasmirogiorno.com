@@ -9,7 +9,7 @@ export default function About() {
   return (
     <main className={styles.main}>
 
-      <p className={styles.aboutTitle}>ARE TWO ARCHITECTS FROM SOUTHERN ITALY.</p>
+      <h1 className={styles.aboutTitle}>ARE TWO ARCHITECTS FROM SOUTHERN ITALY.</h1>
       <div className={styles.iconWrapper} >
         <AboutIcon className={styles.icon} />
       </div>

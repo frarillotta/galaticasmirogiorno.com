@@ -1,12 +1,8 @@
 
-.verticalLineWrapper {
-    position: absolute;
-    height: 100%;
-}
-
 .verticalLine {
     height: 100%;
-    width: 8px;
+    width: 3px;
+    position: absolute;
     /* min-width: 8px; */
 }
 
@@ -15,7 +11,7 @@
 }
 
 .description {
-    grid-area: 1/14/10/24;
+    grid-area: 1/14/10/-1;
     overflow: hidden;
     position: relative;
     isolation: isolate;
@@ -25,14 +21,23 @@
     margin-bottom: 12px;
 }
 
+.lineMask {
+    position: absolute;
+    height: 100%;
+    width: 8px;
+    left: -4px;
+    background: white;
+}
+
 .descriptionParagraph {
     padding: 12px;
-    font-size: clamp(0.6rem, 1.5cqh, 0.99rem);
+    font-size: clamp(0.8em, 2cqh, 1.25em);
+    text-wrap-style: pretty;
 }
 
 @media screen and (max-width: 600px) {
     .description {
-        grid-area: 1/8/10/15;
+        grid-area: 1/8/10/-1;
     }
 
     .descriptionParagraph {

@@ -5,7 +5,7 @@ import { Link } from '~/Components/Link/Link';
 
 const variants: Variants = {
     initial: {
-        scaleY: 0, 
+        scaleY: 0,
         originY: 0,
         //workaround cause safari sucks
         z: 0.1
@@ -23,22 +23,24 @@ const variants: Variants = {
     // }
 }
 const MotionLine = motion(Line)
-
+//workaround for blurriness
+function template({ scaleY }: { scaleY: number }) {
+    return `scaleY(${scaleY})`
+  }
 export default function Contact() {
     return (
         <main className={styles.contact}>
+            <Line
+                className={styles.verticalLine}
+            />
             <motion.div
-                className={styles.verticalLineWrapper}
-            >
-                <MotionLine 
-                    className={styles.verticalLine} 
-                    initial={'initial'}
-                    animate={'animate'}
-                    // exit={'exit'}
-                    variants={variants}
-                />
-            </motion.div>
-            <motion.p
+                className={styles.lineMask}
+                transformTemplate={template}
+                initial={{ scaleY: 1, transformOrigin: '50% 100% 0px' }}
+                animate={{ scaleY: 0, transformOrigin: '50% 100% 0px' }}
+                transition={{ duration: 3, ease: 'easeOut', delay: 0.5 }}
+            />
+            <motion.h1
                 className={styles.contactDetails}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -50,7 +52,7 @@ export default function Contact() {
                 <span>INFO@GALATICASMIROGIORNO.COM</span><br />
                 <span>+39 346 37 266 07</span><br />
                 <span>+39 393 89 31 973</span><br />
-            </motion.p>
+            </motion.h1>
             <motion.p
                 className={styles.credits}
                 initial={{ opacity: 0 }}
