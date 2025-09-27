@@ -8,7 +8,7 @@
 
 
 .aboutTitle {
-    grid-area: 1/12/1/1;
+    grid-area: 1/13/9/1;
 }
 
 .iconWrapper {
@@ -17,6 +17,9 @@
 
 @media screen and (max-width: 600px) {
     
+    .aboutTitle {
+        grid-area: 1/22/9/1;
+    }
     .iconWrapper {
         grid-area: 8/1/17/13;
     }
