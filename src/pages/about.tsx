@@ -9,9 +9,7 @@ export default function About() {
   return (
     <main className={styles.main}>
 
-      <h1 className={styles.aboutTitle}>are two architects who met in Calabria, Southern Italy. Their story is deeply in the South: one from Calabria, the other from Sicily - regions divided by the wild landscape of Strait of Messina. <br/>
-      They graduated together in 2020 with a thesis on the creative reuse of unfinished architecture, the most defining phenomena in their territories. <br/>
-      Today, they live and work at the foot of Mount Etna, embracing slow living and nature.
+      <h1 className={styles.aboutTitle}>ARE TWO ARCHITECTS WHO MET IN CALABRIA, SOUTHERN ITALY. THEIR STORY IS DEEPLY IN THE SOUTH: ONE FROM CALABRIA, THE OTHER FROM SICILY - REGIONS DIVIDED BY THE WILD LANDSCAPE OF STRAIT OF MESSINA. <br/> THEY GRADUATED TOGETHER IN 2020 WITH A THESIS ON THE CREATIVE REUSE OF UNFINISHED ARCHITECTURE, THE MOST DEFINING PHENOMENA IN THEIR TERRITORIES. <br/> TODAY, THEY LIVE AND WORK AT THE FOOT OF MOUNT ETNA, EMBRACING SLOW LIVING AND NATURE.
       </h1>
       <div className={styles.iconWrapper} >
         <AboutIcon className={styles.icon} />
